@@ -15,7 +15,13 @@ Do not broaden an Item 5 investigation into general security testing, feature re
 
 ## Required sequence
 
-### 1. Revalidate current state
+### 1. Register and resume work
+
+Every planned future task, active investigation, report draft, and follow-up must have a row in [WORK_LOG.md](WORK_LOG.md) before work begins. At resume, check the current checkpoint and work log first. Continue an existing work ID when possible.
+
+Keep each work item in the register through its entire lifecycle: planned, in progress, candidate rejected, report awaiting decision, accepted/paid, credited, not reproduced, declined, withdrawn, or closed with no finding. Record the next action.
+
+### 2. Revalidate current state
 
 Before examining candidates, establish fresh evidence for:
 - the current HEAD of `pursekeeper/api`;
@@ -24,9 +30,9 @@ Before examining candidates, establish fresh evidence for:
 - current documentation text and live behavior where applicable;
 - prior reports, issues, fixes, and decisions that may make a candidate duplicate or already resolved.
 
-Record the date/time and exact commit identifiers in the checkpoint. Never treat a prior chat summary as current repository state.
+Record the date/time and exact commit identifiers in the checkpoint and relevant work-log row. Never treat a prior chat summary as current repository state.
 
-### 2. Establish the review cutoff
+### 3. Establish the review cutoff
 
 For each document, identify the most recent paid review or fix that establishes its cutoff. Then inspect only changes made after that cutoff for the candidate error.
 
@@ -38,7 +44,7 @@ The proof should include:
 
 If a review cutoff cannot be substantiated, mark the candidate blocked or unverified; do not imply provenance.
 
-### 3. Compare documentation with reality
+### 4. Compare documentation with reality
 
 Trace the exact instruction through:
 - the cited document;
@@ -48,60 +54,38 @@ Trace the exact instruction through:
 
 Prefer a low-cost, read-only reproduction such as `curl`, `grep`, a public JSON response, or a small local code-path check. Do not make paid Nano calls unless they are indispensable and explicitly approved. Avoid destructive tests.
 
-### 4. Prove practical consequence
+### 5. Prove practical consequence
 
 State what a reader following the exact sentence does and what actually happens. The consequence must be concrete and reproducible: for example, an operation fails, credits are unavailable, a command targets the wrong resource, or the documented recovery path cannot work.
 
-Do not report:
-- grammar or formatting;
-- ambiguity without a demonstrated consequence;
-- a behavior that existed before the applicable cutoff;
-- an issue already fixed or already reported;
-- a theoretical outcome unsupported by reproduction or code.
+Do not report grammar/formatting, ambiguity without a demonstrated consequence, behavior that predates the cutoff, an issue already fixed or reported, or a theoretical outcome unsupported by reproduction or code.
 
-### 5. Check for duplicates
+### 6. Check duplicates and estimate confidence
 
-Search all available sources before preparing a candidate:
-- the current wanted list;
-- prior sent reports and replies;
-- issue tracker;
-- relevant commits and changelogs;
-- known fixes and reports from other operators, where visible.
+Check the wanted list, prior sent reports/replies, issue tracker, relevant commits/changelogs, and known fixes/reports by others. Record what was searched and why the candidate is distinct.
 
-Record what was searched, what matched, and why this finding is distinct. If the same issue was reported earlier by someone else, disclose that and do not present it as an original paid candidate.
-
-### 6. Estimate confidence
-
-Assign a confidence estimate and explain its basis:
-- **High (8–10/10):** exact post-cutoff diff, current doc/code mismatch, and cheap reproduction all align.
+Assign a confidence score:
+- **High (8–10/10):** exact post-cutoff diff, current doc/code mismatch, and cheap reproduction align.
 - **Medium (5–7/10):** actionable mismatch is likely, but one evidence link or live confirmation is incomplete.
 - **Low (0–4/10):** timing, consequence, or implementation behavior is speculative.
 
-Only high-confidence candidates with a complete evidence chain should be proposed for submission. Medium candidates need more verification; low candidates should be discarded.
+Only high-confidence candidates with a complete evidence chain should be presented for submission. Preserve rejected candidates in WORK_LOG with the reason, so they are not rediscovered as new work.
 
-### 7. Present before sending
+### 7. Present before sending and record the outcome
 
-Prepare one English report for the operator, containing one document and one finding. Do not send it automatically. The operator reviews the candidate first. Send only when the operator explicitly says **“Enviar”**; then send the approved report once to `agent@pursekeeper.dev`.
+Prepare one English report for the operator, containing one document and one finding. Do not send it automatically. Send only when the operator explicitly says **“Enviar”**; then send the approved report once to `agent@pursekeeper.dev`.
+
+Before sending, update the work item to **Awaiting decision** and record the exact subject and sent timestamp/message reference. When the reply arrives, record the outcome distinctly: accepted/paid, confirmed/credited, duplicate/declined, not reproduced, rejected, or still awaiting decision. Do not infer acceptance or payment from a fix alone.
 
 After a confirmed acceptance/fix, update the cutoff to the new commit. If the fix introduces a new possible error, reopen only the affected document and inspect the new post-fix changes.
 
 ## Required report structure
 
-Follow [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md). A complete report includes:
-1. operator;
-2. one document;
-3. one finding;
-4. exact quotation;
-5. reproduction;
-6. observed result;
-7. why the result contradicts the document;
-8. practical consequence;
-9. provenance and timing;
-10. payout address.
+Follow [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md). A complete report includes operator, one document, one finding, exact quotation, reproduction, observed result, why it is wrong, practical consequence, provenance/timing, confidence, duplicate checks, and payout address.
 
-Use the standard subject:
+Use the subject:
 `Item 5 report — [short error description] — uknwplayer`
 
 ## Work-block discipline
 
-At the end of every investigation block, update [the current checkpoint](checkpoints/CHECKPOINT_CURRENT.md), even when the outcome is no finding or blocked. Keep an auditable distinction between verified fact, inference, and open question.
+At the end of every investigation block, update both [WORK_LOG.md](WORK_LOG.md) and [the current checkpoint](checkpoints/CHECKPOINT_CURRENT.md), including when no qualifying candidate is found, a candidate is rejected, or work is blocked.
