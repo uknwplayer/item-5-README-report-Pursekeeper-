@@ -1,48 +1,41 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
 **Date:** 2026-09-27  
-**Block:** 004 — Send approved post-review report  
-**State:** REPORT SENT ONCE / AWAITING PURSEKEEPER DECISION
+**Block:** 005 — Post-review hunt; no qualifying new finding  
+**State:** HUNT CLOSED / NO NEW REPORT / PRIOR REPORT AWAITING DECISION
 
-## Completed in this block
+## Revalidation
 
-- The operator approved the report by saying “Enviar”.
-- Sent the approved Item 5 report once to `agent@pursekeeper.dev`.
-- Verified the sent message in Gmail: recipient and subject match; SENT label present.
-- Recorded the submission timestamp and message identifiers in [WORK_LOG.md](../WORK_LOG.md).
-- No duplicate send was made.
+- Upstream: [pursekeeper/api](https://github.com/pursekeeper/api), default branch main, HEAD aee28ed7b60365e844ec26edf64877199f1e5d56 (2026-09-27 17:43:24 UTC).
+- Re-read the current wanted-list section in examples/research/README.md, latest commits/diffs, root README, examples/no-node.md, current implementation and the existing duplicate/ruling record.
+- Gmail search after the previous submission time found no newer Pursekeeper reply. Report 1a0e416e0283ed66 remains pending.
+- No Nano spent. No candidate was sent in this block.
 
-## Submitted report
+## Hunt outcome
 
-- **Document:** `examples/research/README.md`
-- **Subject:** `Item 5 report — research README backdates the 17:42 fixes — uknwplayer`
-- **Sent:** 2026-09-27 18:18:19 UTC (15:18:19 America/Sao_Paulo)
-- **Gmail message ID:** `1a0e416e0283ed66`
-- **RFC Message-ID:** `<CAMonF9B4cyHFS-V-fnj-jySykYmdFRhdAaZcDCA0ZgOHwA6Z5Q@mail.gmail.com>`
-- **Recipient:** `agent@pursekeeper.dev`
-- **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
-- **Exact report draft/content record:** [candidate file](../candidates/ITEM5-2026-09-27-research-readme-fix-time.md)
+No separate, high-confidence Item 5 report met the post-review, consequence, reproduction, and duplicate criteria.
 
-## Finding and evidence recap
+| Lead | Disposition | Evidence |
+|---|---|---|
+| Root README x402 zero-credit sentence | Duplicate of accepted report #282; not resubmitted | Same refused-redirect recovery exception, fixed in live root and /api text by 97cbf38. |
+| Root README always-GPU paid-work wording | Duplicate of accepted report #279; not resubmitted | Same GPU fallback claim covered in examples/no-node.md. |
+| Current no-node breaker wording | Matches implementation | server.js workFor() opens the 60-second breaker only when a GPU failure throws; valid JSON without work proceeds to later sources without opening the breaker. |
+| NanoGPT alias in guide | No defect reproduced | Official endpoint matrix lists /api/x402/v1/chat/completions; no-cost curl timed out at the proxy with no response body, so it is inconclusive. |
 
-The current `examples/research/README.md` at upstream HEAD `aee28ed7b60365e844ec26edf64877199f1e5d56` says three fixes were live at 17:36:49 / complete by 17:37 UTC. Parent commit `97cbf380b10ff344281a1baadaa5406f77f49942` said 17:42 UTC; the later commit `aee28ed7b603` introduced the earlier time.
+## Prior submitted report: still awaiting decision
 
-Public `https://pursekeeper.dev/log.json` entry 459 places the corrections live at 17:42 UTC; ledger 282 separately records the payment at 17:37:53.675 UTC. Related Pursekeeper replies also place the live documentation changes at 17:42 UTC. The report explains how the incorrect published cutoff can affect Item 5 report/review timing. Candidate confidence was estimated at 7.7/10.
+- **Document:** examples/research/README.md
+- **Subject:** Item 5 report — research README backdates the 17:42 fixes — uknwplayer
+- **Sent:** 2026-09-27 18:18:19 UTC
+- **Gmail message ID:** 1a0e416e0283ed66
+- **Recipient:** agent@pursekeeper.dev
+- **Exact sent content:** [candidate record](../candidates/ITEM5-2026-09-27-research-readme-fix-time.md)
 
-## Current state and next work
+This report is still unruled. Its timing comparison is disputed by the current provenance: commit aee28ed7 says the times were corrected to the clock (live 17:36:49, paid 17:37–17:38, published 17:39 UTC), while public log entry 459 said live at 17:42. Do not resend or treat the commit as an acceptance; preserve the exact sent report and await a reply.
 
-- **NEXT-ITEM-5:** Awaiting Pursekeeper's ruling. Do not resend. Do not infer acceptance/payment without explicit reply and ledger evidence.
-- **NEXT-ITEM-5-FOLLOWUP:** Planned; the next hunt may begin immediately without waiting for this report's decision. Revalidate upstream HEAD, wanted list, mailbox, prior reports, commits, and document-specific cutoffs first. If this report is accepted or causes a fix, use the new relevant commit as the cutoff for this document.
+## Next
 
-## Active rules
-
-- Register every future task in WORK_LOG before beginning.
-- Keep completed, credited, not reproduced, rejected, withdrawn, and pending statuses distinct.
-- One report = one document = one actionable finding.
-- Establish the exact post-cutoff commit and diff.
-- Reproduce the wrong result cheaply and non-destructively where possible.
-- Present the complete English report before sending.
-- Send only after explicit operator instruction “Enviar”; send exactly once.
-- Conversation language: Portuguese. Repository language: English.
-- Update WORK_LOG and this checkpoint at the end of every work block.
-- Payout address: `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`.
+- NEXT-ITEM-5-FOLLOWUP is closed with no qualifying finding.
+- NEXT-ITEM-5-NEXT is planned. On the next “Próxima caça”, revalidate HEAD, wanted list, inbox, cutoffs, and duplicates from scratch.
+- Continue to send only after the operator presents a candidate and explicitly says “Enviar”.
+- Payout address: nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt.
