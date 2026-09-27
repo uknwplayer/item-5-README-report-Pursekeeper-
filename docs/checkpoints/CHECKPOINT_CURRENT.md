@@ -1,39 +1,38 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
 **Date:** 2026-09-27  
-**Block:** 003 — Revalidate upstream and prepare post-review candidate  
-**State:** CANDIDATE READY / AWAITING OPERATOR REVIEW / NOT SENT
+**Block:** 004 — Send approved post-review report  
+**State:** REPORT SENT ONCE / AWAITING PURSEKEEPER DECISION
 
 ## Completed in this block
 
-- Registered `NEXT-ITEM-5` before the hunt and revalidated live project state rather than relying on the prior checkpoint.
-- Rechecked the current upstream repository, wanted list, recent commit diffs, relevant source behavior, public log, mailbox, earlier reports, and issues for duplicates.
-- Compared the current research README with its parent version and isolated one later timestamp edit.
-- Prepared one English report for one document and recorded the exact evidence and reproduction in [the candidate draft](../candidates/ITEM5-2026-09-27-research-readme-fix-time.md).
-- Updated the work log and registered the next follow-up item.
-- **No email was sent.** The candidate is awaiting operator review.
+- The operator approved the report by saying “Enviar”.
+- Sent the approved Item 5 report once to `agent@pursekeeper.dev`.
+- Verified the sent message in Gmail: recipient and subject match; SENT label present.
+- Recorded the submission timestamp and message identifiers in [WORK_LOG.md](../WORK_LOG.md).
+- No duplicate send was made.
 
-## Candidate summary
+## Submitted report
 
 - **Document:** `examples/research/README.md`
-- **Current upstream HEAD:** `aee28ed7b60365e844ec26edf64877199f1e5d56` (2026-09-27 17:43:24 UTC)
-- **Finding:** The current wording says three fixes were live by 17:36:49 / 17:37 UTC. Its parent at `97cbf380b10ff344281a1baadaa5406f77f49942` (17:39:27 UTC) said they were fixed by 17:42 UTC. The later commit `aee28ed7b603` introduced the backdated time.
-- **Independent current-state evidence:** Public `https://pursekeeper.dev/log.json` entry 459 records the corrections live at 17:42 UTC; ledger 282 separately records the payment at 17:37:53.675 UTC. Related Pursekeeper replies also place the live docs at 17:42 UTC. Thus payment time and deployment time are distinct.
-- **Concrete consequence:** Because this README publishes Item 5 ruling/reopen chronology, the false earlier cutoff can lead a reader to classify reports or later edits against the wrong eligibility window.
-- **Duplicate checks:** Checked the current wanted/research README and recent commits; searched Gmail for `17:36:49` and GitHub issues for `17:36:49` / `17:42 UTC`. No duplicate for this timestamp discrepancy was found.
-- **Confidence:** 7.7/10. The commit diff and live-time contradiction are strong; practical impact depends on a reader using the published chronology to classify report timing.
+- **Subject:** `Item 5 report — research README backdates the 17:42 fixes — uknwplayer`
+- **Sent:** 2026-09-27 18:18:19 UTC (15:18:19 America/Sao_Paulo)
+- **Gmail message ID:** `1a0e416e0283ed66`
+- **RFC Message-ID:** `<CAMonF9B4cyHFS-V-fnj-jySykYmdFRhdAaZcDCA0ZgOHwA6Z5Q@mail.gmail.com>`
+- **Recipient:** `agent@pursekeeper.dev`
+- **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
+- **Exact report draft/content record:** [candidate file](../candidates/ITEM5-2026-09-27-research-readme-fix-time.md)
 
-## Operator decision
+## Finding and evidence recap
 
-Review the English draft before sending. If the operator says **“Enviar”**, send that exact report once to `agent@pursekeeper.dev` with subject:
+The current `examples/research/README.md` at upstream HEAD `aee28ed7b60365e844ec26edf64877199f1e5d56` says three fixes were live at 17:36:49 / complete by 17:37 UTC. Parent commit `97cbf380b10ff344281a1baadaa5406f77f49942` said 17:42 UTC; the later commit `aee28ed7b603` introduced the earlier time.
 
-`Item 5 report — research README backdates the 17:42 fixes — uknwplayer`
+Public `https://pursekeeper.dev/log.json` entry 459 places the corrections live at 17:42 UTC; ledger 282 separately records the payment at 17:37:53.675 UTC. Related Pursekeeper replies also place the live documentation changes at 17:42 UTC. The report explains how the incorrect published cutoff can affect Item 5 report/review timing. Candidate confidence was estimated at 7.7/10.
 
-Payout address in the draft:
+## Current state and next work
 
-`nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
-
-If the candidate is revised, declined, or withdrawn, record the outcome and reason in [WORK_LOG.md](../WORK_LOG.md) before beginning another hunt. Once this candidate is decided, start `NEXT-ITEM-5-FOLLOWUP`; if accepted or fixed, use the new relevant commit as that document's cutoff.
+- **NEXT-ITEM-5:** Awaiting Pursekeeper's ruling. Do not resend. Do not infer acceptance/payment without explicit reply and ledger evidence.
+- **NEXT-ITEM-5-FOLLOWUP:** Planned; the next hunt may begin immediately without waiting for this report's decision. Revalidate upstream HEAD, wanted list, mailbox, prior reports, commits, and document-specific cutoffs first. If this report is accepted or causes a fix, use the new relevant commit as the cutoff for this document.
 
 ## Active rules
 
