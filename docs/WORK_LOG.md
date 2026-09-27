@@ -6,6 +6,7 @@ This is the durable register for completed, declined/non-reproduced, active, and
 
 - **Planned** — authorized future work, not started.
 - **In progress** — investigation or report preparation is underway.
+- **Candidate ready — awaiting operator review** — evidence and draft are recorded; the operator has not yet approved sending.
 - **Awaiting decision** — sent once; no ruling yet.
 - **Accepted / paid** — Pursekeeper explicitly accepted and states payment/ledger details.
 - **Confirmed / credited** — finding confirmed but credited to the operator due to prior report; no payment to this operator.
@@ -44,9 +45,10 @@ The entries below are grounded in the Pursekeeper email replies reviewed on 2026
 
 | Work ID | Scope / question | Status | Started | Next action |
 |---|---|---|---|---|
-| NEXT-ITEM-5 | Next eligible post-review documentation finding | **In progress** | 2026-09-27; time noted in current checkpoint | Revalidate current `pursekeeper/api` HEAD, wanted list, mail, prior reports, and document-specific cutoffs before choosing a candidate |
+| NEXT-ITEM-5 | Post-review error candidate: research README backdates fixes that public log and Pursekeeper replies place live at 17:42 UTC | **Candidate ready — awaiting operator review** | 2026-09-27; upstream revalidated at HEAD `aee28ed7b60365e844ec26edf64877199f1e5d56` | Review [candidate draft](candidates/ITEM5-2026-09-27-research-readme-fix-time.md). It has not been emailed. If approved with “Enviar”, send this exact version once; otherwise revise or close it with the reason. |
+| NEXT-ITEM-5-FOLLOWUP | Continue Item 5 after this candidate’s decision; revalidate latest upstream HEAD, wanted list, mailbox, duplicate reports, and applicable per-document cutoff | **Planned** | Not started | Start after the candidate is approved, declined, or withdrawn; use any accepted/fix commit as the new cutoff for that document. |
 
-No other Item 5 work is known to be awaiting a decision at the time this register was updated. Verify the mailbox before relying on that statement.
+The mailbox and public log were rechecked during the 2026-09-27 hunt. The candidate remains operator-review-only; no outgoing email was sent.
 
 ## Mandatory registration rule
 
