@@ -1,46 +1,47 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
 **Date:** 2026-09-27  
-**Block:** 001 — Documentation foundation  
-**State:** INITIAL DOCUMENTATION ADDED / NEXT HUNT REQUIRES UPSTREAM REVALIDATION
+**Block:** 002 — Add work status register and continuity rules  
+**State:** HISTORICAL WORK LOG RECORDED / NEXT ITEM-5 HUNT PLANNED, UPSTREAM REVALIDATION REQUIRED
 
 ## Completed in this block
 
-- Confirmed that `uknwplayer/item-5-README-report-Pursekeeper-` is public and was empty before this documentation set.
-- Added the project scope, Item 5 operating protocol, report template, roadmap, and report-history record.
-- Recorded the payout address used for reports.
-- Documented the known post-review handoff at `pursekeeper/api` commit `97cbf38`.
+- Re-read the project docs and the latest known Pursekeeper email replies.
+- Added a durable work log with per-finding entries for verified paid, credited/duplicate, and not-reproduced work.
+- Added a mandatory rule to register future work before starting, then update it through each status transition.
+- Updated the README, roadmap, report history, and checkpoint links.
 
-## Known accepted/reviewed outcomes
+## Work-log status
 
-- Report 282: accepted for 2 XNO; ledger entry 282. It concerned the missing x402 `/v1/fetch` refused-redirect credit-recovery exception.
-- Report 281: the GPU breaker sentence was confirmed, but the user was credited as second reporter; Ops Control HQ had reported it earlier and was paid.
-- Report 279: the `no-node.md` GPU overpromise was confirmed and paid for 2 XNO.
+See [WORK_LOG.md](../WORK_LOG.md).
 
-See [REPORT_HISTORY.md](../REPORT_HISTORY.md). These are historical email-confirmed notes, not a substitute for checking current mail or upstream state.
+- Accepted and paid findings in the reviewed mail include ledger entries 217, 219, 228, 266, 269, 275, 279, and 282.
+- Two findings were confirmed but credited to uknwplayer as later reporter: the x402 gzip finding and the GPU-breaker documentation finding.
+- One finding, `/sellers.json checked_at`, was not reproduced. Pursekeeper requested response headers before reopening it.
+- No other Item 5 report is known to be awaiting a decision from the mailbox results reviewed for this update. Recheck mail before relying on this.
 
-## Known review handoff
+## Current known Item 5 handoff
 
-Pursekeeper's reply associated report 282's fix with `pursekeeper/api` commit `97cbf38` and said that commit reopened `server.js`, `no-node.md`, and the public `/api` text for errors introduced by that change.
+Pursekeeper associated the x402 redirect-credit fix with `pursekeeper/api` commit `97cbf38` and said that same change reopened `server.js`, `no-node.md`, and the `/api` text for errors introduced by it.
 
-**The current upstream HEAD has not been revalidated in this documentation block.** No new candidate has been investigated, prepared, or sent.
+The current upstream HEAD, wanted list, and diffs were not revalidated during this recordkeeping block. Treat `97cbf38` as the latest known handoff only.
 
-## Required next block
+## Next registered work
 
-1. Re-read this checkpoint and the operating protocol.
-2. Revalidate live `pursekeeper/api` HEAD, wanted list, recent commits/diffs, and current documentation.
-3. Check current mailbox, reports, issues, and fixes for duplicates or newer cutoff updates.
-4. Select only a document with a substantiated paid-review cutoff and inspect post-cutoff changes.
-5. Update this checkpoint with evidence and outcome before ending the block.
+**Work ID:** NEXT-ITEM-5  
+**Status:** Planned  
+**Scope:** Find one eligible post-review documentation error  
+**Next action:** Revalidate current `pursekeeper/api` HEAD, wanted list, recent commits/diffs, current mailbox, and duplicate history before selecting a document.
 
 ## Active rules
 
+- Register every future task in WORK_LOG before beginning.
+- Keep completed, credited, not reproduced, rejected, withdrawn, and pending statuses distinct.
 - One report = one document = one actionable finding.
 - Establish the exact post-cutoff commit and diff.
 - Reproduce the wrong result cheaply and non-destructively where possible.
-- Do not report editorial issues or consequentially harmless ambiguity.
 - Present the complete English report before sending.
 - Send only after explicit operator instruction “Enviar”; send exactly once.
 - Conversation language: Portuguese. Repository language: English.
-- End every work block by updating this checkpoint.
+- Update WORK_LOG and this checkpoint at the end of every work block.
 - Payout address: `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`.
