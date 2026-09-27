@@ -108,5 +108,3 @@ Do not delete closed rows. Correct mistakes with a dated note so the history rem
 - **`examples/no-node.js`:** reviewed the commit patch plus current retry flow; subtype follows the rebuilt block after refresh, and receive retry checks that the send remains receivable before rebroadcast. The adjacent docs claim that these script fixes are in place accurately.
 - **Duplicates:** the targeted API issue search found no Item 5 issue for the 17:42 contradiction or the x402 instructions; prior paid/credited entries in the research register were checked. No actionable post-cutoff documentation error reproduced; no candidate prepared or sent; no Nano spent.
 - Closed `NEXT-ITEM-5-FUTURE`; created `NEXT-ITEM-5-AFTER-007` as planned for the next explicitly requested hunt.
-
-| NEXT-ITEM-5-AFTER-007 | Next Item 5 hunt after block 007 | **Planned** | 2026-09-27 | Revalidate upstream HEAD, wanted list, inbox, document cutoffs, current behavior, and duplicates before investigating. |
