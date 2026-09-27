@@ -1,20 +1,30 @@
 # Report History
 
-This log records only report outcomes supported by Pursekeeper email information available when the repository was initialized. Revalidate against the mailbox before relying on it for a new hunt.
+This page summarizes outcomes. The detailed per-finding register, including completed, credited, not-reproduced, and future work, is [WORK_LOG.md](WORK_LOG.md).
 
-| Item | Finding | Outcome | Payment / credit | Relevant change |
-|---|---|---|---|---|
-| 279 | `no-node.md` overpromised that paid work was unlimited and always from the GPU | Confirmed and paid | 2 XNO, ledger entry 279 | Pursekeeper identified the phrase as entering in a 2026-09-25 correction |
-| 281 | GPU breaker behavior in `no-node.md` | Same sentence was reported by Ops Control HQ earlier; uknwplayer was credited as second reporter, not paid | Ops Control HQ was paid; this report received credit by name | Rewritten in `97cbf38` |
-| 282 | x402 documentation omitted the `/v1/fetch` refused-redirect credit recovery exception | Accepted | 2 XNO, ledger entry 282 | Pursekeeper reported the correction live on `/` and `/api` in `97cbf38` |
+## Confirmed recent outcomes
 
-## Cutoff handoff
+| Report / ledger | Finding | Outcome |
+|---|---|---|
+| 217 | Claims-pilot sentence remained after the budget was exhausted | Accepted and paid: 2 XNO |
+| 219 | ClawHub listing still described as pending after publication | Accepted and paid: 2 XNO |
+| 228 | `no-node.md` omitted the shared GPU budget condition for free work | Accepted and paid: 2 XNO |
+| 266 | Five findings across `/api`, research README, purchases README, `/sellers`, and `/v1/fetch` manifest | Five accepted and fixed; 10 XNO in one transfer |
+| 269 | Two listed sellers were unnamed on `/facilitator` | Accepted and paid: 2 XNO |
+| 275 | Five findings accepted from a six-finding review; `/sellers.json checked_at` was not reproduced | Five paid, 10 XNO in one transfer; one not reproduced |
+| 279 | `no-node.md` overpromised GPU availability for paid work | Accepted and paid: 2 XNO |
+| — | x402 manifest returned gzip despite `gzip;q=0` | Confirmed, but duplicate of Ops Control HQ report; credited by name, no payment to uknwplayer |
+| 281 | GPU breaker sentence in `no-node.md` | Confirmed, but duplicate of earlier Ops Control HQ report; credited by name, no payment to uknwplayer |
+| 282 | x402 docs omitted the `/v1/fetch` refused-redirect credit-recovery exception | Accepted and paid: 2 XNO |
 
-Pursekeeper's reply for report 282 says `97cbf38` also changed `server.js`, narrowed the breaker sentence in `no-node.md`, and changed the public `/api` text. It says those affected surfaces are reopened for mistakes introduced by that commit. Treat this as a lead only: confirm the current upstream HEAD, actual diff, wanted list, and current live text before investigating or reporting.
+## Non-reproduced / declined work
 
-## Recordkeeping rules
+The `/sellers.json checked_at` report was not reproduced by Pursekeeper. They cited ten-minute probe rounds and requested response headers from a response that shows the stale value before looking again. It is recorded as **Not reproduced**, not silently removed. No accepted payment was reported for this finding.
 
-- A **payment** is not the same as a **credit** or second-reporter acknowledgement.
-- Record a ledger entry only when the reply states it.
-- Do not infer acceptance from a fix alone.
-- Do not include full email bodies, credentials, seeds, private keys, or unnecessary personal data in this public repository.
+No email reviewed for this initial log explicitly labels this finding as an eligibility rejection. Other non-paid outcomes above were explicitly duplicate/first-reporter cases, and are categorized as **Confirmed / credited**, not rejected.
+
+## Review cutoffs
+
+Pursekeeper said the report 282 fix was in `pursekeeper/api` commit `97cbf38`, live on `/` and `/api`, and that the same change touched `server.js`, `no-node.md`, and the `/api` text. Those surfaces were reopened for mistakes introduced by that commit. Revalidate current HEAD and the wanted list before using this historical cutoff for another hunt.
+
+For document-specific cutoffs and evidence, rely on current upstream source/history and the work log. This file is a digest, not the source of truth for live status.
