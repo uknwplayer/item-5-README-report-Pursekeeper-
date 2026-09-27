@@ -1,37 +1,39 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
 **Date:** 2026-09-27  
-**Block:** 002 — Add work status register and continuity rules  
-**State:** HISTORICAL WORK LOG RECORDED / NEXT ITEM-5 HUNT PLANNED, UPSTREAM REVALIDATION REQUIRED
+**Block:** 003 — Revalidate upstream and prepare post-review candidate  
+**State:** CANDIDATE READY / AWAITING OPERATOR REVIEW / NOT SENT
 
 ## Completed in this block
 
-- Re-read the project docs and the latest known Pursekeeper email replies.
-- Added a durable work log with per-finding entries for verified paid, credited/duplicate, and not-reproduced work.
-- Added a mandatory rule to register future work before starting, then update it through each status transition.
-- Updated the README, roadmap, report history, and checkpoint links.
+- Registered `NEXT-ITEM-5` before the hunt and revalidated live project state rather than relying on the prior checkpoint.
+- Rechecked the current upstream repository, wanted list, recent commit diffs, relevant source behavior, public log, mailbox, earlier reports, and issues for duplicates.
+- Compared the current research README with its parent version and isolated one later timestamp edit.
+- Prepared one English report for one document and recorded the exact evidence and reproduction in [the candidate draft](../candidates/ITEM5-2026-09-27-research-readme-fix-time.md).
+- Updated the work log and registered the next follow-up item.
+- **No email was sent.** The candidate is awaiting operator review.
 
-## Work-log status
+## Candidate summary
 
-See [WORK_LOG.md](../WORK_LOG.md).
+- **Document:** `examples/research/README.md`
+- **Current upstream HEAD:** `aee28ed7b60365e844ec26edf64877199f1e5d56` (2026-09-27 17:43:24 UTC)
+- **Finding:** The current wording says three fixes were live by 17:36:49 / 17:37 UTC. Its parent at `97cbf380b10ff344281a1baadaa5406f77f49942` (17:39:27 UTC) said they were fixed by 17:42 UTC. The later commit `aee28ed7b603` introduced the backdated time.
+- **Independent current-state evidence:** Public `https://pursekeeper.dev/log.json` entry 459 records the corrections live at 17:42 UTC; ledger 282 separately records the payment at 17:37:53.675 UTC. Related Pursekeeper replies also place the live docs at 17:42 UTC. Thus payment time and deployment time are distinct.
+- **Concrete consequence:** Because this README publishes Item 5 ruling/reopen chronology, the false earlier cutoff can lead a reader to classify reports or later edits against the wrong eligibility window.
+- **Duplicate checks:** Checked the current wanted/research README and recent commits; searched Gmail for `17:36:49` and GitHub issues for `17:36:49` / `17:42 UTC`. No duplicate for this timestamp discrepancy was found.
+- **Confidence:** 7.7/10. The commit diff and live-time contradiction are strong; practical impact depends on a reader using the published chronology to classify report timing.
 
-- Accepted and paid findings in the reviewed mail include ledger entries 217, 219, 228, 266, 269, 275, 279, and 282.
-- Two findings were confirmed but credited to uknwplayer as later reporter: the x402 gzip finding and the GPU-breaker documentation finding.
-- One finding, `/sellers.json checked_at`, was not reproduced. Pursekeeper requested response headers before reopening it.
-- No other Item 5 report is known to be awaiting a decision from the mailbox results reviewed for this update. Recheck mail before relying on this.
+## Operator decision
 
-## Current known Item 5 handoff
+Review the English draft before sending. If the operator says **“Enviar”**, send that exact report once to `agent@pursekeeper.dev` with subject:
 
-Pursekeeper associated the x402 redirect-credit fix with `pursekeeper/api` commit `97cbf38` and said that same change reopened `server.js`, `no-node.md`, and the `/api` text for errors introduced by it.
+`Item 5 report — research README backdates the 17:42 fixes — uknwplayer`
 
-The current upstream HEAD, wanted list, and diffs were not revalidated during this recordkeeping block. Treat `97cbf38` as the latest known handoff only.
+Payout address in the draft:
 
-## Next registered work
+`nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
 
-**Work ID:** NEXT-ITEM-5  
-**Status:** Planned  
-**Scope:** Find one eligible post-review documentation error  
-**Next action:** Revalidate current `pursekeeper/api` HEAD, wanted list, recent commits/diffs, current mailbox, and duplicate history before selecting a document.
+If the candidate is revised, declined, or withdrawn, record the outcome and reason in [WORK_LOG.md](../WORK_LOG.md) before beginning another hunt. Once this candidate is decided, start `NEXT-ITEM-5-FOLLOWUP`; if accepted or fixed, use the new relevant commit as that document's cutoff.
 
 ## Active rules
 
