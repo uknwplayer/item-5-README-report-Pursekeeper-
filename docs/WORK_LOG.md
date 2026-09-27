@@ -44,7 +44,7 @@ The entries below are grounded in the Pursekeeper email replies reviewed on 2026
 
 | Work ID | Scope / question | Status | Started | Next action |
 |---|---|---|---|---|
-| NEXT-ITEM-5 | Next eligible post-review documentation finding | **Planned** | Not started | Revalidate current `pursekeeper/api` HEAD, wanted list, mail, prior reports, and document-specific cutoffs before choosing a candidate |
+| NEXT-ITEM-5 | Next eligible post-review documentation finding | **In progress** | 2026-09-27; time noted in current checkpoint | Revalidate current `pursekeeper/api` HEAD, wanted list, mail, prior reports, and document-specific cutoffs before choosing a candidate |
 
 No other Item 5 work is known to be awaiting a decision at the time this register was updated. Verify the mailbox before relying on that statement.
 
