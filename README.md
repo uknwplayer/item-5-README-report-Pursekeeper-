@@ -15,9 +15,10 @@ English is the official language for repository files and reports. Conversation 
 ## Start here
 
 1. Read [the current checkpoint](docs/checkpoints/CHECKPOINT_CURRENT.md).
-2. Read [the operating protocol](docs/OPERATING_PROTOCOL.md).
-3. Use the [report template](docs/REPORT_TEMPLATE.md).
-4. Confirm the current repository HEAD, wanted list, recent fixes, and prior reports before investigating.
+2. Read [the work log](docs/WORK_LOG.md); continue an existing work ID where possible.
+3. Read [the operating protocol](docs/OPERATING_PROTOCOL.md).
+4. Use the [report template](docs/REPORT_TEMPLATE.md).
+5. Revalidate current upstream state, wanted list, relevant cutoff, recent fixes, and prior reports before investigating.
 
 ## Evidence standard
 
@@ -36,8 +37,12 @@ The report must establish provenance and timing: the relevant paid-review cutoff
 - Include the payout address recorded in the report template.
 - Never perform destructive tests or spend Nano when a cheap read-only reproduction is sufficient.
 
-## Current baseline
+## Work registration
+
+Every completed, declined, active, or planned task is recorded in [the work log](docs/WORK_LOG.md). Register future work before starting it, maintain its status and next action, and update the current checkpoint at the end of every work block.
+
+## Current historical baseline
 
 The latest known Pursekeeper reply accepted the x402 redirect-credit documentation report for 2 XNO (ledger entry 282) and identified commit `97cbf38` in `pursekeeper/api` as a later change that reopened `server.js`, `no-node.md`, and the `/api` text. This is a historical handoff, not proof of the current HEAD. Revalidate upstream state before any new hunt.
 
-See [the roadmap](docs/ROADMAP.md) and [the report history](docs/REPORT_HISTORY.md).
+See [the roadmap](docs/ROADMAP.md), [the report history](docs/REPORT_HISTORY.md), and [continuity rules](docs/CONTINUITY_RULES.md).
