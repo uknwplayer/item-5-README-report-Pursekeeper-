@@ -17,7 +17,7 @@ This is the durable register for completed, declined/non-reproduced, active, and
 
 ## Historical register
 
-The entries below are grounded in the Pursekeeper email replies reviewed on 2026-09-27. Dates are UTC where the reply provides them; otherwise the date is the report/reply date. Payment values are per finding; entries sharing a transfer are marked accordingly.
+The entries below are grounded in the Pursekeeper email replies reviewed on 2026-09-27. Dates are UTC where the reply provides them; otherwise the date is the report/reply date. Payment values are per finding; entries sharing one transfer are marked accordingly.
 
 | Date | Work / finding | Document or surface | Status | Payment / evidence |
 |---|---|---|---|---|
@@ -45,10 +45,10 @@ The entries below are grounded in the Pursekeeper email replies reviewed on 2026
 
 | Work ID | Scope / question | Status | Started | Next action |
 |---|---|---|---|---|
-| NEXT-ITEM-5 | Post-review error candidate: research README backdates fixes that public log and Pursekeeper replies place live at 17:42 UTC | **Candidate ready — awaiting operator review** | 2026-09-27; upstream revalidated at HEAD `aee28ed7b60365e844ec26edf64877199f1e5d56` | Review [candidate draft](candidates/ITEM5-2026-09-27-research-readme-fix-time.md). It has not been emailed. If approved with “Enviar”, send this exact version once; otherwise revise or close it with the reason. |
-| NEXT-ITEM-5-FOLLOWUP | Continue Item 5 after this candidate’s decision; revalidate latest upstream HEAD, wanted list, mailbox, duplicate reports, and applicable per-document cutoff | **Planned** | Not started | Start after the candidate is approved, declined, or withdrawn; use any accepted/fix commit as the new cutoff for that document. |
+| NEXT-ITEM-5 | Post-review error candidate: research README backdates fixes that public log and Pursekeeper replies place live at 17:42 UTC | **Awaiting decision** | 2026-09-27; upstream revalidated at HEAD `aee28ed7b60365e844ec26edf64877199f1e5d56`; report sent once at 2026-09-27 18:18:19 UTC | Await Pursekeeper’s ruling; do not resend. Email subject: `Item 5 report — research README backdates the 17:42 fixes — uknwplayer`; Gmail message ID `1a0e416e0283ed66` (Message-ID `<CAMonF9B4cyHFS-V-fnj-jySykYmdFRhdAaZcDCA0ZgOHwA6Z5Q@mail.gmail.com>`). Exact report: [sent-report candidate](candidates/ITEM5-2026-09-27-research-readme-fix-time.md). |
+| NEXT-ITEM-5-FOLLOWUP | Continue Item 5: revalidate latest upstream HEAD, wanted list, mailbox, duplicate reports, and applicable per-document cutoff | **Planned** | Not started | May begin immediately after submission without waiting for a ruling. Use any accepted/fix commit as the new cutoff for that document; check this report’s mailbox outcome when reviewing fresh mail. |
 
-The mailbox and public log were rechecked during the 2026-09-27 hunt. The candidate remains operator-review-only; no outgoing email was sent.
+The 2026-09-27 candidate was sent once to `agent@pursekeeper.dev` at 18:18:19 UTC (15:18:19 America/Sao_Paulo). Gmail confirmed the SENT label, recipient, subject, and Message-ID above. Await a response; do not infer acceptance or payment from any fix alone.
 
 ## Mandatory registration rule
 
