@@ -88,7 +88,7 @@ Do not delete closed rows. Correct mistakes with a dated note so the history rem
 - **Structural lead rejected:** one 2026-09-16 ShaXiaozhu row in the research index has four cells under a five-column header: its report link renders in the `paid` column and the `file` column is empty, while the amount text remains in the subject. This row predates the README's latest paid Item 5 review (08:00 UTC on 2026-09-27), was not changed by later fixes, and its possible reader consequence is not clear enough for a report. The current commits' newer rows have five cells.
 - **Facilitator boundary lead rejected:** unauthenticated POST probes with 32,001-byte and 320,001-byte bodies to `/verify` both returned HTTP 400 and a 49-byte error response, without reaching payment verification; this matches the documented 32,000-byte rejection for the tested values. No Nano was spent.
 - Reviewed recent structure changes in `examples/no-node.md`, `examples/research/README.md`, server `DOCS`, facilitator docs, NanoGPT guide and root README. The latest changes did not expose another distinct, post-cutoff structural or cross-document error with a reproducible wrong-action result.
-- No new Pursekeeper reply arrived; the previously sent research README timing report remains pending and disputed by commit `aee28ed7`'s clock-correction note. No report was drafted or sent in this block.
+- At Block 006's close there had been no reply yet and the timing report was then pending. Pursekeeper ruled at 20:01 UTC in email `1a0e4753adf9dbc7`: README was correct; decision 459 and earlier emails were wrong; paid Ӿ1 under ledger #285 for the cross-surface contradiction despite the report's incorrect framing.
 
 
 ## Block 007 start (2026-09-27 20:21 UTC)
@@ -108,3 +108,9 @@ Do not delete closed rows. Correct mistakes with a dated note so the history rem
 - **`examples/no-node.js`:** reviewed the commit patch plus current retry flow; subtype follows the rebuilt block after refresh, and receive retry checks that the send remains receivable before rebroadcast. The adjacent docs claim that these script fixes are in place accurately.
 - **Duplicates:** the targeted API issue search found no Item 5 issue for the 17:42 contradiction or the x402 instructions; prior paid/credited entries in the research register were checked. No actionable post-cutoff documentation error reproduced; no candidate prepared or sent; no Nano spent.
 - Closed `NEXT-ITEM-5-FUTURE`; created `NEXT-ITEM-5-AFTER-007` as planned for the next explicitly requested hunt.
+
+
+## Block 008 start (2026-09-27 20:41 UTC)
+
+- User requested the next Item 5 hunt. Revalidated upstream main: latest visible commit remains `dd419256bd5a741887d680fa801bdcf9b5035a93` (2026-09-27 20:00:11 UTC). Re-read the current work log/checkpoint and checked Gmail after 2026-09-27; latest Pursekeeper mail remains the 20:01:08 UTC ruling on report `1a0e416e0283ed66`, paid Ӿ1, ledger #285. No newer reply surfaced.
+- Current pass begins by refreshing the wanted-list rules and reviewing only eligible documentation changed after the relevant paid review/fix cutoff. Compare exact commit diffs with source/current behavior, public JSON and external official docs as needed; verify consequences and duplicates. No report is authorized for sending without operator review.
