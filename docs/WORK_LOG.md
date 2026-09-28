@@ -269,3 +269,10 @@ Payout address: nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51y
 - **Reopened `examples/no-node.md` lead, rejected as non-finding:** Commit `32ac90e` states `maxTimeoutSeconds` is top-level, not under `extra`. This matches the official x402 v2 PaymentRequirements table (field required) and the current `x402.js` `requirements()` return object. Current guide example and explanatory text place it at the top level. The earlier misplaced sentence was corrected; no reader following the current text gets the wrong schema.
 - **README / bounty checks:** Root README now explicitly documents the existing `/v1/fetch` refused-redirect credit hand-back; the same message confirms it was corrected and paid under #292. `llms.txt` marks the agent-pair bounty closed, consistent with the bounty page and latest wanted-list state. The changed research index records the three concurrent Item 5 changes/findings, including the no-node placement issue; there is no distinct unfixed error to submit.
 - New Item 5 wanted-list criterion was rechecked and remains a document error that causes a reader to act and receive a wrong result; one report per document. No matching actionable discrepancy remains after the fixes. No report drafted or sent in this block; no Nano spent. Closed Block 018 and use the current HEAD and paid ruling as the next cutoff.
+
+
+## Coverage-map scope crosswalk update (2026-09-28 05:04 UTC)
+
+- Added a document-to-review crosswalk in `docs/COVERAGE_MAP.md`, mapping each recorded paid/credited report to the specific page or file it covered, distinguishing batch payment from repository-wide review, and recording cutoff gaps instead of guessing.
+- The crosswalk captures explicit cutoff dates for the homepage and `examples/no-node.md`; it flags that exact times or guide-specific cutoffs are missing for other surfaces. It also clarifies that adjacent files and nested purchase READMEs do not inherit one another's reviews.
+- This is a navigation aid for future hunts, not a new Item 5 investigation or a claim that all listed surfaces were exhaustively reviewed.
