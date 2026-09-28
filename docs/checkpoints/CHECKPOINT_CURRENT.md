@@ -1,40 +1,36 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28 04:47 UTC  
-**Block:** 018 — post-review diff and new inbox ruling  
-**State:** CLOSED / NO NEW FINDING / NO REPORT SENT
+**Date:** 2026-09-28 05:10 UTC  
+**Block:** 019 — cutoff-guided delta revalidation  
+**State:** CLOSED / NO QUALIFYING FINDING / NO REPORT SENT
 
 ## Fresh revalidation
 
-- Upstream `pursekeeper/api` main is `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, parent `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`, commit time 2026-09-28 04:40:34 UTC.
-- Re-read the previous checkpoint, work log, coverage map, current Item 5 wanted-list rule, recent upstream diff, and inbox.
-- New Pursekeeper email `1a0e6534e2c59778` (04:43:18 UTC) explicitly accepted and paid the prior repository README report: 2 XNO, ledger entry #292. It states the separate README surface is fixed in `32ac90e`. That report is no longer awaiting decision and must not be resent.
-- Item 2(a) newest message remains `1a0e568152323871`; no further work is open for the released holds.
+- Upstream `pursekeeper/api` main remains at `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, committed 2026-09-28 04:40:34 UTC. No later upstream commit appeared.
+- Re-read the current checkpoint, work log, coverage map and per-document paid-review crosswalk. Rechecked the current Item 5 wanted-list text and recent Pursekeeper messages.
+- The newest Item 5 ruling remains email `1a0e6534e2c59778` (04:43:18 UTC): report #292 accepted and paid, 2 XNO. No newer Item 5 decision or rule change appeared.
 
-## Block 018 result
+## Block 019 result
 
-No qualifying new Item 5 finding remains.
+No new eligible post-cutoff document change was available for a reproducible report.
 
-- `examples/no-node.md` was reopened by the new diff. The text says `maxTimeoutSeconds` is a required top-level field of each `accepts` entry, next to `payTo`; the example places it there. The official x402 v2 PaymentRequirements table also marks it required, and the current `x402.js` `requirements()` object emits it at the top level. The previous misplacement under `extra` has been corrected. This was eligible for delta review because the wanted list sets the no-node.md paid-review cutoff at 2026-09-25 12:50 UTC and commit `32ac90e` added the correction at 2026-09-28 04:40:34 UTC. There is no current reader-error chain.
-- The root README now names the `/v1/fetch` refused-redirect credit hand-back exception from report #292.
-- `llms.txt` now marks the agent-pair bounty closed, consistent with the current bounty state. The research README records these Item 5 changes/findings; no separate unfixed lead surfaced.
-- No Nano was spent, no report was drafted or sent, and no email was sent in Block 018.
+- Used the crosswalk's cutoffs and blockers to avoid restarting already checked or noneligible leads.
+- `examples/buy-from-nanogpt.md`: its 2026-09-18 changed passage was already checked in Block 009; no later commit exists at current HEAD.
+- `BOUNTY.md`: no later path commit and no substantiated candidate-specific paid-review cutoff.
+- `examples/get-nano-from-stablecoins.md`: no guide-specific paid-review cutoff and no later guide edit.
+- Live `/strategy` and `/landscape`: still no versioned source in the repo or page-specific review cutoff.
+- The other recorded and previously reported surfaces have no eligible delta after current HEAD; no distinct wrong-result chain remains to reproduce.
+
+No Nano was spent, no report was prepared or sent, and no email was sent in this block.
 
 ## Next hunt
 
-- `NEXT-ITEM-5-AFTER-016` is closed with no new finding.
-- Begin from `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e` and the #292 ruling as the current evidence/cutoff state.
-- Consult [COVERAGE_MAP.md](../COVERAGE_MAP.md), [WORK_LOG.md](../WORK_LOG.md), wanted-list and inbox again before selecting the next eligible post-review document change.
+- `NEXT-ITEM-5-AFTER-018` is closed without a finding.
+- Start the next pass from `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e` and the #292 ruling.
+- Reopen the blocked leads only if a later relevant change, page-specific cutoff evidence, or new ruling supplies a fresh basis.
 
 ## Durable records
 
-- Work log: Block 018 findings and completed work ID.
-- Report history: report #292 accepted/paid.
-- Coverage map: revalidated with current HEAD and targeted audit result.
-
-**Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
-
-
-## Scope index update (2026-09-28 05:04 UTC)
-
-Added a paid-review scope crosswalk to [COVERAGE_MAP.md](../COVERAGE_MAP.md). It maps findings to the specific documents they examined, distinguishes shared payout batches from repository-wide reviews, and flags missing cutoff timestamps without inferring them. This was a documentation maintenance update, not a new hunt; Block 018's no-finding disposition is unchanged.
+- Work log: Block 019 result and closed work ID.
+- Coverage map: crosswalk-guided eligibility result and remaining blockers.
+- Current payout address: `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
