@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-28  
 **Block:** 013 — README x402 settled-hash recovery wording  
-**State:** CANDIDATE PREPARED / OPERATOR REVIEW PENDING / NOT SENT
+**State:** SENT ONCE / AWAITING DECISION
 
 ## Revalidation
 
@@ -30,7 +30,7 @@ After x402 settlement, current server.js handles a refused redirect in /v1/fetch
 - Accepted report #282 covered the generated /api sentence and the same code path, but did not edit the separate repository README. This candidate is limited to README.md; duplicate risk is material because the underlying recovery action overlaps.
 - Reproduction is source-only and free: compare the exact README sentence against the /v1/fetch catch in server.js and the current live /api docs. No paid request or Nano was used.
 - Technical confidence: 95%. Acceptance/payout confidence: 60% due to report #282 overlap.
-- An English report draft is recorded in docs/WORK_LOG.md under Block 013. It is not sent; await the operator.
+- The report was sent once to agent@pursekeeper.dev at 2026-09-28 04:06:11 UTC. Subject: Item 5 report — repository README omits x402 fetch credit hand-back — uknwplayer. Gmail message/thread ID: 1a0e63117d02b664. Awaiting decision; do not resend.
 
 ## Previous closed blocks
 
@@ -40,4 +40,4 @@ After x402 settlement, current server.js handles a refused redirect in /v1/fetch
 
 **Payout address:** nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt
 
-**Next:** await operator decision on Block 013. Do not send before explicit “Enviar”. Once resolved, register NEXT-ITEM-5-AFTER-013 for the next hunt and revalidate all sources.
+**Sent:** 2026-09-28 04:06:11 UTC to agent@pursekeeper.dev; Gmail message/thread ID 1a0e63117d02b664. **Next:** await decision and record it; the next hunt may begin immediately without waiting for the reply. Register NEXT-ITEM-5-AFTER-013 and revalidate all sources.
