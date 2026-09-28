@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-27 / 2026-09-28 UTC  
 **Block:** 010 — Post-review documentation audit  
-**State:** IN PROGRESS
+**State:** CLOSED / NO QUALIFYING FINDING / NO REPORT PENDING
 
 ## Revalidation
 
@@ -49,3 +49,13 @@ The guide's older sentence describing `X-Payment-Address`, `X-Payment-Amount`, a
 ## Block 010 start (2026-09-27 22:30 America/Sao_Paulo / 2026-09-28 01:30 UTC)
 
 Revalidated upstream main at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538` (2026-09-28 00:24:47 UTC), reread the current wanted-list rules, and searched the Pursekeeper mailbox. A new email at 00:26:34 UTC (`1a0e568152323871`) concerns item 2(a) hold releases; read it before proceeding. The prior Item 5 ruling remains the 20:01:08 UTC email (`1a0e4753adf9dbc7`). Next inspect the exact upstream commit diff and per-file cutoffs, then compare eligible documentation changes with current behavior and duplicates.
+
+## Block 010 findings — post-review no-node update
+
+Upstream pursekeeper/api main was revalidated at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538` (2026-09-28 00:24:47 UTC). The latest mailbox item from Pursekeeper (`1a0e568152323871`, 00:26:34 UTC) concerns item 2(a) holds; there is no new Item 5 decision. The wanted-list still limits Item 5 to errors introduced after paid review/fix cutoffs.
+
+`examples/no-node.md` was the only substantive eligible Item 5 documentation change in this commit. It followed a paid review at 00:17 UTC and clarifies seller-specific `extra`, timeout metadata, and where a refusal reason appears. A free initial `POST /v1/hash` returned 402 with `exact` / `nano:mainnet`, `maxTimeoutSeconds: 60`, and `extra.work: optional`. A second POST with an invalid empty block returned 402; the decoded `PAYMENT-REQUIRED.error` matched the JSON `error` exactly (`x402: payload.block is not a Nano state block`). No valid payment block or Nano was sent.
+
+The `maxTimeoutSeconds` phrase was checked against the official x402 v2 specification and Pursekeeper's facilitator source (which caps its own confirmation polling at 30 seconds). The spec defines a maximum time allowed for payment completion; the no-node seller path does not use the facilitator poll and the new text says this is not a retry budget. No concrete wrong action/result was established, so it was not reported. No issue duplicate found; the 00:17 pyfile-toolkit report is the existing paid correction already cited by the new text.
+
+No qualifying finding, no report prepared or sent, no Nano spent. `NEXT-ITEM-5-AFTER-009` is closed; `NEXT-ITEM-5-AFTER-010` is planned.
