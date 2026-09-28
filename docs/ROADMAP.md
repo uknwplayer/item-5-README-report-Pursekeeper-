@@ -17,7 +17,7 @@
 - [ ] Confirm the applicable paid-review cutoff per candidate document.
 - [ ] Check reports, issues, commits, and fixes for duplicates.
 
-**Current handoff as of Block 013:** upstream HEAD revalidated as `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`. A candidate remains pending operator review: repository `README.md` says a settled x402 block cannot be reused as `X-Nano-Payment` credit, while the later `96893d9` `/v1/fetch` hand-back restores the settled hash as credit after a refused redirect. Report #282 fixed the generated `/api` text, while the separate repository README remains stale. Candidate and duplicate risk are documented in the checkpoint and work log. Report sent once on 2026-09-28 04:06:11 UTC (Gmail message 1a0e63117d02b664); awaiting decision. The next hunt may begin immediately without waiting for the reply. Record the outcome and revalidate before Block 014.
+**Current handoff as of Block 014:** upstream HEAD revalidated at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`; no new eligible finding emerged from the remaining recent document changes. The homepage Round 2 date was excluded because its text predated the paid review cutoff; evidence is in the checkpoint and work log. Block 013's separate README candidate was sent once at 2026-09-28 04:06:11 UTC (Gmail message `1a0e63117d02b664`) and awaits decision. Close `NEXT-ITEM-5-AFTER-013` with no new finding; register `NEXT-ITEM-5-AFTER-014` as planned. A new hunt may proceed without waiting for the email reply, with fresh revalidation.
 
 ## Phase 2 — Candidate investigation
 
