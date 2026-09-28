@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 018, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-28, against Block 021, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -51,9 +51,9 @@ These are candidates for **cutoff discovery first**, not automatic report target
 
 | Surface | Next useful step |
 |---|---|
-| `BOUNTY.md` | Block 016 checked its path history: the latest listed change is `0b5151bc` on 2026-09-10 06:22:54 UTC; no newer change was found at current HEAD. No candidate-specific paid-review cutoff was established in the log. Revisit only if a later relevant change appears or a cutoff is substantiated. |
-| `examples/get-nano-from-stablecoins.md` | Added by `eed1502` on 2026-09-25 21:16:27 UTC; no later edit appears in its path history at HEAD. The guide was read for provenance/scope, but no guide-specific paid review was found in the register/index. Its cutoff is unresolved, so no behavioral candidate was tested or qualified in Block 016. Reopen when its cutoff or a relevant post-cutoff change is established. |
-| Individual `examples/purchases/*/README.md` files | Check each file's own cutoff and changed passages. The parent purchases README's paid review does not automatically cover these separate documents. |
+| `BOUNTY.md` | Blocks 016 and 021 checked the full path history and current text: latest change `0b5151bc57dfa206ada869f188f426772fcae287` (2026-09-10 06:22:54 UTC); current text says closed. Block 021 found no newer diff, no candidate-specific paid-review cutoff, and no issue/mail lead. Ineligible; reopen only if a later relevant change appears or a cutoff is substantiated. |
+| `examples/get-nano-from-stablecoins.md` | Blocks 016 and 021 read it for provenance/scope. Only path commit is `eed150241560c496ad7b0bd9329d7c5d751bcb05` (2026-09-25 21:16:27 UTC); no later edit, guide-specific paid review, matching inbox mail, or issue found. Its cutoff remains unresolved, so no behavioral candidate was tested or qualified. Reopen when a guide-specific cutoff/ruling or a relevant later change is established. |
+| Individual `examples/purchases/*/README.md` files | Block 021 read the APFS Probe, NanoBazaar, Subnano, and Vend READMEs and checked each path history: each is an operational receipt/evidence log with only its initial publication, no later instruction-changing diff, and no individual paid-review cutoff. Out of Item 5 scope by default; parent purchases README's paid review does not cover these separate files. Reconsider only if later text turns one into service instructions and its own cutoff is established. |
 | Purchase evidence JSON/TXT and scripts | Do not treat raw evidence as Item 5 instructions by default. Inspect only if a document points readers to it as an operational step or later text turns it into guidance. |
 | Individual `examples/research/*.md` reports and research evidence folders | These are generally Item 2(a) research/evidence, not Item 5 service docs. Do not bulk-audit as Item 5. Reclassify a specific file only if it contains reader-facing service instructions and has an eligible post-review change. |
 | Other public site pages/routes | Block 017 inspected live `/strategy` and `/landscape` in addition to `/`, `/api`, and `/bounty`. `site.js` reads STRATEGY.md/LANDSCAPE.md from external GAMBIT_WORKSPACE; those files are not tracked in the current GitHub tree, so no versioned content diff or paid-review cutoff was established. `/strategy` line “get XNO from USDC in one call” was compared with its linked guide's POST + deposit + polling flow, but the guide explains those steps and no clear wrong-result chain was established. `/landscape` metadata says last changed 00:28 UTC while its latest dated entry says 00:30 UTC; no practical reader consequence. Keep both as targeted live-only checks, not eligible findings, until cutoff/provenance and an actionable consequence are established. |
@@ -114,3 +114,12 @@ For each, require the chain **document says X → current code/live state does Y
 - Revalidated the current main branch, wanted-list rule and Pursekeeper inbox. HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`; no new Item 5 ruling or eligible post-cutoff diff has appeared.
 - The latest documentation diff was already checked in Block 018. The existing cutoff and provenance blockers in the map remain unchanged; no additional candidate was established.
 - This was a delta revalidation using the paid-review crosswalk, not a full reread of every document. No report sent and no Nano spent.
+
+
+## Block 021 reconciliation (2026-09-28 05:31 UTC)
+
+- Revalidated upstream main, wanted-list wording and Pursekeeper inbox; HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, latest Item 5 ruling remains #292 paid at 04:43:18 UTC.
+- Searched previously untouched areas. `BOUNTY.md` has no later path change or candidate-specific cutoff. The stablecoin guide has only its creation commit and no guide-specific review evidence; cutoff unresolved. GitHub issue search for the guide returned zero; inbox searches found no guide-related review mail.
+- Checked parent purchase README duplication: its current text includes the seller-`/v1/work` correction associated with the prior report. The individual APFS Probe, NanoBazaar, Subnano and Vend READMEs are purchase receipts, not general service instructions; their per-path history contains only initial publication.
+- No new candidate met the chain of a named document's paid-review/fix cutoff, a later relevant diff, contradicted current behavior, and reproducible wrong reader result. No report or Nano spend. Coverage stays targeted; no whole-file certification is claimed.
+- Next: monitor for document-specific paid-review evidence or a new relevant text/code change; then open only that document's delta and verify consequences before drafting.
