@@ -17,9 +17,21 @@ Do not broaden an Item 5 investigation into general security testing, feature re
 
 ### 1. Register and resume work
 
-Every planned future task, active investigation, report draft, and follow-up must have a row in [WORK_LOG.md](WORK_LOG.md) before work begins. At resume, check the current checkpoint and work log first. Continue an existing work ID when possible.
+Every planned future task, active investigation, report draft, and follow-up must have a row in [WORK_LOG.md](WORK_LOG.md) before work begins. At resume, check the current checkpoint and work log first, then read [COVERAGE_MAP.md](COVERAGE_MAP.md) before choosing the target. Continue an existing work ID when possible.
 
 Keep each work item in the register through its entire lifecycle: planned, in progress, candidate rejected, report awaiting decision, accepted/paid, credited, not reproduced, declined, withdrawn, or closed with no finding. Record the next action.
+
+
+### 1a. Use the accumulated coverage record
+
+The coverage map is a required input to every hunt, not an optional summary.
+
+- Consult its audited, previously reported/fixed, and open entries before selecting a document. Cross-check them against the current work log, wanted list, inbox, and upstream history; the map can be stale.
+- Prefer an eligible post-review documentation diff or a document reopened by a later fix. A surface marked open is only a lead: first prove its applicable paid-review/fix cutoff and a relevant later change. Never bypass Item 5's cutoff rule to fill a coverage gap.
+- Check prior rejected/inconclusive leads before testing so the same unsupported theory is not rediscovered.
+- At the end of every block, record the exact surface and scope examined, cutoff/commit, evidence and reproduction, disposition, and remaining open areas in both the work log/checkpoint and the coverage map.
+- Use precise status language: “targeted audit” means only the recorded passage/diff/behavior was checked; do not claim a whole document or endpoint was fully audited unless the work log shows that complete scope.
+- Preserve the strongest proven search pattern as first priority: **post-review commit → stale or contradictory reader-facing instructions → current code/live behavior → reproducible wrong result**.
 
 ### 2. Revalidate current state
 
