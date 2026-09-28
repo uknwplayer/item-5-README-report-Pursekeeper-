@@ -1,40 +1,43 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
 **Date:** 2026-09-28  
-**Block:** 012 — Reopened /api hand-back documentation audit  
-**State:** CLOSED / NO QUALIFYING FINDING / NO REPORT PENDING
+**Block:** 013 — README x402 settled-hash recovery wording  
+**State:** CANDIDATE PREPARED / OPERATOR REVIEW PENDING / NOT SENT
 
 ## Revalidation
 
-- Upstream pursekeeper/api main HEAD remains 8bf1f3c6e02e87a123d74dba4dad1c1efe113538 (2026-09-28 00:24:47 UTC), parent dd419256bd5a741887d680fa801bdcf9b5035a93.
-- The wanted-list rule remains: Item 5 is closed for a document except errors introduced by a later fix or text added after its paid review.
-- The newest Pursekeeper email remains 1a0e568152323871 at 00:26:34 UTC. Read in full, it concerns three released Item 2(a) holds and says nothing else is outstanding. The last Item 5 ruling remains 1a0e4753adf9dbc7, ledger #285 / decision #463.
-- Targeted issue searches found no malformed-redirect report; the closest prior Item 5 finding is paid report #284 on the same /api hand-back sentence.
+- Upstream main HEAD: 8bf1f3c6e02e87a123d74dba4dad1c1efe113538 (2026-09-28 00:24:47 UTC), parent dd419256bd5a741887d680fa801bdcf9b5035a93.
+- Wanted-list policy still closes each document except for errors introduced by later fixes or text added after its paid review.
+- Newest Pursekeeper email: 1a0e568152323871 at 00:26:34 UTC, about Item 2(a) hold releases. Last Item 5 ruling: 1a0e4753adf9dbc7, ledger #285 / decision #463.
 
-## Block 012 — /api diff after paid review #284
+## Block 013 — candidate in repository README.md
 
-The current live /api documentation includes this post-review passage:
+Exact README text:
 
-> “the one exception is /v1/fetch handing a call back because a redirect could not be followed (the next target failed the same address check as the first URL, the redirect had no Location header, or there were more than five hops), when the price goes on the block's hash as X-Nano-Payment credit and the 400 reply names that hash to retry with.”
+> “A settled block is recorded with zero credit so it cannot be presented again through X-Nano-Payment.”
 
-This passage was expanded by commit dd419256bd5a741887d680fa801bdcf9b5035a93 at 2026-09-27 20:00:11 UTC, after Ops Control HQ's paid #284 report (18:35–19:43 UTC; fix live 19:58:56 UTC). The latest HEAD retains it, and an unpaid GET of https://pursekeeper.dev/api confirmed the same current text.
+After x402 settlement, current server.js handles a refused redirect in /v1/fetch by selecting the just-settled hash from x-nano-payment-hash, restoring PRICE_RAW to that hash in credits, and returning a 400 note that says to retry with X-Nano-Payment: <hash>. Thus the hash is reusable as credit in this exception, despite the README absolute wording.
 
-### Potential omission checked
+### Provenance and cutoff
 
-The parenthetical does not name a malformed redirect Location. At source, however, fetchText() evaluates new URL(loc, u) inside a catch that sets e.unpaid = true; for example, Node reports TypeError: Invalid URL for new URL('http://[', 'https://example.com/'). The /v1/fetch handler returns credit for every e.unpaid case when the payment hash exists; chargeX402() records that hash and exposes it on the response. Thus malformed Location takes the credit-return branch by source inspection.
+- Root README was part of the four-report README/API-doc review set on the 2026-09-27 12:25 UTC commit 02f7b614ce07c39649885c0d29a7d30368a092fc; the bounty-paragraph finding was in the 12:27–13:12 UTC reports, ledger #276.
+- Commit 96893d9342c22bdb5a701e9ee1830a488b313edf at 16:41:21 UTC changed server.js to restore the settled x402 hash on a refused /v1/fetch redirect. The README hunk in that commit changes only the bounty close time and leaves its x402 paragraph untouched.
+- Commit 97cbf380b10ff344281a1baadaa5406f77f49942 at 17:39:27 UTC corrected the generated /api text for the exception. Repository README.md remains unchanged at current HEAD.
 
-No paid /v1/fetch call was made. The lead was rejected as a report: the text's broad wording covers a redirect that cannot be followed, and the 400 response note identifies the hash to retry with. I could not establish that a reader following the current text would get a wrong result. The possibility is adjacent to paid report #284's correction of the same instruction and required a distinct wrong-result chain before reporting.
+### Duplicate check, reproduction, and disposition
 
-## Outcome and next
+- Issue search for repo:pursekeeper/api x402 redirect credit README found no matching README issue.
+- Accepted report #282 covered the generated /api sentence and the same code path, but did not edit the separate repository README. This candidate is limited to README.md; duplicate risk is material because the underlying recovery action overlaps.
+- Reproduction is source-only and free: compare the exact README sentence against the /v1/fetch catch in server.js and the current live /api docs. No paid request or Nano was used.
+- Technical confidence: 95%. Acceptance/payout confidence: 60% due to report #282 overlap.
+- An English report draft is recorded in docs/WORK_LOG.md under Block 013. It is not sent; await the operator.
 
-No report candidate was prepared or sent. No Nano was spent. Confidence in the no-finding conclusion for this diff: high. Closed NEXT-ITEM-5-AFTER-011; NEXT-ITEM-5-AFTER-012 is planned. Revalidate all state at the next hunt.
+## Previous closed blocks
+
+- Block 012: /api redirect hand-back wording after paid #284; malformed Location case traced through source but no wrong-result chain was established. No report sent.
+- Block 011: no-node.md post-review text after pyfile-toolkit review #289 matched source and unpaid response behavior. No report sent.
+- Block 009: NanoGPT quote instructions matched two unpaid live quotes; older header mismatch predated cutoff. No report sent.
 
 **Payout address:** nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt
 
-## Previous block 011
-
-The new no-node.md text after its 00:17 UTC review matched source and an unpaid live 402/retry. Timeout wording did not create an actionable wrong-result chain. No report or Nano spend.
-
-## Previous block 009
-
-The paid-reviewed NanoGPT guide was reopened by its 2026-09-18 same-quote warning. Two unpaid live quotes rotated payTo, paymentId, and completeUrl, supporting the new instruction to complete the original quote. Older header wording that differed from current live output predated the paid review and was excluded. No candidate was prepared or sent.
+**Next:** await operator decision on Block 013. Do not send before explicit “Enviar”. Once resolved, register NEXT-ITEM-5-AFTER-013 for the next hunt and revalidate all sources.
