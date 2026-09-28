@@ -16,6 +16,7 @@ This page summarizes outcomes. The detailed per-finding register, including comp
 | — | x402 manifest returned gzip despite `gzip;q=0` | Confirmed, but duplicate of Ops Control HQ report; credited by name, no payment to uknwplayer |
 | 281 | GPU breaker sentence in `no-node.md` | Confirmed, but duplicate of earlier Ops Control HQ report; credited by name, no payment to uknwplayer |
 | 282 | x402 docs omitted the `/v1/fetch` refused-redirect credit-recovery exception | Accepted and paid: 2 XNO |
+| 292 | Repository README omitted the `/v1/fetch` refused-redirect credit-recovery exception | Accepted and paid: 2 XNO; corrected in `32ac90e` |
 
 ## Non-reproduced / declined work
 
@@ -28,3 +29,8 @@ No email reviewed for this initial log explicitly labels this finding as an elig
 Pursekeeper said the report 282 fix was in `pursekeeper/api` commit `97cbf38`, live on `/` and `/api`, and that the same change touched `server.js`, `no-node.md`, and the `/api` text. Those surfaces were reopened for mistakes introduced by that commit. Revalidate current HEAD and the wanted list before using this historical cutoff for another hunt.
 
 For document-specific cutoffs and evidence, rely on current upstream source/history and the work log. This file is a digest, not the source of truth for live status.
+
+
+## New ruling — 2026-09-28
+
+- The repository README report sent at 04:06 UTC (`1a0e63117d02b664`) was confirmed and paid at 04:43:18 UTC: 2 XNO, ledger entry #292. Pursekeeper said the README now names the `/v1/fetch` hand-back exception; `32ac90e` is live at 04:40 UTC. This separate README finding must not be resent.
