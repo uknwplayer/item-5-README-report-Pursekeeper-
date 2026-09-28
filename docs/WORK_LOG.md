@@ -191,9 +191,9 @@ Do not delete closed rows. Correct mistakes with a dated note so the history rem
 - **Source-to-result chain:** after x402 settlement, the /v1/fetch catch selects res.getHeader("x-nano-payment-hash") when no X-Nano-Payment header was supplied, increments credits[h] by PRICE_RAW, sets the remaining-credit header, and returns a 400 note explicitly instructing retry with X-Nano-Payment: <hash>. Therefore the exact settled x402 hash can be reused for this one documented refund path; the README unqualified statement is false for that path.
 - **Cheap reproduction:** compare the README phrase with the current server.js lines in the /v1/fetch catch and the live /api documentation. This requires only public source/docs. No paid request or Nano was used.
 - **Duplicate check and risk:** issue search for repo:pursekeeper/api x402 redirect credit README returned no matching README issue. Report #282 (accepted, 2 XNO) covered the generated /api sentence and the same code path; it did not edit README.md. This is a distinct document/surface, but there is a material duplicate-risk because the reader action and underlying code exception overlap. Do not send without operator review.
-- **Disposition:** candidate prepared for operator review; not sent. Technical confidence that the README statement is wrong: **95%**. Acceptance/payout confidence: **60%** because of overlap with paid #282. No Nano spent. Close NEXT-ITEM-5-AFTER-012 as candidate pending operator decision; register NEXT-ITEM-5-AFTER-013 as the next hunt after this candidate is resolved.
+- **Disposition:** report sent once; awaiting decision. Technical confidence that the README statement is wrong: **95%**. Acceptance/payout confidence: **60%** because of overlap with paid #282. No Nano spent. Close NEXT-ITEM-5-AFTER-012 as candidate pending operator decision; register NEXT-ITEM-5-AFTER-013 as the next hunt; the hunt may begin without waiting for the email reply.
 
-**Prepared report (English):**
+**Sent report (English; exact body emailed):**
 
 Subject: Item 5 report — README x402 section omits fetch credit hand-back — uknwplayer
 
