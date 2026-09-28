@@ -17,7 +17,7 @@
 - [ ] Confirm the applicable paid-review cutoff per candidate document.
 - [ ] Check reports, issues, commits, and fixes for duplicates.
 
-**Current handoff as of Block 011 (not proof for the next hunt):** upstream HEAD was `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`; `no-node.md` was reviewed through its 00:17 UTC paid review, and the 00:24:47 UTC follow-up text was checked against source and live responses with no qualifying finding. Revalidate HEAD and all cutoffs again before Block 012.
+**Current handoff as of Block 012 (not proof for the next hunt):** upstream HEAD was `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`. The `/api` hand-back documentation changed after paid review #284 in `dd419256`; its expanded text was compared with the current source and live page. A malformed-Location credit return was traced but did not produce a clear reader-wrong-result chain. Revalidate HEAD and all cutoffs again before Block 013.
 
 ## Phase 2 — Candidate investigation
 
