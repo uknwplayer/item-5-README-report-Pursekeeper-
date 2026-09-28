@@ -17,8 +17,9 @@ English is the official language for repository files and reports. Conversation 
 1. Read [the current checkpoint](docs/checkpoints/CHECKPOINT_CURRENT.md).
 2. Read [the work log](docs/WORK_LOG.md); continue an existing work ID where possible.
 3. Read [the operating protocol](docs/OPERATING_PROTOCOL.md).
-4. Use the [report template](docs/REPORT_TEMPLATE.md).
-5. Revalidate current upstream state, wanted list, relevant cutoff, recent fixes, and prior reports before investigating.
+4. Read the [living coverage map](docs/COVERAGE_MAP.md) to see audited, partially checked, reported/fixed, and open surfaces.
+5. Use the [report template](docs/REPORT_TEMPLATE.md).
+6. Revalidate current upstream state, wanted list, relevant cutoff, recent fixes, and prior reports before investigating.
 
 ## Evidence standard
 
