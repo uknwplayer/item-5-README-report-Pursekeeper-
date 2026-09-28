@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 023, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-28, against Block 024, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.nst Block 023, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -141,3 +141,13 @@ For each, require the chain **document says X → current code/live state does Y
 - Current read-only checks after `32ac90e`: gzip HEADs for `/sellers.json` and `/log.json` returned true compressed lengths (20,722 and 316,992); identity GETs for `/log.json` and `/landscape` completed at their declared byte lengths; gzip GET `/log.json` completed; a 6,000-byte range returned 206 with a matching Content-Range and Content-Length. This environment did not reproduce issue #68's former truncation.
 - No separate reader-facing wrong-result chain was found in this delta. Targeted check only; no candidate drafted/sent and no Nano spent.
 - Next: select a distinct post-review/reopened document and issue only after another fresh state check; exclude #68's document sentence and consequence.
+
+
+## Block 024 reconciliation (2026-09-28 06:14 UTC)
+
+- Revalidated upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted-list rule, latest inbox ruling (#292, accepted/paid at 04:43:18 UTC), open Item 5 issues, and the existing coverage map/work log. No newer upstream commit, Item 5 rule change, or email ruling appeared.
+- Audited the public GitHub tree recursively against the coverage map. No omitted first-party service-instruction Markdown was found. Remaining Markdown/TXT under `examples/research` and `examples/purchases` are research, receipts, or evidence artifacts, not Item 5 service instructions by default.
+- Issue #68 remains a duplicate of the already emailed Content-Length/truncation report in `examples/research/README.md`; `32ac90e` includes the range fix, and current live behavior was already tested in Block 023. Other open issues concern different bounty items or seller onboarding.
+- Rechecked remaining cutoff blockers: `BOUNTY.md` has no later diff or candidate-specific paid-review cutoff; the stablecoin guide has no later edit or its own paid-review cutoff; strategy/landscape content remains external/unversioned. The mapped post-review changes and fixes have already been screened.
+- No distinct document/error chain meets the Item 5 rule. No report sent and no Nano spent. This was a tree/inventory and delta screen, not a line-by-line audit of every historical file.
+- Next useful step: start Block 025 from fresh state after a new main-branch commit or a ruling establishing a document-specific cutoff/reopening. Exclude prior reported/fixed claims.
