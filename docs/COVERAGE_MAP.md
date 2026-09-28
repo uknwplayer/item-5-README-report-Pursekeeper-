@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 025, upstream HEAD `31da3096db8d5f93c6354a870f95546f1973ecb5`, the current wanted list, and Pursekeeper inbox.nst Block 023, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-28, against Block 025, upstream HEAD `31da3096db8d5f93c6354a870f95546f1973ecb5`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
