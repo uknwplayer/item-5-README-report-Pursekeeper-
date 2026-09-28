@@ -25,6 +25,26 @@
 | Endpoint/docs behavior: `/v1/requests`, `/v1/process`, `/v1/fetch`, `/v1/hash`, `/v1/credit`, `/.well-known/x402` | Covered in specific historical reports/probes, including paid reports #266/#275/#276/#282 and current no-node/API checks. | Coverage is finding-specific, not an exhaustive endpoint audit. Revalidate source and current public behavior. |
 | Homepage campaign date and paid-work GPU wording | Block 014 checked provenance/cutoff; campaign text predated its paid-review cutoff, GPU wording also predates review. | Excluded for timing. Do not re-open without a later relevant text/code change. |
 
+## Paid-review scope crosswalk
+
+Use this as a document-by-document index, not as proof that a whole page or file was audited. A payment batch may contain several findings; it does not merge the documents' cutoffs. Fixes reopen only the affected document for a distinct error introduced by that fix. “Cutoff not recorded” means do not invent one; inspect the source history and wanted-list record before claiming eligibility.
+
+| Document / surface | Paid review or finding recorded | Cutoff and scope note |
+|---|---|---|
+| Pursekeeper homepage `/` | #217, #219 and #282 | Wanted list records the homepage review date as 2026-09-25 05:00 UTC. Report #282 later paid for the x402 hand-back wording and its fix in `97cbf38` reopened that changed prose for new errors. |
+| Live `/api` documentation | #266 and #282; Ops Control HQ #284 review | #266 covered the wrapped `/v1/requests` line; #282 covered x402 hand-back prose. After #284, `dd419256` changed the redirect explanation (2026-09-27 20:00:11 UTC); only that post-review change was examined in Blocks 011–012. |
+| `examples/no-node.md` | #228, #279, Ops Control HQ #284; #281 was credited to uknwplayer as a duplicate | The explicit cutoff in the wanted list is 2026-09-25 12:50 UTC. Later accepted/credited fixes touched this file. Latest targeted delta: `32ac90e` (2026-09-28 04:40:34 UTC) corrected the `maxTimeoutSeconds` placement; see Block 018. |
+| `examples/buy-from-nanogpt.md` | Paid review recorded as 2026-09-10 | Block 009 checked a 2026-09-18 post-review edit. The exact cutoff time is not captured here; older header differences were excluded because they predate that review. |
+| `examples/purchases/README.md` | #266 | The paid finding covered the seller-first `/v1/work` instructions. It does not cover individual READMEs in `examples/purchases/*/`. |
+| `examples/research/README.md` | #266 and #285 | Separate findings were paid in each review. Check the latest changed rows and ruling before reusing either cutoff; this index does not claim every linked research file was reviewed. |
+| `/facilitator` | #269 | The paid finding concerned stale seller labels; fix `ab1799a` derived labels from verified listings. |
+| `/sellers` and `/.well-known/x402` manifest | #266 | Separate findings in the same 10-XNO transfer: invoice-flow wording and the required `url` parameter/pre-charge behavior, respectively. |
+| `/offers` and fetch/credit behavior | #275; #282 and #284 also touched fetch-related docs/code | #275 paid for the offer-trigger claim and fetch redirect behavior. Check whether a later commit changed the particular prose before treating it as a fresh document finding. Code-only findings in the same batch do not reset unrelated document cutoffs. |
+| Repository `README.md` | #275 and #292 | #275 paid for the closed-bounty claim; #292 paid for the distinct x402 hand-back omission and fixed it in `32ac90e` (04:40:34 UTC). |
+| `llms.txt` | New post-review bounty-status row recorded in upstream research README at `32ac90e` | It now says the agent-pair bounty is closed. No paid-review cutoff/ruling for this separate file is recorded here; current wording is accurate. |
+
+**Known cutoff gaps:** `examples/get-nano-from-stablecoins.md` has no guide-specific paid review in the register; `BOUNTY.md` has no substantiated candidate-specific cutoff; the homepage/strategy/landscape live-only files have no versioned content history in this repo. Do not borrow a neighboring document's review date.
+
 ## Open areas — no dedicated Item 5 audit recorded
 
 These are candidates for **cutoff discovery first**, not automatic report targets. Item 5 eligibility still requires a substantiated paid-review/fix cutoff and a later relevant diff.
