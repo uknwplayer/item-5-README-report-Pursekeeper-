@@ -12,12 +12,13 @@
 ## Phase 1 — Revalidate the next hunt
 
 - [ ] Read the current checkpoint and work log; resume the next registered work ID.
+- [ ] Read `docs/COVERAGE_MAP.md`; reconcile it with current upstream history and use open areas to prioritize eligible targets.
 - [ ] Revalidate current `pursekeeper/api` HEAD.
 - [ ] Refresh the wanted list and recent commit history.
 - [ ] Confirm the applicable paid-review cutoff per candidate document.
 - [ ] Check reports, issues, commits, and fixes for duplicates.
 
-**Current handoff as of Block 014:** upstream HEAD revalidated at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`; no new eligible finding emerged from the remaining recent document changes. The homepage Round 2 date was excluded because its text predated the paid review cutoff; evidence is in the checkpoint and work log. Block 013's separate README candidate was sent once at 2026-09-28 04:06:11 UTC (Gmail message `1a0e63117d02b664`) and awaits decision. Close `NEXT-ITEM-5-AFTER-013` with no new finding; register `NEXT-ITEM-5-AFTER-014` as planned. A new hunt may proceed without waiting for the email reply, with fresh revalidation.
+**Current handoff after Block 014:** upstream HEAD last revalidated at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`; no new eligible finding emerged from the remaining recent document changes. The homepage Round 2 date was excluded because its text predated the paid-review cutoff. Block 013's separate README candidate was sent once at 2026-09-28 04:06:11 UTC (Gmail message `1a0e63117d02b664`) and awaits decision. A living coverage map was added in `docs/COVERAGE_MAP.md`; consult and reconcile it at the start and end of every hunt. `NEXT-ITEM-5-AFTER-014` is the next planned hunt and must begin with fresh revalidation and cutoff discovery for open surfaces. It may proceed without waiting for the Block 013 email reply.
 
 ## Phase 2 — Candidate investigation
 
@@ -25,7 +26,7 @@
 - [ ] Compare the exact documentation claim with source/live behavior.
 - [ ] Reproduce the consequence using a cheap, non-destructive method.
 - [ ] Record provenance, timing, duplicate search, and confidence.
-- [ ] Update the registered work item and checkpoint, including rejected candidates.
+- [ ] Update the registered work item, checkpoint, and coverage map, including rejected candidates.
 - [ ] Discard candidates without a complete actionable evidence chain.
 
 ## Phase 3 — Operator review and submission
