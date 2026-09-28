@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 021, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-28, against Block 022, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -116,10 +116,19 @@ For each, require the chain **document says X → current code/live state does Y
 - This was a delta revalidation using the paid-review crosswalk, not a full reread of every document. No report sent and no Nano spent.
 
 
-## Block 021 reconciliation (2026-09-28 05:31 UTC)
+## Block 021 reconciliation (2026-09-28 05:25 UTC)
 
 - Revalidated upstream main, wanted-list wording and Pursekeeper inbox; HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, latest Item 5 ruling remains #292 paid at 04:43:18 UTC.
 - Searched previously untouched areas. `BOUNTY.md` has no later path change or candidate-specific cutoff. The stablecoin guide has only its creation commit and no guide-specific review evidence; cutoff unresolved. GitHub issue search for the guide returned zero; inbox searches found no guide-related review mail.
 - Checked parent purchase README duplication: its current text includes the seller-`/v1/work` correction associated with the prior report. The individual APFS Probe, NanoBazaar, Subnano and Vend READMEs are purchase receipts, not general service instructions; their per-path history contains only initial publication.
 - No new candidate met the chain of a named document's paid-review/fix cutoff, a later relevant diff, contradicted current behavior, and reproducible wrong reader result. No report or Nano spend. Coverage stays targeted; no whole-file certification is claimed.
 - Next: monitor for document-specific paid-review evidence or a new relevant text/code change; then open only that document's delta and verify consequences before drafting.
+
+
+## Block 022 reconciliation (2026-09-28 05:30 UTC)
+
+- Revalidated HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, wanted-list scope, and latest inbox ruling #292 (04:43:18 UTC).
+- Audited the precise post-review diff in `examples/buy-from-nanogpt.md`: `432f34f` (2026-09-18 12:06:03 UTC) added the single-use quote warning; `ca19562` (2026-09-18 16:20:21 UTC) added its evidence link. Current official NanoGPT docs and linked firsthand evidence support the changed warning.
+- Two unpaid, unauthenticated quote requests were made to the old documented path and current official path. Both returned HTTP 402 with payment options; no Nano payment was sent. The endpoint path difference did not produce a wrong result.
+- This is a targeted delta/behavior check, not a full audit of the guide. No distinct actionable error or report candidate; no report sent and no Nano spent.
+- Next: only reopen on a new relevant diff or newly substantiated per-document cutoff.
