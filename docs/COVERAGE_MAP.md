@@ -107,3 +107,10 @@ For each, require the chain **document says X → current code/live state does Y
 - Revalidated the coverage crosswalk against upstream main and the latest Pursekeeper inbox. Upstream remains at `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`; no later commit, Item 5 rule update, or email ruling appeared.
 - No changed eligible diff remains since Block 018. The previously open leads retain their recorded blockers: the NanoGPT guide's last changed passage was already audited; `BOUNTY.md` has no newer file commit or candidate-specific paid-review cutoff; the stablecoin guide has no guide-specific cutoff or later edit; strategy/landscape content has no versioned source or page-specific cutoff.
 - This was a delta revalidation using the existing map, not a claim that every document was reread. No candidate report and no Nano spend. Keep these blockers recorded; reopen only with new provenance/diff evidence.
+
+
+## Block 020 reconciliation (2026-09-28 05:14 UTC)
+
+- Revalidated the current main branch, wanted-list rule and Pursekeeper inbox. HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`; no new Item 5 ruling or eligible post-cutoff diff has appeared.
+- The latest documentation diff was already checked in Block 018. The existing cutoff and provenance blockers in the map remain unchanged; no additional candidate was established.
+- This was a delta revalidation using the paid-review crosswalk, not a full reread of every document. No report sent and no Nano spent.
