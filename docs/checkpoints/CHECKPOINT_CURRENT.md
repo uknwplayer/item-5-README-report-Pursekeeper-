@@ -1,34 +1,33 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28 05:31 UTC  
-**Block:** 021 — untouched-surface and per-document cutoff hunt  
+**Date:** 2026-09-28 05:30 UTC  
+**Block:** 022 — post-review NanoGPT guide delta recheck  
 **State:** CLOSED / NO QUALIFYING FINDING / NO REPORT SENT
 
 ## Fresh revalidation
 
 - Upstream `pursekeeper/api` main remains at `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, committed 2026-09-28 04:40:34 UTC.
-- Rechecked the Item 5 wanted-list text, current work log/coverage map, relevant GitHub path histories, issue search and Pursekeeper inbox.
-- The latest Item 5 ruling remains email #292: confirmed and paid at 04:43:18 UTC. No newer Item 5 ruling, cutoff, or reply appeared.
+- Re-read the wanted-list rule and current work log/coverage crosswalk. The per-document cutoff rule is unchanged.
+- Latest Pursekeeper Item 5 inbox ruling remains report #292, confirmed and paid at 04:43:18 UTC. No later Item 5 ruling appeared.
 
-## Block 021 result
+## Block 022 result
 
-No new candidate met the Item 5 document-specific cutoff and post-cutoff-change rule.
+No new report candidate met the post-review/reopen rule.
 
-- `BOUNTY.md`: latest path change `0b5151bc57dfa206ada869f188f426772fcae287` at 2026-09-10 06:22:54 UTC; no later change. Current text says the bounty is closed. No candidate-specific paid-review cutoff was established.
-- `examples/get-nano-from-stablecoins.md`: opened and read. Its only path commit is creation `eed150241560c496ad7b0bd9329d7c5d751bcb05` at 2026-09-25 21:16:27 UTC. No later edit, matching inbox review, or GitHub issue was found; its own paid-review cutoff remains unresolved. No behavior finding was tested or claimed.
-- Parent `examples/purchases/README.md`: the current text includes the seller-`/v1/work` step from the prior paid report; this is already corrected work and not a new candidate.
-- Individual APFS Probe, NanoBazaar, Subnano, and Vend purchase READMEs are dated receipts/evidence, not general Pursekeeper service instructions. Each checked path has only its initial publication and no individual review cutoff or later instruction-changing diff.
-- GitHub issue searches found no stablecoin-guide issue or duplicate lead.
+- Rechecked the post-review changes to `examples/buy-from-nanogpt.md`: `432f34fab3588c7e2da330b327638da77133f538` (2026-09-18 12:06:03 UTC) added the single-use quote/paymentId/completeUrl warning; `ca195622fe2be75adfce3039198b45b8e06d7b1f` (2026-09-18 16:20:21 UTC) added its evidence link.
+- Current official NanoGPT documentation and the linked firsthand report support the warning. They describe quote-bound payTo/completeUrl behavior and the need to finish using the same quote.
+- Two unpaid unauthenticated quote requests were made: old documented route `/api/x402/v1/chat/completions` with `x-x402: nano`, and current official route `/api/v1/chat/completions` with `x-x402: true`. Both returned HTTP 402 with payment options. No payment was sent and no Nano was spent.
+- No distinct reader-facing wrong-result chain was established. The route difference did not cause the guide's documented request to fail.
 
-This was a targeted inspection of open areas, not a full audit of every line or live integration. No report drafted or sent and no Nano spent.
+This was a targeted delta/behavior check, not a full audit of the guide. No report drafted or sent.
 
 ## Next hunt
 
-Start from `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e` and the latest #292 ruling. Reopen an open surface when a document-specific paid-review/cutoff record or a new relevant text/code change appears; inspect that document's delta and prove a reader-facing wrong result before preparing a report.
+Work ID `NEXT-ITEM-5-AFTER-022` is planned. Start Block 023 with fresh HEAD, wanted-list, inbox and coverage-map checks. Select a target only if its document-specific paid-review cutoff and relevant later change are established.
 
 ## Durable records
 
-- Work log: `NEXT-ITEM-5-AFTER-020` closed with Block 021 scope, result, and next action.
-- Coverage map: Block 021 findings and exclusions added; untouched areas remain classified by cutoff and audience.
+- Work log: `NEXT-ITEM-5-AFTER-021` closed; `NEXT-ITEM-5-AFTER-022` planned.
+- Coverage map: Block 022 records the diff, live quote tests and disposition.
 
 **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
