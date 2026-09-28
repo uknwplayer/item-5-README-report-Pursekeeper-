@@ -33,3 +33,8 @@ No qualifying new Item 5 finding remains.
 - Coverage map: revalidated with current HEAD and targeted audit result.
 
 **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
+
+
+## Scope index update (2026-09-28 05:04 UTC)
+
+Added a paid-review scope crosswalk to [COVERAGE_MAP.md](../COVERAGE_MAP.md). It maps findings to the specific documents they examined, distinguishes shared payout batches from repository-wide reviews, and flags missing cutoff timestamps without inferring them. This was a documentation maintenance update, not a new hunt; Block 018's no-finding disposition is unchanged.
