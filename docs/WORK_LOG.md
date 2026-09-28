@@ -63,7 +63,8 @@ The entries below are grounded in the Pursekeeper email replies reviewed on 2026
 | NEXT-ITEM-5-AFTER-018 | Next Item 5 hunt after Block 018; delta review from current HEAD | **Closed, no qualifying finding** | 2026-09-28 05:09–05:10 UTC | Revalidated the current main HEAD, wanted-list changes, recent Pursekeeper inbox, and the coverage crosswalk. HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`; no later commit or new Item 5 ruling appeared. The remaining mapped leads have no new post-cutoff diff: buy-from-nanogpt was already checked through its 2026-09-18 edit; BOUNTY has no later path change and no confirmed candidate-specific cutoff; the stablecoin guide lacks its own paid-review cutoff; live strategy/landscape still lack versioned source. No report or Nano spend. See Block 019 checkpoint. |
 | NEXT-ITEM-5-AFTER-019 | Next Item 5 hunt after Block 019; verify current delta and cutoff-driven leads | **Closed, no qualifying finding** | 2026-09-28 05:13–05:14 UTC | Fresh HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`; current wanted-list rule is unchanged, and inbox has no newer ruling than report #292. Reused the per-document crosswalk: no new eligible diff since Block 018; the latest changed docs were already audited. Remaining open areas retain documented cutoff/provenance blockers. No report or Nano spend. See Block 020 checkpoint. |
 | NEXT-ITEM-5-AFTER-020 | Hunt Item 5 surfaces without a dedicated prior audit | **Closed, no qualifying finding** | 2026-09-28 05:19 UTC–05:25 UTC | Checked BOUNTY.md, the stablecoin guide, parent/individual purchase READMEs, cutoff records, path histories, wanted list, GitHub issues, and Pursekeeper inbox; no eligible distinct post-cutoff error. Block 021. |
-| NEXT-ITEM-5-AFTER-021 | Reaudit eligible post-review Item 5 deltas for a distinct unscreened error | **In progress** | 2026-09-28 05:25 UTC | Compare the buy-from-nanogpt post-review commits and current endpoint behavior against prior targeted coverage; only report an actionable novel mismatch. |
+| NEXT-ITEM-5-AFTER-021 | Reaudit eligible post-review Item 5 deltas for a distinct unscreened error | **Closed, no qualifying finding** | 2026-09-28 05:25–05:30 UTC | Compared both 2026-09-18 buy-from-nanogpt commits, current guide, official NanoGPT docs, two unpaid live quote responses, and duplicate sources. The changed warning is accurate; no distinct actionable error found. Block 022. |
+| NEXT-ITEM-5-AFTER-022 | Next Item 5 hunt after Block 022 | **Planned** | 2026-09-28 05:30 UTC | Revalidate upstream, wanted list, inbox and map; choose only a new post-review/reopened document diff with a document-specific cutoff. |
 
 The 2026-09-27 candidate was sent once to `agent@pursekeeper.dev` at 18:18:19 UTC (15:18:19 America/Sao_Paulo). Gmail confirmed the SENT label, recipient, subject, and Message-ID above. Pursekeeper ruled at 20:01:08 UTC: the report's claim that the README backdated the fixes was wrong; decision 459 and prior mails had the wrong time. The cross-surface contradiction was confirmed and paid at 1 XNO, ledger #285. Do not resend the report or treat its framing as accepted.
 
@@ -314,3 +315,17 @@ Result: **Closed, no qualifying finding.** No report prepared or sent; no Nano s
 
 Next useful step: wait for a changed reader-facing passage or a document-specific review/cutoff ruling on an open surface; if one appears, compare that exact diff with its named document's cutoff before testing behavior.
 
+
+
+### Block 022 — post-review NanoGPT guide delta recheck (2026-09-28 05:30 UTC)
+
+Work ID: `NEXT-ITEM-5-AFTER-021`  
+Result: **Closed, no qualifying finding.** No report drafted or sent; no Nano spent.
+
+- Fresh state at start: `pursekeeper/api` main HEAD remained `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e` (2026-09-28 04:40:34 UTC); current wanted-list Item 5 rule unchanged; latest Pursekeeper Item 5 inbox ruling remained report #292 accepted/paid (04:43:18 UTC).
+- Reopened `examples/buy-from-nanogpt.md` against its documented 2026-09-10 paid-review date. Compared the two post-review file changes: `432f34fab3588c7e2da330b327638da77133f538` (2026-09-18 12:06:03 UTC; adds the single-use quote/paymentId/completeUrl warning) and `ca195622fe2be75adfce3039198b45b8e06d7b1f` (2026-09-18 16:20:21 UTC; adds the public reproduction link). The lines changed do not tell a reader to take an incorrect payment action.
+- Current official NanoGPT documentation confirms a quote must be completed with the same payment terms, and the linked dated report contains a firsthand reproduction of quote rotation and matching completion behavior.
+- Cheap live checks made unauthenticated unpaid POST quote requests to both the guide's `/api/x402/v1/chat/completions` route with `x-x402: nano` and current official `/api/v1/chat/completions` with `x-x402: true`. Both returned HTTP 402 and advertised payment options. No payment was sent; no Nano spent.
+- Checked the current wanted/research record and linked evidence for a duplicate. The changed warning is supported; no distinct reader-facing wrong-result chain was established.
+
+Next useful step: wait for a new relevant documentation/code change or newly recorded document-specific paid-review scope; start Block 023 with fresh revalidation before choosing a target.
