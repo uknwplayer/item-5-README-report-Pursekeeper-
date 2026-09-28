@@ -182,3 +182,40 @@ Do not delete closed rows. Correct mistakes with a dated note so the history rem
 - **Disposition:** not a qualifying finding. The sentence's umbrella says the call is handed back when a redirect cannot be followed, and the 400 note names the hash to retry with. I could not show that a reader following the text would lose or fail to reuse the credit. This is also adjacent to paid report #284's correction of the same sentence, so the new case needed a clearly distinct wrong-result chain before reporting. No report drafted or sent; no Nano spent.
 - **Duplicate/provenance check:** current `dd419256` diff widened the exception text after #284; current live `/api` matches it. Targeted issue searches returned no matching malformed-Location report; prior #284 is the closely related paid correction. The possibility is recorded as rejected/inconclusive, not as a duplicate finding.
 - **Outcome:** closed `NEXT-ITEM-5-AFTER-011` with no qualifying finding; registered `NEXT-ITEM-5-AFTER-012` as planned.
+
+## Block 013 findings (2026-09-28 UTC)
+
+- **Revalidation:** pursekeeper/api main is 8bf1f3c6e02e87a123d74dba4dad1c1efe113538 (2026-09-28 00:24:47 UTC), parent dd419256bd5a741887d680fa801bdcf9b5035a93. The wanted-list rule remains: a document is closed except for errors introduced by later fixes or text after its paid review. No newer Pursekeeper email than 1a0e568152323871 (00:26:34 UTC) appeared; it concerns Item 2(a) releases. The last Item 5 ruling read was 1a0e4753adf9dbc7 (ledger #285 / decision #463).
+- **Candidate / one document:** the repository README.md x402 section still says: “A settled block is recorded with zero credit so it cannot be presented again through X-Nano-Payment.” Its latest update was commit 96893d9342c22bdb5a701e9ee1830a488b313edf at 2026-09-27 16:41:21 UTC; the README hunk changed only the bounty close-time line.
+- **Cutoff and provenance:** README.md had just been reviewed for the bounty paragraph in the four-report set on the 2026-09-27 12:25 UTC change (02f7b614ce07c39649885c0d29a7d30368a092fc; reported 12:27–13:12 UTC, ledger #276). At 16:41:21 UTC, commit 96893d9 changed server.js so /v1/fetch credits an x402 settled-block hash when a redirect is refused, while leaving the README absolute claim unchanged. Follow-up commit 97cbf380b10ff344281a1baadaa5406f77f49942 at 17:39:27 UTC corrected the generated /api docs to name this exception, not the repository README.
+- **Source-to-result chain:** after x402 settlement, the /v1/fetch catch selects res.getHeader("x-nano-payment-hash") when no X-Nano-Payment header was supplied, increments credits[h] by PRICE_RAW, sets the remaining-credit header, and returns a 400 note explicitly instructing retry with X-Nano-Payment: <hash>. Therefore the exact settled x402 hash can be reused for this one documented refund path; the README unqualified statement is false for that path.
+- **Cheap reproduction:** compare the README phrase with the current server.js lines in the /v1/fetch catch and the live /api documentation. This requires only public source/docs. No paid request or Nano was used.
+- **Duplicate check and risk:** issue search for repo:pursekeeper/api x402 redirect credit README returned no matching README issue. Report #282 (accepted, 2 XNO) covered the generated /api sentence and the same code path; it did not edit README.md. This is a distinct document/surface, but there is a material duplicate-risk because the reader action and underlying code exception overlap. Do not send without operator review.
+- **Disposition:** candidate prepared for operator review; not sent. Technical confidence that the README statement is wrong: **95%**. Acceptance/payout confidence: **60%** because of overlap with paid #282. No Nano spent. Close NEXT-ITEM-5-AFTER-012 as candidate pending operator decision; register NEXT-ITEM-5-AFTER-013 as the next hunt after this candidate is resolved.
+
+**Prepared report (English):**
+
+Subject: Item 5 report — README x402 section omits fetch credit hand-back — uknwplayer
+
+The repository README x402 section says:
+
+> “A settled block is recorded with zero credit so it cannot be presented again through X-Nano-Payment.”
+
+In commit 96893d9342c22bdb5a701e9ee1830a488b313edf (2026-09-27 16:41:21 UTC), server.js added an x402 hand-back for /v1/fetch when a redirect cannot be followed. In the catch path, the handler takes the just-settled hash from the PAYMENT-RESPONSE x-nano-payment-hash response header, restores PRICE_RAW to credits[hash], and replies with a 400 note that explicitly says to retry using X-Nano-Payment: <hash>. The hash is therefore reusable as credit in this exception, contrary to the README unqualified statement.
+
+Reproduce without a payment by reading the current public README and source:
+
+```sh
+curl -fsSL https://raw.githubusercontent.com/pursekeeper/api/main/README.md |
+  rg -n -F "A settled block is recorded with zero credit so it cannot be presented again through X-Nano-Payment"
+curl -fsSL https://raw.githubusercontent.com/pursekeeper/api/main/server.js |
+  rg -n -F "the price goes on the settled block"
+curl -fsSL https://raw.githubusercontent.com/pursekeeper/api/main/server.js |
+  rg -n -F "so retry with X-Nano-Payment: "
+```
+
+The current live /api docs also identify the /v1/fetch exception and say the 400 reply names the hash to retry with. A reader following the repository README alone can discard the refunded hash and fail to recover the paid call, even though the service returns it as reusable credit.
+
+Timing: the README was in the Item 5 review/fix set on the 2026-09-27 12:25 UTC commit (02f7b61, ledger #276, bounty-close paragraph). The 16:41:21 UTC server change in 96893d9 introduced the x402 refund behavior after that review and did not update this x402 paragraph. Commit 97cbf38 later updated /api only. Report #282 was accepted for the corresponding stale /api sentence; this report is limited to the distinct repository README.md surface.
+
+Payout address: nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt
