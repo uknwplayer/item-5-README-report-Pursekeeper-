@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 026, upstream HEAD `449391364ae6e6c37fa19699fe389426359a16cf`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-28, against Block 027, upstream HEAD `449391364ae6e6c37fa19699fe389426359a16cf`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -170,3 +170,10 @@ For each, require the chain **document says X → current code/live state does Y
 - Read the current README `/v1/work` table and compared the #317 post-fix route against `workGenerate()`: validation/capacity precede charge, failed generation hands credit back, and paid calls bypass the free per-IP counter. The README's no-limit paid claim matches. GPU fallback during the existing cooldown is older behavior, not introduced by the latest handler fix; no eligible report based on it.
 - Current public `/v1/x402` JSON was not verified: curl timed out at 8 seconds. Conclusions are source-based. No candidate, no submission, no Nano spent. Block 026 was a targeted delta review, not a line-by-line audit.
 - Next: Block 027 after fresh revalidation; preserve the stablecoin guide's unresolved review cutoff and prioritize eligible untouched docs.
+
+
+## Block 027 reconciliation (2026-09-28 21:35–21:51 UTC)
+
+- Fresh upstream HEAD remains `449391364ae6e6c37fa19699fe389426359a16cf`; no API repository commit landed after Block 026. The current register records paid Item 5 reports through #319; Gmail shows no inbound Item 5 decision after #292.
+- Screened the recent research README additions/corrections: #319's payment row and two timestamp updates in `4493913`. They document historical events; neither gives operational instructions, and no reproducible wrong action or participation consequence was established. Prior #285 timing dispute/ruling checked for duplicate scope.
+- No qualifying candidate. No send or Nano spend. Block 027 is a narrow review of the newest research-index edits, not a new full audit. Next action: Block 028 from fresh state, prioritizing new relevant deltas and preserving the unresolved stablecoin-guide cutoff.
