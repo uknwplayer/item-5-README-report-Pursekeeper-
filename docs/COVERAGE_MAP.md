@@ -100,3 +100,10 @@ For each, require the chain **document says X → current code/live state does Y
 - The new `examples/no-node.md` change postdates its 2026-09-25 12:50 UTC paid-review cutoff and is a valid correction to its prior `extra.maxTimeoutSeconds` placement. Official x402 v2 schema marks `maxTimeoutSeconds` required on PaymentRequirements; local `x402.js` sets it on the top-level requirements object; the current prose and example agree. No candidate remains.
 - `llms.txt` now marks the agent-pair bounty closed; this is consistent with the current bounty state. The research README records the same three post-review changes, so the affected leads are accounted for and not duplicates waiting to be submitted.
 - This was a targeted audit of the new diff and current cited schema/code, not a whole-repository audit. No report sent and no Nano spent. Next hunt starts from this commit and ruling.
+
+
+## Block 019 reconciliation (2026-09-28 05:10 UTC)
+
+- Revalidated the coverage crosswalk against upstream main and the latest Pursekeeper inbox. Upstream remains at `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`; no later commit, Item 5 rule update, or email ruling appeared.
+- No changed eligible diff remains since Block 018. The previously open leads retain their recorded blockers: the NanoGPT guide's last changed passage was already audited; `BOUNTY.md` has no newer file commit or candidate-specific paid-review cutoff; the stablecoin guide has no guide-specific cutoff or later edit; strategy/landscape content has no versioned source or page-specific cutoff.
+- This was a delta revalidation using the existing map, not a claim that every document was reread. No candidate report and no Nano spend. Keep these blockers recorded; reopen only with new provenance/diff evidence.
