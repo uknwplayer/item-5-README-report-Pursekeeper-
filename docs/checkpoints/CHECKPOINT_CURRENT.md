@@ -1,32 +1,34 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28 06:14 UTC  
-**Block:** 024 — full public-tree reconciliation, issue/duplicate review, cutoff delta screen  
+**Date:** 2026-09-28 19:43 UTC  
+**Block:** 025 — post-payment doc fixes and new on-ramp evidence  
 **State:** CLOSED / NO QUALIFYING FINDING / NO REPORT SENT
 
 ## Fresh revalidation
 
-- Upstream `pursekeeper/api` main remains at `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, committed 2026-09-28 04:40:34 UTC.
-- Rechecked the Item 5 wanted-list rule, current coverage map and work log. The rule remains document-specific: look only for actionable errors introduced after that document's paid review or by a later fix.
-- Latest Pursekeeper Item 5 inbox ruling remains report #292, accepted and paid at 04:43:18 UTC. No later Item 5 email/ruling appeared.
-- Rechecked open issues. #68 is the duplicate Content-Length/truncation report in `examples/research/README.md`; other open issues concern separate bounty items or seller onboarding.
+- Upstream `pursekeeper/api` HEAD: `31da3096db8d5f93c6354a870f95546f1973ecb5`, committed 2026-09-28 16:52:29 UTC; nine commits ahead of Block 024's base `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`.
+- Rechecked the wanted-list cutoff rule, current coverage map/work log, GitHub issues, and Gmail. The latest visible inbound Item 5 decision in Gmail remains #292 (04:43:18 UTC). Upstream's public research register contains newer paid reports/fixes through ledger #307.
+- The cutoff remains document-specific: an actionable error must be in text added after that document's paid review or be introduced by a later fix.
 
-## Block 024 result
+## Block 025 result
 
-No new candidate met the eligibility, consequence, and uniqueness requirements.
+No distinct candidate met the eligibility and reader-impact requirements.
 
-- Recursively compared the upstream public GitHub tree with the coverage map. No omitted first-party service-instruction Markdown was found. The remaining Markdown/TXT under `examples/research` and `examples/purchases` are research, receipts, or evidence artifacts, not Item 5 service instructions by default.
-- Issue #68 remains the same already emailed sentence and consequence. Its history records the paid #274 ruling and later `32ac90e` range fix; Block 023's current live checks did not reproduce the prior truncation.
-- Remaining eligibility blockers are unchanged: `BOUNTY.md` has no later diff or candidate-specific cutoff; `examples/get-nano-from-stablecoins.md` has no later edit or guide-specific paid-review cutoff; strategy/landscape remain external and unversioned. Mapped recent doc changes/fixes were already screened.
-- No report drafted or sent. No Nano spent. This was an inventory/delta screen, not a complete line-by-line audit of every historical file.
+- Commit `31da309` (16:52:29 UTC) fixes the last Notes bullet in `examples/buy-from-nanogpt.md` after paid report #307. The old closed-bounty claim is already paid and is not a new finding. The replacement points to the research wanted list and `no-node.md`; its per-item price and first-acceptable-report statements match the wanted-list wording. No new wrong-result chain was established.
+- Commit `05d29c1` (16:48:43 UTC) changes `examples/no-node.md` to say the agent-pair bounty is closed and to point to the current wanted list. Its script/research paths map to current repository files, and `server.js` routes existing `/examples/*` files. The revised GPU/shared-budget text was checked against current `server.js` comments/configuration. No actionable mismatch found in the changed passages.
+- The same commit adds a dated historical order record to `examples/get-nano-from-stablecoins.md`; it does not change the reader's procedure. No actionable finding was established, and this guide still has no document-specific paid-review cutoff in the work records.
+- Checked the new research rows, open issues, coverage map and prior sent reports for duplicates. The #307 claim is already paid/fixed; no distinct candidate surfaced.
+- Public-page fetch could not be verified: the general web opener marked Pursekeeper URLs inaccessible and Firecrawl had insufficient credits. The link assessment is source-level (repository files and route handler), not a fresh live HTTP-status claim. No report drafted or sent; no Nano spent.
+
+This was a targeted delta review, not a line-by-line audit of every document.
 
 ## Next hunt
 
-Work ID `NEXT-ITEM-5-AFTER-024` is planned. Start Block 025 by revalidating upstream HEAD, wanted list, inbox, and coverage map. Prioritize a new post-review documentation diff or document reopened by a later implementation change; exclude already reported/fixed claims.
+Work ID `NEXT-ITEM-5-AFTER-025` is planned. Start Block 026 from fresh upstream HEAD, wanted list, inbox, coverage map, and duplicate checks. Exclude the already paid #307 stale-bounty claim.
 
 ## Durable records
 
-- Work log: `NEXT-ITEM-5-AFTER-023` closed; `NEXT-ITEM-5-AFTER-024` planned.
-- Coverage map: Block 024 records the recursive tree reconciliation, open-issue/duplicate status, remaining cutoff blockers, and next eligible trigger.
+- Work log: `NEXT-ITEM-5-AFTER-024` closed; `NEXT-ITEM-5-AFTER-025` planned.
+- Coverage map: Block 025 records the changed passages, source comparison, duplicate review, and live-fetch limitation.
 
 **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
