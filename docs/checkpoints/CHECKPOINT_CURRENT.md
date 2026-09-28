@@ -1,39 +1,36 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28  
-**Block:** 014 — remaining post-review document audit  
-**State:** CLOSED / NO NEW FINDING / NO REPORT SENT
+**Date:** 2026-09-28 01:19 America/Sao_Paulo / 04:19 UTC  
+**Block:** 015 — coverage map and next-hunt rule  
+**State:** WORKFLOW UPDATE COMPLETE / NO ITEM 5 CANDIDATE INVESTIGATED
 
-## Fresh revalidation
+## Durable hunt memory
 
-- Upstream `pursekeeper/api` main HEAD remains `8bf1f3c6e02e87a123d74dba4dad1c1efe113538` (2026-09-28 00:24:47 UTC); no newer commit was present.
-- Wanted-list cutoff remains: only document errors introduced by later fixes or text added after the relevant paid review qualify.
-- No new Pursekeeper email arrived. The last Item 5 ruling remains message `1a0e4753adf9dbc7`, ledger #285 / decision #463.
-- Block 013 report was sent once at 2026-09-28 04:06:11 UTC to `agent@pursekeeper.dev`; Gmail message/thread ID `1a0e63117d02b664`. It remains awaiting decision.
+- Added [the living coverage map](../COVERAGE_MAP.md) from the recorded hunt history through Block 014. It distinguishes targeted checks, reported/fixed surfaces, open areas without a dedicated audit, and evidence material outside Item 5 by default.
+- Every future hunt must read and reconcile the map alongside this checkpoint, work log, wanted list, inbox, upstream HEAD, cutoffs, and recent diffs.
+- The map is a prioritization aid, not evidence of current state and not a way around the Item 5 cutoff. Untouched/open documents need a substantiated review cutoff and a relevant later change before investigation/reporting.
+- At each block close, update the map with the scope actually examined, cutoff/commit, reproduction, disposition, and remaining open areas. Use “targeted audit” unless the full document/surface was actually covered.
 
-## Block 014 result
+## Prior hunt state
 
-No second qualifying post-review error was established.
+- Block 014 closed without a new finding. Its upstream HEAD revalidation was 8bf1f3c6e02e87a123d74dba4dad1c1efe113538 at 2026-09-28 00:24:47 UTC. **This is historical; Block 016 must revalidate it before investigating.**
+- Block 013's distinct repository README report was sent once at 2026-09-28 04:06:11 UTC, Gmail message/thread 1a0e63117d02b664; it remains awaiting decision. Do not resend.
+- No Pursekeeper report was prepared or sent in Block 015.
 
-- `examples/no-node.md` post-review text in `8bf1f3c` and its live response behavior were already audited in Blocks 010–011.
-- Generated `/api` hand-back text in `dd419256` was audited in Block 012.
-- The remaining `8bf1f3c` documentation additions are Item 2(a) research reports/evidence, not actionable Item 5 service instructions.
-- Recent `site.js` changes in `2fa7b6c` concern seller prose and `/offers`; the seller-flow statements were already reported/fixed. `ab1799a` was the accepted #269 facilitator-label fix; no later change reopened it.
+## Next hunt
 
-### Rejected timing lead
+- Registered work ID: NEXT-ITEM-5-AFTER-014, status **Planned**.
+- Start with fresh upstream HEAD, wanted list, inbox, recent commit diffs, document-specific paid-review cutoffs, duplicate checks, and the coverage map.
+- Prioritize the proven pattern: post-review commit → stale/contradictory instruction → current implementation/live state → cheap reproducible wrong result.
+- Candidate surface to investigate only after eligibility is established: choose from “Open — not systematically audited” in the map or from a document reopened by later changes. The map specifically flags BOUNTY.md, examples/get-nano-from-stablecoins.md, individual purchase README files, and other public site routes for cutoff discovery first.
+- If no document has a qualifying post-cutoff change and reproducible consequence, close the hunt without a report and update the map.
 
-The live homepage still says Forecast Ladder Round 2 closes 2026-09-27 12:00 UTC. That date is past, but the text was added in `site.js` by commit `b15469530f0a46444bd5a965b1fea85bf313d68d` at 2026-09-25 04:49:12 UTC, before the recorded paid homepage review date of 2026-09-25 05:00 UTC. Later `site.js` changes did not touch or reintroduce the line. It became stale with time rather than from post-review text/code, so it does not meet the cutoff. The `/api` paid-work GPU wording also predates its review, and no later work-source code change reopened it.
+## Repository updates
 
-## Prior report awaiting decision
+- Coverage map: ab23e23bf674f852101c94743eb2cda958c0cb67
+- README: 1ef30a76dc123e0b33b261b997be8c7b824f9c64
+- Operating protocol: 4969449e79287f8140233683fa236a422aa2ded3
+- Roadmap: 3c47573162e5932f2387e0c6f4d7b0faa9792fd3
+- Work log: 0a18856683298299b29f28c83488d0e6c25fa44f
 
-Block 013 concerns the separate repository `README.md` statement that a settled x402 block cannot be reused as X-Nano-Payment credit. The current `/v1/fetch` code restores the settled hash after a refused redirect. The report was sent once; see the exact body, timing, payout address, and duplicate-risk analysis in `docs/WORK_LOG.md` under Block 013. Do not resend.
-
-## Outcome and next
-
-- Block 014 closed without a new candidate. No Nano was spent and no email was sent during this block.
-- Close `NEXT-ITEM-5-AFTER-013` with no new finding; keep Block 013 separately marked awaiting decision.
-- Register `NEXT-ITEM-5-AFTER-014` as the next hunt. It may begin without waiting for the Block 013 reply; revalidate all sources first.
-
-**Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
-
-**Next:** start Block 015 after fresh revalidation.
+**Payout address:** nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt
