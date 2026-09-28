@@ -17,7 +17,7 @@
 - [ ] Confirm the applicable paid-review cutoff per candidate document.
 - [ ] Check reports, issues, commits, and fixes for duplicates.
 
-**Current handoff as of Block 012 (not proof for the next hunt):** upstream HEAD was `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`. The `/api` hand-back documentation changed after paid review #284 in `dd419256`; its expanded text was compared with the current source and live page. A malformed-Location credit return was traced but did not produce a clear reader-wrong-result chain. Revalidate HEAD and all cutoffs again before Block 013.
+**Current handoff as of Block 013:** upstream HEAD revalidated as `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`. A candidate remains pending operator review: repository `README.md` says a settled x402 block cannot be reused as `X-Nano-Payment` credit, while the later `96893d9` `/v1/fetch` hand-back restores the settled hash as credit after a refused redirect. Report #282 fixed the generated `/api` text, while the separate repository README remains stale. Candidate and duplicate risk are documented in the checkpoint and work log. Await explicit `Enviar`; revalidate before Block 014.
 
 ## Phase 2 — Candidate investigation
 
