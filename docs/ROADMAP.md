@@ -17,7 +17,7 @@
 - [ ] Confirm the applicable paid-review cutoff per candidate document.
 - [ ] Check reports, issues, commits, and fixes for duplicates.
 
-**Known handoff, not current-state proof:** Pursekeeper's latest known reply named commit `97cbf38` as the change that accepted the x402 report and reopened `server.js`, `no-node.md`, and `/api` text. Verify whether this is still the relevant latest state before searching.
+**Current handoff as of Block 011 (not proof for the next hunt):** upstream HEAD was `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`; `no-node.md` was reviewed through its 00:17 UTC paid review, and the 00:24:47 UTC follow-up text was checked against source and live responses with no qualifying finding. Revalidate HEAD and all cutoffs again before Block 012.
 
 ## Phase 2 — Candidate investigation
 
