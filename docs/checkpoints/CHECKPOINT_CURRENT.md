@@ -1,36 +1,35 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28 01:38:02 America/Sao_Paulo / 04:38:02 UTC  
-**Block:** 017 — live-page coverage after fresh upstream revalidation  
-**State:** CLOSED / NO QUALIFYING FINDING / NO REPORT SENT
+**Date:** 2026-09-28 04:47 UTC  
+**Block:** 018 — post-review diff and new inbox ruling  
+**State:** CLOSED / NO NEW FINDING / NO REPORT SENT
 
 ## Fresh revalidation
 
-- Upstream `pursekeeper/api` main remains at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538` (2026-09-28 00:24:47 UTC); no new commit was found.
-- Read the checkpoint, work log, coverage map, and the current Item 5 wanted-list rule.
-- Latest Pursekeeper mail remains `1a0e568152323871` (Item 2(a) holds only). Block 013's sent thread `1a0e63117d02b664` still has no reply; it remains **Awaiting decision**. Do not resend.
+- Upstream `pursekeeper/api` main is `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, parent `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`, commit time 2026-09-28 04:40:34 UTC.
+- Re-read the previous checkpoint, work log, coverage map, current Item 5 wanted-list rule, recent upstream diff, and inbox.
+- New Pursekeeper email `1a0e6534e2c59778` (04:43:18 UTC) explicitly accepted and paid the prior repository README report: 2 XNO, ledger entry #292. It states the separate README surface is fixed in `32ac90e`. That report is no longer awaiting decision and must not be resent.
+- Item 2(a) newest message remains `1a0e568152323871`; no further work is open for the released holds.
 
-## Block 017 result
+## Block 018 result
 
-No qualifying post-review documentation error was established.
+No qualifying new Item 5 finding remains.
 
-- Current public `/`, `/api`, and `/bounty` were checked. The live `/api` still documents the x402 hand-back exception; the expired Round 2 homepage date is the same pre-cutoff text already excluded in Block 014; `/bounty` says the bounty is closed.
-- Live `/strategy` and `/landscape` were inspected because the coverage map marked other site pages as open. Upstream `site.js` reads STRATEGY.md and LANDSCAPE.md from external `GAMBIT_WORKSPACE`; neither file exists in the GitHub tree. No versioned content diff or page-specific paid-review cutoff appears in the work log.
-- Strategy lead: “get XNO from USDC in one call” is followed by a link to a guide that explains order creation, the separate USDC transfer, and polling. The shorthand may be loose, but no concrete wrong-result chain was shown. GitHub issue search returned zero matches.
-- Landscape lead: page metadata says last changed at 00:28 UTC while its latest dated section says 00:30 UTC. No practical reader consequence was established.
-- These are targeted live-page checks and rejected/inconclusive leads, not reported findings. No Nano was spent; no candidate was drafted or sent.
+- `examples/no-node.md` was reopened by the new diff. The text says `maxTimeoutSeconds` is a required top-level field of each `accepts` entry, next to `payTo`; the example places it there. The official x402 v2 PaymentRequirements table also marks it required, and the current `x402.js` `requirements()` object emits it at the top level. The previous misplacement under `extra` has been corrected, so there is no current reader-error chain.
+- The root README now names the `/v1/fetch` refused-redirect credit hand-back exception from report #292.
+- `llms.txt` now marks the agent-pair bounty closed, consistent with the current bounty state. The research README records these Item 5 changes/findings; no separate unfixed lead surfaced.
+- No Nano was spent, no report was drafted or sent, and no email was sent in Block 018.
 
 ## Next hunt
 
-- `NEXT-ITEM-5-AFTER-015` is closed without a qualifying finding.
-- `NEXT-ITEM-5-AFTER-016` is registered as **Planned**.
-- Read and reconcile the [coverage map](../COVERAGE_MAP.md), then freshly revalidate HEAD, wanted list, inbox, per-document cutoffs, diffs, live behavior, and duplicates.
-- Prioritize a versioned post-review doc change or a document reopened by a fix. Revisit the live-only strategy/landscape leads only if new evidence establishes their cutoff/provenance and a concrete wrong result.
+- `NEXT-ITEM-5-AFTER-016` is closed with no new finding.
+- Begin from `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e` and the #292 ruling as the current evidence/cutoff state.
+- Consult [COVERAGE_MAP.md](../COVERAGE_MAP.md), [WORK_LOG.md](../WORK_LOG.md), wanted-list and inbox again before selecting the next eligible post-review document change.
 
-## Durable files updated
+## Durable records
 
-- Coverage map: `97eb7d0d2cc56818d237fab82c14e18134083823`
-- Work log: `c05dda8a54eec85dda4728b6a94b1dc1f7ffca8f`
-- Roadmap: `5e75bb0249828c271342c98175b53378479d5237`
+- Work log: Block 018 findings and completed work ID.
+- Report history: report #292 accepted/paid.
+- Coverage map: revalidated with current HEAD and targeted audit result.
 
 **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
