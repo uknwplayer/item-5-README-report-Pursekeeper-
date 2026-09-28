@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 016, upstream HEAD `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`, current wanted list, and Pursekeeper inbox.  
+**Last reconciled:** 2026-09-28, against Block 017 live pages, upstream HEAD `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`, current wanted list, and Pursekeeper inbox.  
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -36,7 +36,7 @@ These are candidates for **cutoff discovery first**, not automatic report target
 | Individual `examples/purchases/*/README.md` files | Check each file's own cutoff and changed passages. The parent purchases README's paid review does not automatically cover these separate documents. |
 | Purchase evidence JSON/TXT and scripts | Do not treat raw evidence as Item 5 instructions by default. Inspect only if a document points readers to it as an operational step or later text turns it into guidance. |
 | Individual `examples/research/*.md` reports and research evidence folders | These are generally Item 2(a) research/evidence, not Item 5 service docs. Do not bulk-audit as Item 5. Reclassify a specific file only if it contains reader-facing service instructions and has an eligible post-review change. |
-| Other public site pages/routes | No systematic page-by-page audit is recorded beyond the named homepage, `/api`, `/facilitator`, `/sellers`, and `/offers` surfaces. Inventory routes, find the applicable review cutoff, and prioritize changed reader instructions. |
+| Other public site pages/routes | Block 017 inspected live `/strategy` and `/landscape` in addition to `/`, `/api`, and `/bounty`. `site.js` reads STRATEGY.md/LANDSCAPE.md from external GAMBIT_WORKSPACE; those files are not tracked in the current GitHub tree, so no versioned content diff or paid-review cutoff was established. `/strategy` line “get XNO from USDC in one call” was compared with its linked guide's POST + deposit + polling flow, but the guide explains those steps and no clear wrong-result chain was established. `/landscape` metadata says last changed 00:28 UTC while its latest dated entry says 00:30 UTC; no practical reader consequence. Keep both as targeted live-only checks, not eligible findings, until cutoff/provenance and an actionable consequence are established. |
 
 ## How to use this map on every hunt
 
@@ -63,3 +63,11 @@ For each, require the chain **document says X → current code/live state does Y
 - The only post-review no-node.md wording diff remains the 00:24 UTC addition in 8bf1f3c, already checked against current source and unpaid live 402/error behavior in Blocks 010–011. Other latest additions are Item 2(a) research evidence. No new eligible candidate was identified.
 - The stablecoin guide's initial addition is post the homepage's 2026-09-25 05:00 UTC cutoff, but that does not establish a paid-review cutoff for this separate guide. Its own history contains only its creation commit; no later guide diff or guide-specific paid review was found. Eligibility remains unresolved, so no Item 5 behavior finding is claimed.
 - GitHub issue search for the guide returned zero matches. No Nano was spent; no report drafted or sent.
+
+
+## Block 017 reconciliation (2026-09-28 04:38 UTC)
+
+- Fresh current state still showed upstream HEAD `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`, no new wanted-list rule, and no new Pursekeeper mail or reply to Block 013.
+- Current public `/`, `/api`, and `/bounty` were checked. The `/api` x402 hand-back exception is present; the homepage's expired Round 2 date remains pre-cutoff as already recorded; bounty text says closed and points to the current wanted list.
+- Live `/strategy` and `/landscape` are rendered from files in external `GAMBIT_WORKSPACE`, not tracked in the upstream repository. Page mtime/datestamps therefore do not provide the requested commit diff or a page-specific paid-review cutoff. The strategy's “one call” shorthand is followed by a link to a guide that accurately requires creating an order, sending USDC, and polling; no wrong result from following the linked recipe was established. The landscape's 00:28 metadata vs 00:30 dated-entry mismatch has no demonstrated reader consequence.
+- Issue search for the strategy wording returned zero matches. These are documented as rejected/inconclusive leads, not candidate reports. No Nano spent and no report drafted or sent.
