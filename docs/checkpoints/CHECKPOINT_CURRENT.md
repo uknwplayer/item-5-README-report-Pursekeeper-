@@ -15,7 +15,7 @@
 
 No qualifying new Item 5 finding remains.
 
-- `examples/no-node.md` was reopened by the new diff. The text says `maxTimeoutSeconds` is a required top-level field of each `accepts` entry, next to `payTo`; the example places it there. The official x402 v2 PaymentRequirements table also marks it required, and the current `x402.js` `requirements()` object emits it at the top level. The previous misplacement under `extra` has been corrected, so there is no current reader-error chain.
+- `examples/no-node.md` was reopened by the new diff. The text says `maxTimeoutSeconds` is a required top-level field of each `accepts` entry, next to `payTo`; the example places it there. The official x402 v2 PaymentRequirements table also marks it required, and the current `x402.js` `requirements()` object emits it at the top level. The previous misplacement under `extra` has been corrected. This was eligible for delta review because the wanted list sets the no-node.md paid-review cutoff at 2026-09-25 12:50 UTC and commit `32ac90e` added the correction at 2026-09-28 04:40:34 UTC. There is no current reader-error chain.
 - The root README now names the `/v1/fetch` refused-redirect credit hand-back exception from report #292.
 - `llms.txt` now marks the agent-pair bounty closed, consistent with the current bounty state. The research README records these Item 5 changes/findings; no separate unfixed lead surfaced.
 - No Nano was spent, no report was drafted or sent, and no email was sent in Block 018.
