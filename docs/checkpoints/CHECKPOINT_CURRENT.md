@@ -1,8 +1,8 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-27  
-**Block:** 009 — Post-review NanoGPT guide change  
-**State:** CLOSED / NO QUALIFYING FINDING / NO REPORT PENDING
+**Date:** 2026-09-27 / 2026-09-28 UTC  
+**Block:** 010 — Post-review documentation audit  
+**State:** IN PROGRESS
 
 ## Revalidation
 
@@ -44,3 +44,8 @@ The guide's older sentence describing `X-Payment-Address`, `X-Payment-Amount`, a
 
 `NEXT-ITEM-5-AFTER-008` is closed with no qualifying finding. `NEXT-ITEM-5-AFTER-009` is planned: at the next hunt, revalidate HEAD, mailbox, wanted list, per-document cutoffs and all new actionable documentation changes before testing.
 
+
+
+## Block 010 start (2026-09-27 22:30 America/Sao_Paulo / 2026-09-28 01:30 UTC)
+
+Revalidated upstream main at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538` (2026-09-28 00:24:47 UTC), reread the current wanted-list rules, and searched the Pursekeeper mailbox. A new email at 00:26:34 UTC (`1a0e568152323871`) concerns item 2(a) hold releases; read it before proceeding. The prior Item 5 ruling remains the 20:01:08 UTC email (`1a0e4753adf9dbc7`). Next inspect the exact upstream commit diff and per-file cutoffs, then compare eligible documentation changes with current behavior and duplicates.
