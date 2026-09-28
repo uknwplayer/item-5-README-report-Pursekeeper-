@@ -1,34 +1,33 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28 19:43 UTC  
-**Block:** 025 — post-payment doc fixes and new on-ramp evidence  
+**Date:** 2026-09-28 21:35 UTC  
+**Block:** 026 — post-fix revalidation and README /v1/work delta  
 **State:** CLOSED / NO QUALIFYING FINDING / NO REPORT SENT
 
 ## Fresh revalidation
 
-- Upstream `pursekeeper/api` HEAD: `31da3096db8d5f93c6354a870f95546f1973ecb5`, committed 2026-09-28 16:52:29 UTC; nine commits ahead of Block 024's base `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`.
-- Rechecked the wanted-list cutoff rule, current coverage map/work log, GitHub issues, and Gmail. The latest visible inbound Item 5 decision in Gmail remains #292 (04:43:18 UTC). Upstream's public research register contains newer paid reports/fixes through ledger #307.
-- The cutoff remains document-specific: an actionable error must be in text added after that document's paid review or be introduced by a later fix.
+- Upstream `pursekeeper/api` HEAD: `449391364ae6e6c37fa19699fe389426359a16cf`, committed 2026-09-28 21:23:26 UTC. Relevant preceding commits: `b57fc9e` at 21:13:46 UTC, `c1f0d1c` at 21:21:43 UTC, and HEAD's timing correction.
+- The research register records paid Item 5 reports through ledger #319. The latest visible inbound Item 5 email remains Gmail #292; later paid outcomes and fixes are in the public research register.
+- Review remains document-specific: actionable text must postdate that document's paid review or be a distinct error introduced by a later fix.
 
-## Block 025 result
+## Block 026 result
 
-No distinct candidate met the eligibility and reader-impact requirements.
+No candidate satisfied the timing, consequence, and duplicate requirements.
 
-- Commit `31da309` (16:52:29 UTC) fixes the last Notes bullet in `examples/buy-from-nanogpt.md` after paid report #307. The old closed-bounty claim is already paid and is not a new finding. The replacement points to the research wanted list and `no-node.md`; its per-item price and first-acceptable-report statements match the wanted-list wording. No new wrong-result chain was established.
-- Commit `05d29c1` (16:48:43 UTC) changes `examples/no-node.md` to say the agent-pair bounty is closed and to point to the current wanted list. Its script/research paths map to current repository files, and `server.js` routes existing `/examples/*` files. The revised GPU/shared-budget text was checked against current `server.js` comments/configuration. No actionable mismatch found in the changed passages.
-- The same commit adds a dated historical order record to `examples/get-nano-from-stablecoins.md`; it does not change the reader's procedure. No actionable finding was established, and this guide still has no document-specific paid-review cutoff in the work records.
-- Checked the new research rows, open issues, coverage map and prior sent reports for duplicates. The #307 claim is already paid/fixed; no distinct candidate surfaced.
-- Public-page fetch could not be verified: the general web opener marked Pursekeeper URLs inaccessible and Firecrawl had insufficient credits. The link assessment is source-level (repository files and route handler), not a fresh live HTTP-status claim. No report drafted or sent; no Nano spent.
+- Reviewed the #316 fix in `examples/buy-from-nanogpt.md`. It directs an agent holding USDC/USDT to the stablecoin guide, which explains the API-key requirement and that the agent must deposit its stablecoin; the linked `no-node.md` is accurately described as the take/hold/spend guide. #316 is already paid and fixed; the correction introduces no verified new error.
+- Compared the root README's paid `/v1/work` statement against the post-#317 `workGenerate()` implementation. Paid calls skip the free rate counter; body/hash/capacity checks precede charge; a generation failure returns credit. The “no limit” instruction is supported. GPU selection has an existing cooldown fallback, but that behavior predates this handler fix and is not eligible as a new finding in this delta.
+- Checked current register/duplicate records. No separate actionable chain found. Confidence in no-candidate disposition: 8/10 for the eligible changes screened.
+- Tried `curl https://pursekeeper.dev/v1/x402`; the connection timed out after 8 seconds. No live JSON claim is made; comparisons above are source-level. No report drafted/sent and no Nano spent.
 
-This was a targeted delta review, not a line-by-line audit of every document.
+This was a targeted delta review, not a line-by-line audit of all documentation.
 
 ## Next hunt
 
-Work ID `NEXT-ITEM-5-AFTER-025` is planned. Start Block 026 from fresh upstream HEAD, wanted list, inbox, coverage map, and duplicate checks. Exclude the already paid #307 stale-bounty claim.
+Work ID `NEXT-ITEM-5-AFTER-026` is planned. Begin Block 027 from fresh upstream HEAD, wanted list, inbox, coverage map, and duplicate checks. Prioritize newly eligible deltas and documents not yet systematically audited. Keep the stablecoin guide's document-specific paid-review cutoff unresolved; do not infer it from neighboring docs.
 
 ## Durable records
 
-- Work log: `NEXT-ITEM-5-AFTER-024` closed; `NEXT-ITEM-5-AFTER-025` planned.
-- Coverage map: Block 025 records the changed passages, source comparison, duplicate review, and live-fetch limitation.
+- Work log: `NEXT-ITEM-5-AFTER-025` closed; `NEXT-ITEM-5-AFTER-026` planned.
+- Coverage map: Block 026 records eligible deltas, comparison, duplicate screen, and live-fetch limitation.
 
 **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
