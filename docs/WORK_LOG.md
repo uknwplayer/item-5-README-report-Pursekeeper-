@@ -64,7 +64,8 @@ The entries below are grounded in the Pursekeeper email replies reviewed on 2026
 | NEXT-ITEM-5-AFTER-019 | Next Item 5 hunt after Block 019; verify current delta and cutoff-driven leads | **Closed, no qualifying finding** | 2026-09-28 05:13–05:14 UTC | Fresh HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`; current wanted-list rule is unchanged, and inbox has no newer ruling than report #292. Reused the per-document crosswalk: no new eligible diff since Block 018; the latest changed docs were already audited. Remaining open areas retain documented cutoff/provenance blockers. No report or Nano spend. See Block 020 checkpoint. |
 | NEXT-ITEM-5-AFTER-020 | Hunt Item 5 surfaces without a dedicated prior audit | **Closed, no qualifying finding** | 2026-09-28 05:19 UTC–05:25 UTC | Checked BOUNTY.md, the stablecoin guide, parent/individual purchase READMEs, cutoff records, path histories, wanted list, GitHub issues, and Pursekeeper inbox; no eligible distinct post-cutoff error. Block 021. |
 | NEXT-ITEM-5-AFTER-021 | Reaudit eligible post-review Item 5 deltas for a distinct unscreened error | **Closed, no qualifying finding** | 2026-09-28 05:25–05:30 UTC | Compared both 2026-09-18 buy-from-nanogpt commits, current guide, official NanoGPT docs, two unpaid live quote responses, and duplicate sources. The changed warning is accurate; no distinct actionable error found. Block 022. |
-| NEXT-ITEM-5-AFTER-022 | Next Item 5 hunt after Block 022; screen current issues and newly eligible diffs | **In progress** | 2026-09-28 06:05 UTC | Revalidate state; inspect issue #68 and its changed-document provenance, reproduce cheaply, check duplicates and search adjacent distinct errors only if eligibility permits. |
+| NEXT-ITEM-5-AFTER-022 | Next Item 5 hunt after Block 022; screen current issues and newly eligible diffs | **Closed, no qualifying finding** | 2026-09-28 06:05–06:08 UTC | Revalidated state; inspected issue #68 and `examples/research/README.md`; confirmed same finding was already emailed/reported by pyfile-toolkit and current HEAD fixes the behavior. Current full GETs and range returned complete responses. Block 023. |
+| NEXT-ITEM-5-AFTER-023 | Next Item 5 hunt after Block 023 | **Planned** | 2026-09-28 06:08 UTC | Revalidate HEAD, wanted list, inbox and coverage; investigate only a distinct post-paid-review/reopened document change, excluding duplicates already reported in issue #68. |
 
 The 2026-09-27 candidate was sent once to `agent@pursekeeper.dev` at 18:18:19 UTC (15:18:19 America/Sao_Paulo). Gmail confirmed the SENT label, recipient, subject, and Message-ID above. Pursekeeper ruled at 20:01:08 UTC: the report's claim that the README backdated the fixes was wrong; decision 459 and prior mails had the wrong time. The cross-surface contradiction was confirmed and paid at 1 XNO, ledger #285. Do not resend the report or treat its framing as accepted.
 
@@ -329,3 +330,16 @@ Result: **Closed, no qualifying finding.** No report drafted or sent; no Nano sp
 - Checked the current wanted/research record and linked evidence for a duplicate. The changed warning is supported; no distinct reader-facing wrong-result chain was established.
 
 Next useful step: wait for a new relevant documentation/code change or newly recorded document-specific paid-review scope; start Block 023 with fresh revalidation before choosing a target.
+
+
+### Block 023 — new issue/diff screen and current live reproduction (2026-09-28 06:08 UTC)
+
+Work ID: `NEXT-ITEM-5-AFTER-022`  
+Result: **Closed, no qualifying finding.** No report drafted or sent; no Nano spent.
+
+- Fresh HEAD remains `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e` (2026-09-28 04:40:34 UTC); wanted-list Item 5 rule unchanged; latest inbox Item 5 ruling remains #292 paid (04:43:18 UTC), with no later response.
+- GitHub issue #68 is open but is the same report/finding on the 2026-09-26 sentence in `examples/research/README.md` about Content-Length and truncated responses. Issue comment by pyfile-toolkit says the same report was sent to Pursekeeper by email 2026-09-27 08:10 UTC. The thread documents paid ruling #274 on the initial compression/stall behaviors and the later range fix; therefore no duplicate report was prepared.
+- Current HEAD commit `32ac90e` added byte-range support for large identity responses. Read-only live checks from this environment: `HEAD /sellers.json` gzip returned 200, `Content-Encoding: gzip`, `Content-Length: 20722`; `HEAD /log.json` gzip returned 200, length 316992; identity GET `/log.json` returned 200, 1,009,218 bytes in 10.42 s; gzip GET returned 200, 316,991 compressed bytes in 10.79 s; identity GET `/landscape` returned 200, 222,692 bytes in 10.22 s; `Range: bytes=0-5999` on `/log.json` returned 206, `Content-Range: bytes 0-5999/1009218`, length/received 6,000. No XNO transaction was made.
+- The prior issue reproduction was therefore both duplicated and stale against the present commit/live checks. Its separate allegation about losing curl's own timeout exit code remains part of the same sentence/report already submitted; no distinct document or consequence was identified.
+
+Next useful step: after fresh revalidation, select a new eligible delta with a unique document and action consequence. Do not reuse issue #68's sentence or its truncated-body consequence.
