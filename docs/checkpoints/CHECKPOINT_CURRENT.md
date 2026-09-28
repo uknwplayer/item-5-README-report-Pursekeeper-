@@ -1,38 +1,36 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28 01:29:54 America/Sao_Paulo / 04:29:54 UTC  
-**Block:** 016 — coverage-guided post-review hunt  
+**Date:** 2026-09-28 01:38:02 America/Sao_Paulo / 04:38:02 UTC  
+**Block:** 017 — live-page coverage after fresh upstream revalidation  
 **State:** CLOSED / NO QUALIFYING FINDING / NO REPORT SENT
 
 ## Fresh revalidation
 
-- Upstream `pursekeeper/api` main HEAD is `8bf1f3c6e02e87a123d74dba4dad1c1efe113538` (2026-09-28 00:24:47 UTC); it remained current during this block.
-- Read the current Item 5 wanted-list rule, coverage map, and project history.
-- The latest Pursekeeper email found was `1a0e568152323871` (2026-09-28 00:26:34 UTC), about Item 2(a) hold releases, with nothing outstanding. Block 013's sent thread `1a0e63117d02b664` has no reply; it remains **Awaiting decision**. Do not resend.
+- Upstream `pursekeeper/api` main remains at `8bf1f3c6e02e87a123d74dba4dad1c1efe113538` (2026-09-28 00:24:47 UTC); no new commit was found.
+- Read the checkpoint, work log, coverage map, and the current Item 5 wanted-list rule.
+- Latest Pursekeeper mail remains `1a0e568152323871` (Item 2(a) holds only). Block 013's sent thread `1a0e63117d02b664` still has no reply; it remains **Awaiting decision**. Do not resend.
 
-## Block 016 result
+## Block 017 result
 
-No new eligible report was established.
+No qualifying post-review documentation error was established.
 
-- The latest upstream diff, `8bf1f3c`, changed `examples/no-node.md`, `examples/no-node.js`, and Item 2(a) research/evidence. The post-review no-node.md text was already checked against implementation and unpaid live 402/error responses in Blocks 010–011. No distinct consequence appeared in the remaining changed paths.
-- Coverage-map lead `BOUNTY.md`: path history ends at `0b5151bc` (2026-09-10 06:22:54 UTC), with no newer edit at current HEAD. No candidate-specific paid-review cutoff was established.
-- Coverage-map lead `examples/get-nano-from-stablecoins.md`: added by `eed1502` at 2026-09-25 21:16:27 UTC, no later path edit. No guide-specific paid review appears in the report register/index. The homepage's 05:00 UTC cutoff does not prove the separate guide's cutoff; eligibility remains unresolved. The guide was read for scope/provenance only, not behavior-tested or presented as a candidate.
-- Individual purchase artifacts have no current post-cutoff diffs in the inspected path histories; raw receipts/evidence remain outside Item 5 by default unless made operational reader instructions.
-- GitHub issue search for the stablecoin guide returned zero matches. No Nano was spent; no candidate was drafted or sent.
+- Current public `/`, `/api`, and `/bounty` were checked. The live `/api` still documents the x402 hand-back exception; the expired Round 2 homepage date is the same pre-cutoff text already excluded in Block 014; `/bounty` says the bounty is closed.
+- Live `/strategy` and `/landscape` were inspected because the coverage map marked other site pages as open. Upstream `site.js` reads STRATEGY.md and LANDSCAPE.md from external `GAMBIT_WORKSPACE`; neither file exists in the GitHub tree. No versioned content diff or page-specific paid-review cutoff appears in the work log.
+- Strategy lead: “get XNO from USDC in one call” is followed by a link to a guide that explains order creation, the separate USDC transfer, and polling. The shorthand may be loose, but no concrete wrong-result chain was shown. GitHub issue search returned zero matches.
+- Landscape lead: page metadata says last changed at 00:28 UTC while its latest dated section says 00:30 UTC. No practical reader consequence was established.
+- These are targeted live-page checks and rejected/inconclusive leads, not reported findings. No Nano was spent; no candidate was drafted or sent.
 
 ## Next hunt
 
-- Work ID `NEXT-ITEM-5-AFTER-014` is closed with no qualifying finding.
-- `NEXT-ITEM-5-AFTER-015` is registered as **Planned** in the work log.
-- Begin by reading and reconciling the [coverage map](../COVERAGE_MAP.md), then freshly revalidate upstream HEAD, wanted list, inbox, relevant paid-review cutoffs, recent diffs, current behavior, and duplicates.
-- Prioritize a post-review documentation diff or a document reopened by a fix. Do not treat an unreviewed surface as eligible without confirming the applicable Item 5 cutoff and relevant later change.
+- `NEXT-ITEM-5-AFTER-015` is closed without a qualifying finding.
+- `NEXT-ITEM-5-AFTER-016` is registered as **Planned**.
+- Read and reconcile the [coverage map](../COVERAGE_MAP.md), then freshly revalidate HEAD, wanted list, inbox, per-document cutoffs, diffs, live behavior, and duplicates.
+- Prioritize a versioned post-review doc change or a document reopened by a fix. Revisit the live-only strategy/landscape leads only if new evidence establishes their cutoff/provenance and a concrete wrong result.
 
-## Durable protocol and files
+## Durable files updated
 
-The coverage map is mandatory input for each hunt and must be updated at block close. Use “targeted audit” unless full scope was genuinely checked.
-
-- Coverage map update: `46aa417ee928fc8bcbd233eab2b67a578efb5151`
-- Work log: `c21959d09fd179b86cceb3d79965bb9487522275`
-- Roadmap: `e778d3ac7e277de1f885b60e793aef2814fefb9f`
+- Coverage map: `97eb7d0d2cc56818d237fab82c14e18134083823`
+- Work log: `c05dda8a54eec85dda4728b6a94b1dc1f7ffca8f`
+- Roadmap: `5e75bb0249828c271342c98175b53378479d5237`
 
 **Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
