@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against project checkpoint Block 014 and work log.  
+**Last reconciled:** 2026-09-28, against Block 016, upstream HEAD `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`, current wanted list, and Pursekeeper inbox.  
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -31,8 +31,8 @@ These are candidates for **cutoff discovery first**, not automatic report target
 
 | Surface | Next useful step |
 |---|---|
-| `BOUNTY.md` | Establish its latest paid-review cutoff and inspect only subsequent changes for actionable, stale instructions. |
-| `examples/get-nano-from-stablecoins.md` | Establish whether it has a qualifying review cutoff; then compare post-cutoff instructions with current supported flow and cheap public behavior. |
+| `BOUNTY.md` | Block 016 checked its path history: the latest listed change is `0b5151bc` on 2026-09-10 06:22:54 UTC; no newer change was found at current HEAD. No candidate-specific paid-review cutoff was established in the log. Revisit only if a later relevant change appears or a cutoff is substantiated. |
+| `examples/get-nano-from-stablecoins.md` | Added by `eed1502` on 2026-09-25 21:16:27 UTC; no later edit appears in its path history at HEAD. The guide was read for provenance/scope, but no guide-specific paid review was found in the register/index. Its cutoff is unresolved, so no behavioral candidate was tested or qualified in Block 016. Reopen when its cutoff or a relevant post-cutoff change is established. |
 | Individual `examples/purchases/*/README.md` files | Check each file's own cutoff and changed passages. The parent purchases README's paid review does not automatically cover these separate documents. |
 | Purchase evidence JSON/TXT and scripts | Do not treat raw evidence as Item 5 instructions by default. Inspect only if a document points readers to it as an operational step or later text turns it into guidance. |
 | Individual `examples/research/*.md` reports and research evidence folders | These are generally Item 2(a) research/evidence, not Item 5 service docs. Do not bulk-audit as Item 5. Reclassify a specific file only if it contains reader-facing service instructions and has an eligible post-review change. |
@@ -55,3 +55,11 @@ Prefer, in order:
 3. A distinct, documented surface with a verifiable cutoff and recent change.
 
 For each, require the chain **document says X → current code/live state does Y → a reader following X gets a reproducible wrong result**. If no candidate meets that chain, close the block without a report and use the updated map to guide the next hunt.
+
+
+## Block 016 reconciliation (2026-09-28 04:29 UTC)
+
+- Upstream HEAD, wanted-list text, inbox, and the Block 013 sent thread were freshly rechecked. No new Item 5 email/reply or upstream commit appeared.
+- The only post-review no-node.md wording diff remains the 00:24 UTC addition in 8bf1f3c, already checked against current source and unpaid live 402/error behavior in Blocks 010–011. Other latest additions are Item 2(a) research evidence. No new eligible candidate was identified.
+- The stablecoin guide's initial addition is post the homepage's 2026-09-25 05:00 UTC cutoff, but that does not establish a paid-review cutoff for this separate guide. Its own history contains only its creation commit; no later guide diff or guide-specific paid review was found. Eligibility remains unresolved, so no Item 5 behavior finding is claimed.
+- GitHub issue search for the guide returned zero matches. No Nano was spent; no report drafted or sent.
