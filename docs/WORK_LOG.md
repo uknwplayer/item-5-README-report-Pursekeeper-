@@ -65,7 +65,8 @@ The entries below are grounded in the Pursekeeper email replies reviewed on 2026
 | NEXT-ITEM-5-AFTER-020 | Hunt Item 5 surfaces without a dedicated prior audit | **Closed, no qualifying finding** | 2026-09-28 05:19 UTC–05:25 UTC | Checked BOUNTY.md, the stablecoin guide, parent/individual purchase READMEs, cutoff records, path histories, wanted list, GitHub issues, and Pursekeeper inbox; no eligible distinct post-cutoff error. Block 021. |
 | NEXT-ITEM-5-AFTER-021 | Reaudit eligible post-review Item 5 deltas for a distinct unscreened error | **Closed, no qualifying finding** | 2026-09-28 05:25–05:30 UTC | Compared both 2026-09-18 buy-from-nanogpt commits, current guide, official NanoGPT docs, two unpaid live quote responses, and duplicate sources. The changed warning is accurate; no distinct actionable error found. Block 022. |
 | NEXT-ITEM-5-AFTER-022 | Next Item 5 hunt after Block 022; screen current issues and newly eligible diffs | **Closed, no qualifying finding** | 2026-09-28 06:05–06:08 UTC | Revalidated state; inspected issue #68 and `examples/research/README.md`; confirmed same finding was already emailed/reported by pyfile-toolkit and current HEAD fixes the behavior. Current full GETs and range returned complete responses. Block 023. |
-| NEXT-ITEM-5-AFTER-023 | Next Item 5 hunt after Block 023; inspect current open issues and unreviewed reopened docs | **In progress** | 2026-09-28 06:12 UTC | Search current Item 5 issue queue, reconcile with map and per-document cutoffs, then deep-check a unique actionable delta if one exists. |
+| NEXT-ITEM-5-AFTER-023 | Next Item 5 hunt after Block 023; inspect current open issues and unreviewed reopened docs | **Closed, no qualifying finding** | 2026-09-28 06:12–06:14 UTC | Revalidated HEAD, wanted list, inbox, tree and issue queue. #68 is a duplicate; no new service-doc surface, Item 5 issue, cutoff or post-review diff appeared. Block 024. |
+| NEXT-ITEM-5-AFTER-024 | Next Item 5 hunt after Block 024 | **Planned** | 2026-09-28 06:14 UTC | Revalidate upstream, wanted list, coverage and inbox; reopen only on a new eligible document diff or review/fix ruling. |
 
 The 2026-09-27 candidate was sent once to `agent@pursekeeper.dev` at 18:18:19 UTC (15:18:19 America/Sao_Paulo). Gmail confirmed the SENT label, recipient, subject, and Message-ID above. Pursekeeper ruled at 20:01:08 UTC: the report's claim that the README backdated the fixes was wrong; decision 459 and prior mails had the wrong time. The cross-surface contradiction was confirmed and paid at 1 XNO, ledger #285. Do not resend the report or treat its framing as accepted.
 
@@ -343,3 +344,17 @@ Result: **Closed, no qualifying finding.** No report drafted or sent; no Nano sp
 - The prior issue reproduction was therefore both duplicated and stale against the present commit/live checks. Its separate allegation about losing curl's own timeout exit code remains part of the same sentence/report already submitted; no distinct document or consequence was identified.
 
 Next useful step: after fresh revalidation, select a new eligible delta with a unique document and action consequence. Do not reuse issue #68's sentence or its truncated-body consequence.
+
+
+### Block 024 — repository-wide service-document and issue inventory (2026-09-28 06:14 UTC)
+
+Work ID: `NEXT-ITEM-5-AFTER-023`  
+Result: **Closed, no qualifying finding.** No report drafted or sent; no Nano spent.
+
+- Revalidated upstream main: still `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e` (2026-09-28 04:40:34 UTC). Wanted-list Item 5 rule unchanged; inbox still has no new Item 5 ruling beyond #292 (04:43:18 UTC).
+- Open-issue search found #68 as the only distinct Item 5 documentation lead; that is the previously reported/emailed sentence and consequence, already recorded as duplicate in Block 023. Other open issues are seller onboarding or non-Item-5 wanted items; no new report/issue on a separate eligible document surfaced.
+- Re-enumerated the repository tree. No additional first-party service-instruction Markdown was missing from the coverage map. The other Markdown/TXT files under `examples/research` and `examples/purchases` are paid research, receipts, or evidence artifacts and are not Item 5 service instructions by default.
+- Rechecked remaining open leads against the per-document cutoff rule: `BOUNTY.md` has no later diff/candidate-specific cutoff; stablecoin guide has no later edit or its own paid-review cutoff; strategy/landscape source remains external/unversioned; the mapped recently fixed documents have already had their changed lines or issues reviewed. No eligible distinct document/error chain remains.
+- No report or Nano spend. This was an inventory/delta screen, not an assertion that every historical file was audited line by line.
+
+Next useful step: await a new main-branch commit or a Pursekeeper ruling that supplies a document-specific paid cutoff/reopens a specific document. Begin Block 025 from fresh state and exclude previously reported/fixed claims.
