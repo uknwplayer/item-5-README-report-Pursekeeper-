@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 025, upstream HEAD `31da3096db8d5f93c6354a870f95546f1973ecb5`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-28, against Block 026, upstream HEAD `449391364ae6e6c37fa19699fe389426359a16cf`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -161,3 +161,12 @@ For each, require the chain **document says X → current code/live state does Y
 - Checked issues, wanted/research rows and prior sent reports for duplicate claims. The closed-bounty claim is the already paid #307 report; no distinct candidate surfaced.
 - Direct public-page retrieval could not be verified in this block: the web opener marked the target URLs inaccessible and Firecrawl had insufficient credits. Link assessment is therefore source-level, not a fresh live HTTP-status claim. No report sent and no Nano spent.
 - Next: begin Block 026 from fresh state; reopen only eligible post-cutoff or later-fix text, and exclude the #307 claim.
+
+
+## Block 026 reconciliation (2026-09-28 21:23–21:35 UTC)
+
+- Fresh upstream HEAD `449391364ae6e6c37fa19699fe389426359a16cf`; paid/fix register now through ledger #319. Gmail's latest visible inbound Item 5 decision remains #292. The paid #316 correction is the cutoff for the re-opened `examples/buy-from-nanogpt.md` paragraph.
+- Checked that correction against `examples/get-nano-from-stablecoins.md`: its stated audience holds USDC/USDT; order creation requires a Nanswap key, and the documented deposit pays from that balance. Link to `no-node.md` describes what to do after acquiring Nano. The fix resolves #316 and adds no newly demonstrated wrong-result step. #316 is already paid/fixed; duplicate excluded.
+- Read the current README `/v1/work` table and compared the #317 post-fix route against `workGenerate()`: validation/capacity precede charge, failed generation hands credit back, and paid calls bypass the free per-IP counter. The README's no-limit paid claim matches. GPU fallback during the existing cooldown is older behavior, not introduced by the latest handler fix; no eligible report based on it.
+- Current public `/v1/x402` JSON was not verified: curl timed out at 8 seconds. Conclusions are source-based. No candidate, no submission, no Nano spent. Block 026 was a targeted delta review, not a line-by-line audit.
+- Next: Block 027 after fresh revalidation; preserve the stablecoin guide's unresolved review cutoff and prioritize eligible untouched docs.
