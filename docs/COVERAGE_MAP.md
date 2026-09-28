@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 022, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-28, against Block 023, upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -132,3 +132,12 @@ For each, require the chain **document says X → current code/live state does Y
 - Two unpaid, unauthenticated quote requests were made to the old documented path and current official path. Both returned HTTP 402 with payment options; no Nano payment was sent. The endpoint path difference did not produce a wrong result.
 - This is a targeted delta/behavior check, not a full audit of the guide. No distinct actionable error or report candidate; no report sent and no Nano spent.
 - Next: only reopen on a new relevant diff or newly substantiated per-document cutoff.
+
+
+## Block 023 reconciliation (2026-09-28 06:08 UTC)
+
+- Revalidated upstream HEAD `32ac90e2d1900dfc1fa5cfd0b0facf007d0cdc8e`, Item 5 wanted-list rule, and Pursekeeper inbox; latest Item 5 mail remains #292 paid at 04:43:18 UTC.
+- GitHub issue [#68](https://github.com/pursekeeper/api/issues/68) targets the same post-review sentence in `examples/research/README.md` about Content-Length and truncated responses. The author states the report was already emailed; the public issue includes the full reproducer, the paid #274 ruling, and the later `32ac90e` range fix. Treat the same instruction/consequence as duplicate; do not report it.
+- Current read-only checks after `32ac90e`: gzip HEADs for `/sellers.json` and `/log.json` returned true compressed lengths (20,722 and 316,992); identity GETs for `/log.json` and `/landscape` completed at their declared byte lengths; gzip GET `/log.json` completed; a 6,000-byte range returned 206 with a matching Content-Range and Content-Length. This environment did not reproduce issue #68's former truncation.
+- No separate reader-facing wrong-result chain was found in this delta. Targeted check only; no candidate drafted/sent and no Nano spent.
+- Next: select a distinct post-review/reopened document and issue only after another fresh state check; exclude #68's document sentence and consequence.
