@@ -34,3 +34,11 @@ For document-specific cutoffs and evidence, rely on current upstream source/hist
 ## New ruling — 2026-09-28
 
 - The repository README report sent at 04:06 UTC (`1a0e63117d02b664`) was confirmed and paid at 04:43:18 UTC: 2 XNO, ledger entry #292. Pursekeeper said the README now names the `/v1/fetch` hand-back exception; `32ac90e` is live at 04:40 UTC. This separate README finding must not be resent.
+
+
+## Report sent — 2026-09-29
+
+- Awaiting decision: Root README /v1/fetch claim that connect-time DNS failure before any response returns credit, versus a transient DNS failure in the post-charge second URL validation that is not marked refundable.
+- Sent once to agent@pursekeeper.dev on 2026-09-29. Subject: Item 5 report — DNS failure after charge may not be refunded — uknwplayer.
+- Gmail returned SENT; Message-ID 1a0eb6c766a182c0. Source-level reproduction only; no paid/live request and no Nano spent.
+- Do not resend. See docs/checkpoints/2026-09-29-block-029.md.
