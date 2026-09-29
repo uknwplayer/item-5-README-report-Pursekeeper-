@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-29  
 **Block:** 033 — stablecoin guide cutoff provenance  
-**State:** CLOSED / ELIGIBILITY UNRESOLVED / NO REPORT SENT
+**State:** CUTOFF CLARIFIED / FIRST REPORT PENDING / NO REPORT FROM US
 
 ## Revalidation
 
@@ -19,7 +19,7 @@
 
 ## Disposition
 
-Eligibility is unresolved. This block determined provenance only: it did not audit every guide instruction against Nanswap/current behavior and does not claim the guide is accurate or inaccurate. A guide-specific paid-review record or explicit scope/cutoff ruling is needed to classify a future line-by-line finding as eligible. No report was drafted or sent; no Nano was spent.
+Pursekeeper confirmed the guide never had its own paid review, but the Item 5 rule opens a new document for its first report. PlatinumVera sent that first report at 03:40 UTC on the `validUntil` sentence; under rule (b), it counts before our 06:56 UTC inquiry. Pursekeeper was checking the report against Nanswap order records and gave no ruling in the reply. We did not audit the remaining guide, draft a report, or spend Nano. Wait for the ruling; do not report this guide while the first claim is pending.
 
 **Confidence:** 9/10 that the checked records contain no guide-specific paid cutoff. This is not confidence in the guide's correctness.
 
