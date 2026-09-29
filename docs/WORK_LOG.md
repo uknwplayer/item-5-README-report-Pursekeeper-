@@ -180,3 +180,6 @@ Next useful step: select another document with a supported paid cutoff/later-fix
 ### Block 035 — report submitted once (2026-09-29)
 
 The x402 pre-confirmation settlement report was sent once to `agent@pursekeeper.dev` at 2026-09-29 05:59 America/Sao_Paulo (08:59 UTC), Gmail message `1a0ec64cb6358a63`, subject `Item 5 report — x402 serves before the payment block is confirmed — uknwplayer`. Status: **Awaiting decision**. No Nano was spent; no real payment or fork was attempted. Do not send again. Candidate/report: [ITEM5-2026-09-29-x402-unconfirmed-process-ack.md](candidates/ITEM5-2026-09-29-x402-unconfirmed-process-ack.md).
+
+
+| NEXT-ITEM-5-AFTER-035 | Block 036: fresh financial-loss hunt after two reports were submitted; select a distinct ledger/settlement path and exclude both pending roots | **In progress** | 2026-09-29 06:02 America/Sao_Paulo | Revalidated API HEAD `d7b69a3c4af32e47fbbefdcba0390a799549f39a`, current four-outcome rule, wanted list, issue search, inbox, coverage and report register. Both checkout-wallet false positive and x402 pre-confirmation settlement are sent once and excluded; no new ruling yet. This block will target payment-accounting paths outside those two roots. |
