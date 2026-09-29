@@ -238,3 +238,8 @@ Pursekeeper's current Item 5 rule is from upstream `d7b69a3c4af32e47fbbefdcba039
 ### Block 034 addendum — submitted once
 
 Candidate: [`ITEM5-2026-09-29-checkout-wallet-false-positive.md`](candidates/ITEM5-2026-09-29-checkout-wallet-false-positive.md). Current `feePassthrough()` treats an otherwise valid direct API payment as a Subnano checkout when a separate transfer to the Subnano fee collector appears in the payer's recent history. Exact-source fixture: current code returns `true`; parent of `b438d56` returns `false` for the five-entry case, making that commit the provenance point. `creditForUnlocked()` then returns `NO_CREDIT_REASON` without API credit/refund. This is a candidate financial-loss path, distinct from the previously reported false-negative checkout classification issues. Confidence 8/10; sent once at 2026-09-29 05:11 America/Sao_Paulo (08:11 UTC), Gmail message `1a0ec37b5628f92a`; awaiting decision. No Nano spent.
+
+
+### Block 035 in progress — financial paths only (2026-09-29)
+
+Starting from API HEAD `d7b69a3c4af32e47fbbefdcba0390a799549f39a`; current Item 5 rule verified. Exclude the just-submitted `feePassthrough()` false-positive root pending decision. Screen charge, credit/refund, x402/facilitator settlement, and no-node send/retry code only for the four paid outcomes. Candidate `#75` is partial `/log.json` availability/documentation and is excluded under the current rule.

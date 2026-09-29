@@ -25,3 +25,10 @@ Issue #74 concerned the inverse false negative: non-API purpose sends could be a
 ### Report draft
 
 See [`docs/candidates/ITEM5-2026-09-29-checkout-wallet-false-positive.md`](../candidates/ITEM5-2026-09-29-checkout-wallet-false-positive.md). Do not send unless the operator explicitly says **“Enviar”**. Payout address: `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`.
+
+
+## Block 035 — next financial-loss hunt in progress (2026-09-29 05:13 BRT)
+
+- Revalidated API `main` at `d7b69a3c4af32e47fbbefdcba0390a799549f39a` (07:24:40 UTC), project `main` at `b243dbefd590ab444929e720be5a982f66f4965b`, current rule in `examples/research/README.md`, recent commits, issues, coverage map and Gmail.
+- Current scope: four specified money outcomes only. The checkout-wallet false positive was sent once (Gmail `1a0ec37b5628f92a`, 05:11 BRT) and is excluded as a duplicate. Latest inbound Pursekeeper mail remains 07:10:42 UTC; no decision on that new report yet.
+- Initial leads for this block: inspect current settlement/charge/refund source and the recent post-fix money-path commits for a distinct exploitable financial outcome. No live payment, Nano transfer, or report send during analysis.
