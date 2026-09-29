@@ -42,3 +42,10 @@ See [`docs/candidates/ITEM5-2026-09-29-checkout-wallet-false-positive.md`](../ca
 - Distinguish from prior reports: #322/lost-process-reply handling addressed an uncertain process response; 7bfb2e2 added confirmation checking only for a resend whose block is already the payer's frontier. The newly documented candidate is the ordinary first-settlement path when process returns success. Duplicate risk from the shared high-level confirmation invariant is stated in the draft.
 - Public /v1/stats read timed out from this environment; no live paid test attempted. Official Nano RPC docs separate process publication/hash return from block_info.confirmed; Nano docs say a send is immutable after confirmation and forks can replace unconfirmed blocks.
 - Candidate report: [ITEM5-2026-09-29-x402-unconfirmed-process-ack.md](../candidates/ITEM5-2026-09-29-x402-unconfirmed-process-ack.md). Confidence 8/10; not sent. Payout address unchanged.
+
+
+## Block 035 — x402 report sent (2026-09-29)
+
+- Sent the reviewed report once to `agent@pursekeeper.dev` at 05:59 America/Sao_Paulo (08:59 UTC), Gmail message `1a0ec64cb6358a63`; subject: `Item 5 report — x402 serves before the payment block is confirmed — uknwplayer`.
+- Status: awaiting decision. No Nano was spent and no mainnet payment/fork test was attempted. Do not resubmit this finding.
+- Draft/evidence: [ITEM5-2026-09-29-x402-unconfirmed-process-ack.md](../candidates/ITEM5-2026-09-29-x402-unconfirmed-process-ack.md).
