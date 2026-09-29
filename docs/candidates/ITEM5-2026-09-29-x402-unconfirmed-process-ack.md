@@ -1,6 +1,6 @@
 # Candidate report — x402 call served before payment confirmation
 
-**Review state:** Candidate ready — awaiting operator review. Not sent.
+**Review state:** Awaiting decision — sent once on 2026-09-29 05:59 America/Sao_Paulo (08:59 UTC), Gmail message `1a0ec64cb6358a63`.
 **Confidence:** 8/10.
 
 ## Email
