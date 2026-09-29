@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-28, against Block 027, upstream HEAD `449391364ae6e6c37fa19699fe389426359a16cf`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-29, against Blocks 028–030, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -176,4 +176,26 @@ For each, require the chain **document says X → current code/live state does Y
 
 - Fresh upstream HEAD remains `449391364ae6e6c37fa19699fe389426359a16cf`; no API repository commit landed after Block 026. The current register records paid Item 5 reports through #319; Gmail shows no inbound Item 5 decision after #292.
 - Screened the recent research README additions/corrections: #319's payment row and two timestamp updates in `4493913`. They document historical events; neither gives operational instructions, and no reproducible wrong action or participation consequence was established. Prior #285 timing dispute/ruling checked for duplicate scope.
-- No qualifying candidate. No send or Nano spend. Block 027 is a narrow review of the newest research-index edits, not a new full audit. Next action: Block 028 from fresh state, prioritizing new relevant deltas and preserving the unresolved stablecoin-guide cutoff.
+- No qualifying candidate. No send or Nano spend. Block 027 is a narrow review of the newest research-index edits, not a new full audit. Next action: Block 031 from fresh state; prioritize newly changed eligible passages and preserve the stablecoin-guide's unresolved cutoff.
+
+
+## Block 028 reconciliation (2026-09-29)
+
+- Fresh upstream state carried forward from the end of Block 027 and revalidated at Block 030: API HEAD 7bfb2e2567770563f697d6f33eb2fcabe0d6f108, parent b438d5653604422ca7be7eb09ab5dd967d409f90, committed 2026-09-29 02:50:50 UTC. The wanted list was read from the current examples/research/README.md; Pursekeeper inbox had no reply to the DNS report.
+- Block 028's eligible root README /v1/fetch DNS hand-back discrepancy was retained for operator review; it is the same finding later sent once on 2026-09-29 (see Work Log and Block 029), so exclude it from future candidates.
+- The send is recorded as Awaiting decision. The DNS lead is not pending operator review and must not be submitted again.
+
+## Block 029 reconciliation (2026-09-29)
+
+- Reconfirmed that the DNS report was sent once to agent@pursekeeper.dev (Message-ID 1a0eb6c766a182c0, SENT); no new Pursekeeper reply was present. No report was drafted or sent in this block.
+- Carry-forward: begin Block 030 from current HEAD and screen fresh diffs, current wanted-list wording, exact code behavior, and report/issues history.
+
+## Block 030 reconciliation (2026-09-29)
+
+- Revalidated default branch main, API HEAD 7bfb2e2567770563f697d6f33eb2fcabe0d6f108 (2026-09-29 02:50:50 UTC), parent b438d5653604422ca7be7eb09ab5dd967d409f90, current wanted list, report history, issues, and the inbox. No reply to the DNS email; #292 remains the latest visible Item 5 ruling.
+- Audited only post-review/later-fix surfaces: examples/no-node.md since review cutoff 2026-09-28 00:17 UTC; root README /v1/work changes through HEAD; examples/buy-from-nanogpt.md note revisions in 31da309 and follow-up fix b438d56; facilitator /settle documentation against current facilitator.js/x402.js behavior.
+- no-node.md: current claims about the four-in-flight work limit, 503 before charge, GPU-first fallback, and maxTimeoutSeconds placement agree with workGenerate() and current server response code. Root README /v1/work GPU wording also matches workFor(). Root README /v1/fetch DNS refund claim still has the already-sent discrepancy from Block 028–029; exclude as duplicate.
+- buy-from-nanogpt.md: the newly added 31da309 sentence says “a small seed is sometimes sent inside a held item.” The current wanted list says new Item 2(a) holds closed at 2026-09-28 12:00 UTC; only existing holds continue. This was logged as a near-miss, not a candidate: the sentence is non-committal (“sometimes”), and the page separately points readers with USDC/USDT to a working first-Nano route and then to no-node.md; available evidence did not establish that following the seed sentence necessarily causes a wrong result. The older NanoGPT recipe route/header text was not changed by these commits and has no eligible post-review provenance, so excluded even though current official NanoGPT docs now document accountless quotes at /api/v1/... with x-x402: true.
+- Facilitator docs: current /settle page tells clients to check block status before retrying; recent code distinguishes definite rejection from uncertain transport failure and warns that a missing block may still arrive. No actionable documentation/code mismatch found.
+- Duplicate check: current work log/report history, Item 5 wanted-list entries, and API issues were reviewed; no distinct new candidate duplicated by a prior report was found. No candidate ready. No email sent and no Nano spent.
+- Scope limits: no paid requests, no Nano spend, and no destructive actions. This was a post-cutoff delta audit, not a line-by-line review of every eligible document. Next: Block 031 after fresh revalidation.
