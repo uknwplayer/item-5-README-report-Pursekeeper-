@@ -1,48 +1,26 @@
-# Roadmap — Item 5 README Reports
+# Roadmap — Pursekeeper Item 5 Reports
 
-## Phase 0 — Repository foundation
+## Current rule — effective 2026-09-29 07:24 UTC
 
-- [x] Create a dedicated public repository.
-- [x] Add project README and scope.
-- [x] Define the investigation and evidence protocol.
-- [x] Add the English report template and payout address.
-- [x] Add a per-finding register for completed, declined, and future work.
-- [x] Establish checkpoint and continuity rules.
+Upstream commit `d7b69a3c4af32e47fbbefdcba0390a799549f39a` narrowed Item 5. Documentation-only mistakes are fixed and credited unpaid. Future paid reports must prove a concrete path on a documented configuration that causes an unauthorized transfer, duplicate settlement, acceptance of less than the price, or credit/refund that never returns. Temporary unavailability does not qualify. Ӿ5 is paid to the first report per independently fixable root cause. Source tracing is permitted; a reporter must not lose real funds to qualify. Reports already in the inbox when the change published follow the earlier rule.
 
-## Phase 1 — Revalidate the next hunt
+The previous roadmap phases below are historical; do not use the old documentation-review cutoff workflow for eligibility.
 
-- [ ] Read the current checkpoint and work log; resume the next registered work ID.
-- [ ] Read `docs/COVERAGE_MAP.md`; reconcile it with current upstream history and use open areas to prioritize eligible targets.
-- [ ] Revalidate current `pursekeeper/api` HEAD.
-- [ ] Refresh the wanted list and recent commit history.
-- [ ] Confirm the applicable paid-review cutoff per candidate document.
-- [ ] Check reports, issues, commits, and fixes for duplicates.
+## Current next block
 
-**Current handoff after Block 017:** upstream `pursekeeper/api` HEAD remains `8bf1f3c6e02e87a123d74dba4dad1c1efe113538`; no new commit appeared. Live `/strategy` and `/landscape` were checked, but are rendered from files in external `GAMBIT_WORKSPACE`, not tracked in the repository; no page-specific paid-review cutoff or versioned content diff was found. The “one call” strategy wording and landscape timestamp mismatch did not establish a clear wrong-result chain. Block 017 closed without a finding; details are in the checkpoint, work log, and coverage map. Block 013 still awaits a reply and was not resent. `NEXT-ITEM-5-AFTER-016` is planned; begin with fresh revalidation and prioritize eligible post-review commit diffs.
+- [x] Revalidate current API HEAD, wanted-list rule, and Pursekeeper inbox.
+- [x] Update `OPERATING_PROTOCOL.md`, `README.md`, report template, work log, and coverage map for the new rule.
+- [x] Complete a targeted source screen of charge, credit/refund, x402 settlement/replay, facilitator settlement, no-node send/retry, and checkout-wallet classification paths.
+- [x] Record rejected leads, duplicate checks, and the limitation that private purpose files are not in the clone.
+- [x] Prepare one source-reproduced money-loss candidate for operator review; no payment made.
+- [ ] Resume only on a new financial-path lead, relevant code/configuration change, or stronger source evidence; revalidate before starting.
+- [ ] Present a complete report for operator review and wait for explicit “Enviar”.
+- [ ] Send exactly once only after approval; record reply/payment/fix.
 
-## Phase 2 — Candidate investigation
+## Historical workflow
 
-- [ ] Inspect only changes after the relevant cutoff.
-- [ ] Compare the exact documentation claim with source/live behavior.
-- [ ] Reproduce the consequence using a cheap, non-destructive method.
-- [ ] Record provenance, timing, duplicate search, and confidence.
-- [ ] Update the registered work item, checkpoint, and coverage map, including rejected candidates.
-- [ ] Discard candidates without a complete actionable evidence chain.
-
-## Phase 3 — Operator review and submission
-
-- [ ] Present one complete English report to the operator.
-- [ ] Wait for explicit “Enviar”.
-- [ ] Send the reviewed report exactly once to `agent@pursekeeper.dev`.
-- [ ] Mark the work item “Awaiting decision” and record the exact subject and sent timestamp/message reference.
-
-## Phase 4 — Outcome and new cutoff
-
-- [ ] Read and record the reply.
-- [ ] Record acceptance/payment, credit, duplicate decision, rejection, or non-reproduction distinctly.
-- [ ] If accepted/fixed, use the new fix commit as the next cutoff.
-- [ ] Reopen only documents affected by that fix when searching for newly introduced errors.
+The pre-2026-09-29 workflow required post-paid-review documentation diffs and a document-specific cutoff. That workflow is preserved in historical checkpoints/work-log entries but is superseded for future reports by the current rule above.
 
 ## Completion criteria
 
-A work item is complete when its register row and checkpoint record the evidence-based outcome and next action. Do not manufacture a report to fill a block.
+A work block is complete when its work-log row, checkpoint, and coverage map record current upstream state, the financial path examined, any concrete evidence/reproduction, duplicate checks, disposition, and next action. Do not create a report unless one of the four payable outcomes is established.

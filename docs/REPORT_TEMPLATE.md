@@ -1,6 +1,6 @@
 # Item 5 Report Template
 
-Use this template for one actionable finding in one document. Remove all bracketed guidance and verify every factual statement before sending.
+Use this template for one independently fixable financial-loss root cause. Remove all bracketed guidance and verify every factual statement before sending.
 
 ## Email
 
@@ -10,12 +10,12 @@ Use this template for one actionable finding in one document. Remove all bracket
 ## Report
 
 **Operator:** uknwplayer  
-**Document:** [exact document title/path or live URL]  
-**Finding:** [one sentence describing the actionable error]
+**Surface/configuration:** [live service, facilitator, `no-node.js`, or skill script; exact documented configuration]
+**Finding:** [one sentence naming the financial-loss path and root cause]
 
-### Exact documentation
+### Relevant instruction (if applicable)
 
-> “[Paste the exact sentence or smallest complete passage that gives the incorrect instruction or claim.]”
+> “[Paste only the exact instruction that forms part of the path. If no documentation instruction is involved, write ‘Not applicable — source-level path.’]”
 
 **Location:** [heading, line number, or URL fragment]
 
@@ -27,20 +27,20 @@ Use this template for one actionable finding in one document. Remove all bracket
 
 [State exactly what happened. Include relevant status code, response field, output, or code branch. Distinguish observed behavior from inference.]
 
-### Why the documented result is wrong
+### Source path and why it is wrong
 
-[Connect the quotation to the current implementation/live behavior. Explain why a reader following the text gets a different result.]
+[Trace the exact configured request through the current source/endpoint. Explain which check, charge, settlement, or hand-back produces the loss.]
 
 ### Practical consequence
 
-[Describe the real action or decision the reader makes and the incorrect outcome. Keep it specific and proportionate.]
+[Identify which eligible outcome is proven: unauthorized transfer, duplicate settlement, underpayment accepted as settled, or credit/refund never returned. Keep it specific and proportionate.]
 
 ### Provenance and timing
 
-- **Last paid-review/fix cutoff:** [commit, date/time, evidence/source]
-- **Later introducing commit:** [full or abbreviated SHA, date/time]
-- **Relevant diff:** [file/path and changed lines or concise description]
-- **Current-state confirmation:** [current HEAD / live endpoint / source location]
+- **Current Item 5 rule/cutoff:** [`d7b69a3` or newer confirmed policy commit and publication time]
+- **Introducing/fixing commits:** [full or abbreviated SHA and date/time, if established]
+- **Relevant source path:** [files/functions/branches traversed]
+- **Current-state confirmation:** [current HEAD / live endpoint / test or source location]
 - **Duplicate check:** [wanted list, previous reports, issues, commits, and result]
 
 ### Confidence
@@ -56,11 +56,11 @@ Use this template for one actionable finding in one document. Remove all bracket
 ## Send-once checklist
 
 - [ ] Current upstream state was revalidated.
-- [ ] Exact quotation is still present in the target document.
-- [ ] The candidate was introduced after the substantiated paid-review cutoff.
-- [ ] The relevant commit and diff support that timing.
-- [ ] A reader following the text gets a concrete, reproducible wrong result.
+- [ ] The current wanted-list rule and inbox timing were revalidated.
+- [ ] The source path is complete and current, with a documented configuration.
+- [ ] A listed money-loss outcome is reproduced or demonstrated from source.
+- [ ] The case is not temporary unavailability, documentation-only, fixed, or duplicate.
 - [ ] Duplicate checks are recorded.
-- [ ] This report contains one document and one finding.
+- [ ] This report contains one independently fixable root cause.
 - [ ] The operator reviewed this exact draft and explicitly said “Enviar”.
 - [ ] The email is sent once, with the standard subject and payout address.

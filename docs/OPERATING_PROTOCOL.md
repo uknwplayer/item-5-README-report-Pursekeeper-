@@ -1,17 +1,19 @@
 # Operating Protocol — Pursekeeper Item 5
 
-## Purpose and boundaries
+## Current payout rule and boundaries
 
-Investigate only actionable documentation errors eligible under Pursekeeper Item 5. The target is a reader-facing instruction or claim that leads a reasonable reader to an incorrect action or result when followed against the current implementation or live service.
+**Effective cutoff:** upstream commit `d7b69a3c4af32e47fbbefdcba0390a799549f39a`, published 2026-09-29 07:24 UTC. This supersedes the earlier document-review/later-fix eligibility rule for future reports. Documentation-only mistakes may be fixed and credited by Pursekeeper, but they are unpaid. Do not spend hunt time on them.
 
-In-scope surfaces may include:
-- `pursekeeper.dev` documentation and live `/api` text;
-- `no-node.md`;
-- `buy-from-nanogpt.md`;
-- facilitator documentation;
-- a document reopened by code or documentation changes made after its last paid review.
+Investigate only a concrete, reproducible financial-loss path within Item 5. The current rule pays Ӿ5 to the first report for a path, under a documented configuration, against the live service, facilitator, `no-node.js`, or the skill's scripts, by which:
 
-Do not broaden an Item 5 investigation into general security testing, feature requests, style edits, or unrelated bounty categories.
+- a payer or Pursekeeper makes a transfer the payer did not authorize;
+- the same payment is settled twice;
+- a payment below the listed price is accepted as settled; or
+- credit/refund is retained and never returned.
+
+The path may be demonstrated from source with the execution path named, or with a test payment made by the reporter; nobody should lose real funds to qualify. Temporary unavailability does not qualify. Payment is per independently fixable root cause, regardless of how many files/routes expose it; later duplicates are credited. Reports already in Pursekeeper's inbox at the cutoff are handled under the old rule.
+
+In-scope execution surfaces are the live service, facilitator, `no-node.js`, and skill scripts, including documentation only when following a specific instruction causes one of the financial outcomes above. Do not investigate ordinary documentation accuracy, availability-only failures, style, feature requests, general security issues outside these outcomes, or unrelated bounty categories.
 
 ## Required sequence
 
@@ -27,11 +29,11 @@ Keep each work item in the register through its entire lifecycle: planned, in pr
 The coverage map is a required input to every hunt, not an optional summary.
 
 - Consult its audited, previously reported/fixed, and open entries before selecting a document. Cross-check them against the current work log, wanted list, inbox, and upstream history; the map can be stale.
-- Prefer an eligible post-review documentation diff or a document reopened by a later fix. A surface marked open is only a lead: first prove its applicable paid-review/fix cutoff and a relevant later change. Never bypass Item 5's cutoff rule to fill a coverage gap.
+- Use prior coverage to avoid duplicate work, but the old per-document paid-review cutoff is no longer a condition for a new financial-loss report. Do not reopen a surface just to search for a documentation-only mismatch.
 - Check prior rejected/inconclusive leads before testing so the same unsupported theory is not rediscovered.
 - At the end of every block, record the exact surface and scope examined, cutoff/commit, evidence and reproduction, disposition, and remaining open areas in both the work log/checkpoint and the coverage map.
 - Use precise status language: “targeted audit” means only the recorded passage/diff/behavior was checked; do not claim a whole document or endpoint was fully audited unless the work log shows that complete scope.
-- Preserve the strongest proven search pattern as first priority: **post-review commit → stale or contradictory reader-facing instructions → current code/live behavior → reproducible wrong result**.
+- Prioritize money-flow traces: **documented configuration/request → charge/credit/settlement path → concrete unauthorized transfer, double settlement, underpayment, or permanently missing credit/refund**. Recent commits are useful leads, but an eligible financial defect can predate the policy cutoff.
 
 ### 2. Revalidate current state
 
@@ -44,17 +46,9 @@ Before examining candidates, establish fresh evidence for:
 
 Record the date/time and exact commit identifiers in the checkpoint and relevant work-log row. Never treat a prior chat summary as current repository state.
 
-### 3. Establish the review cutoff
+### 3. Establish eligibility and provenance
 
-For each document, identify the most recent paid review or fix that establishes its cutoff. Then inspect only changes made after that cutoff for the candidate error.
-
-The proof should include:
-- the cutoff review/fix and its commit or reliable timestamp;
-- the later commit that introduced the discrepancy;
-- commit timestamp and relevant diff;
-- confirmation that the wording/behavior remains present now.
-
-If a review cutoff cannot be substantiated, mark the candidate blocked or unverified; do not imply provenance.
+Confirm the current Item 5 rule and its publication cutoff from the live wanted list and commit history. For each candidate, identify the exact documented configuration and complete source execution path, and establish that the current code still permits the financial outcome. A post-review document cutoff is not required by the current rule; record introducing commit/time when useful for provenance, but do not reject an otherwise qualifying money-loss path solely because it is old.
 
 ### 4. Compare documentation with reality
 
@@ -66,11 +60,11 @@ Trace the exact instruction through:
 
 Prefer a low-cost, read-only reproduction such as `curl`, `grep`, a public JSON response, or a small local code-path check. Do not make paid Nano calls unless they are indispensable and explicitly approved. Avoid destructive tests.
 
-### 5. Prove practical consequence
+### 5. Prove financial consequence
 
-State what a reader following the exact sentence does and what actually happens. The consequence must be concrete and reproducible: for example, an operation fails, credits are unavailable, a command targets the wrong resource, or the documented recovery path cannot work.
+Name the exact action/request/configuration and trace what happens to funds or payment credit. The demonstrated result must be one of the four paid outcomes listed above. Source tracing is acceptable when it fully proves the execution path; use a low-cost read-only or local test when it strengthens the proof. Never send a real payment just to test a theory.
 
-Do not report grammar/formatting, ambiguity without a demonstrated consequence, behavior that predates the cutoff, an issue already fixed or reported, or a theoretical outcome unsupported by reproduction or code.
+Do not report grammar/formatting, ambiguity, wrong results without one of the listed financial outcomes, availability failures, already fixed paths, duplicates, or theoretical outcomes unsupported by a complete source path or reproduction.
 
 ### 6. Check duplicates and estimate confidence
 
@@ -81,7 +75,7 @@ Assign a confidence score:
 - **Medium (5–7/10):** actionable mismatch is likely, but one evidence link or live confirmation is incomplete.
 - **Low (0–4/10):** timing, consequence, or implementation behavior is speculative.
 
-Only high-confidence candidates with a complete evidence chain should be presented for submission. Preserve rejected candidates in WORK_LOG with the reason, so they are not rediscovered as new work.
+Only high-confidence candidates with a complete evidence chain and an eligible financial outcome should be presented for submission. Preserve rejected candidates in WORK_LOG with the reason, so they are not rediscovered as new work.
 
 ### 7. Present before sending and record the outcome
 
@@ -93,7 +87,7 @@ After a confirmed acceptance/fix, update the cutoff to the new commit. If the fi
 
 ## Required report structure
 
-Follow [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md). A complete report includes operator, one document, one finding, exact quotation, reproduction, observed result, why it is wrong, practical consequence, provenance/timing, confidence, duplicate checks, and payout address.
+Follow [REPORT_TEMPLATE.md](REPORT_TEMPLATE.md). A complete report includes operator, one root cause and its documented configuration/source path, exact relevant quotation when documentation is part of the path, reproduction or source trace, observed financial outcome, practical consequence, provenance/timing, confidence, duplicate checks, and payout address.
 
 Use the subject:
 `Item 5 report — [short error description] — uknwplayer`

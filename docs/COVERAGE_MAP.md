@@ -230,3 +230,11 @@ Pursekeeper's 2026-09-29 07:01 UTC email confirms there was no prior paid review
 ### Block 033 final status
 
 Pursekeeper accepted PlatinumVera's first report on the guide's `validUntil` statement and closed the guide except for mistakes introduced by its correction. The 2026-09-29 `887bb6c` correction was compared with five live Nanswap `get-order` JSON responses and does not introduce a demonstrated actionable error. The guide remains ineligible for a second independent report unless a later correction introduces a distinct error. The same Pursekeeper email accepted our DNS report #342 and confirmed the fix live. Next hunt starts at `887bb6c`.
+
+## Current financial-loss rule override (2026-09-29)
+
+Pursekeeper's current Item 5 rule is from upstream `d7b69a3c4af32e47fbbefdcba0390a799549f39a` (2026-09-29 07:24:40 UTC): documentation-only mistakes are unpaid. Paid reports require a concrete supported path that causes an unauthorized transfer, duplicate settlement, acceptance of less than the price, or credit/refund that never returns. Source proof is allowed without a test payment; temporary unavailability is excluded. Reports already in Pursekeeper's inbox at publication remain under the earlier rule. The prior document paid-review cutoff process is historical and does not gate current eligibility.
+
+### Block 034 addendum — candidate ready
+
+Candidate: [`ITEM5-2026-09-29-checkout-wallet-false-positive.md`](candidates/ITEM5-2026-09-29-checkout-wallet-false-positive.md). Current `feePassthrough()` treats an otherwise valid direct API payment as a Subnano checkout when a separate transfer to the Subnano fee collector appears in the payer's recent history. Exact-source fixture: current code returns `true`; parent of `b438d56` returns `false` for the five-entry case, making that commit the provenance point. `creditForUnlocked()` then returns `NO_CREDIT_REASON` without API credit/refund. This is a candidate financial-loss path, distinct from the previously reported false-negative checkout classification issues. Confidence 8/10; presented for operator review only; not sent. No Nano spent.

@@ -1,12 +1,12 @@
-# Pursekeeper Item 5 — README Reports
+# Pursekeeper Item 5 — Reports
 
-A focused workspace for finding and reporting actionable errors in Pursekeeper documentation under Item 5.
+A focused workspace for finding and reporting Item 5 defects under Pursekeeper's current payout rule.
 
 ## Mission
 
-Identify documentation statements that were introduced or changed after the applicable paid-review cutoff and that cause a reader following the instructions to take an action that produces an incorrect result.
+Pursue only concrete, reproducible financial-loss paths. Since upstream commit `d7b69a3` (2026-09-29 07:24 UTC), documentation-only mistakes are fixed/credited but unpaid. A payable finding must show, on a documented configuration, that a payer or Pursekeeper makes an unauthorized transfer, settles the same payment twice, accepts less than the price as settled, or leaves credit/refund unreturned. The path may be proven from source or with the reporter's own test payment; temporary unavailability does not qualify.
 
-This project is limited to documentation findings in scope for Item 5, including Pursekeeper README/API text, `no-node.md`, `buy-from-nanogpt.md`, facilitator documentation, and documents reopened by later source or documentation changes. Each submission must concern one document and one actionable finding.
+Search the live service, facilitator, `no-node.js`, and skill scripts. Documentation is relevant only when following a specific instruction produces one of the listed financial outcomes. Record one independently fixable root cause per report, even if it appears in multiple files or routes. Do not spend hunt time on ordinary documentation mistakes or other unpaid findings.
 
 ## Working language
 
@@ -19,15 +19,15 @@ English is the official language for repository files and reports. Conversation 
 3. Read [the operating protocol](docs/OPERATING_PROTOCOL.md).
 4. Read the [living coverage map](docs/COVERAGE_MAP.md) to see audited, partially checked, reported/fixed, and open surfaces.
 5. Use the [report template](docs/REPORT_TEMPLATE.md).
-6. Revalidate current upstream state, wanted list, relevant cutoff, recent fixes, and prior reports before investigating.
+6. Revalidate current upstream HEAD, exact wanted-list rule, inbox, recent fixes, and prior reports before investigating. A document-specific paid-review cutoff is no longer required for a new money-loss finding.
 
 ## Evidence standard
 
-A finding is ready to present only when the evidence chain is clear:
+A finding is ready to present only when the financial-loss chain is clear:
 
-> One document says **X** → the current implementation or live state does **Y** → following **X** causes a reproducible wrong result.
+> A documented configuration/request reaches **X** in the current payment path → the code settles, transfers, or retains funds incorrectly → the exact financial loss is reproducible or fully demonstrated from source.
 
-The report must establish provenance and timing: the relevant paid-review cutoff, the later commit that introduced the wording or discrepancy, and the diff. Mere wording polish, ambiguity without an actionable consequence, or behavior that predates the cutoff is out of scope.
+The report must name the complete code path and financial consequence. Record introducing commits/timing as useful provenance, but do not use the old paid-review cutoff as an eligibility gate. Wrong results without a listed financial consequence, temporary unavailability, and documentation-only findings are out of scope for payment.
 
 ## Submission guardrails
 
