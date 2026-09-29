@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-29, against Blocks 028–031, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-29, against Blocks 028–032, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -15,7 +15,7 @@
 | Surface | Recorded coverage | Current handling |
 |---|---|---|
 | Repository `README.md` | Prior review and bounty wording; Block 013 compared the x402 settled-hash sentence with the later `/v1/fetch` credit-return code. | Block 013 report was confirmed and paid as ledger #292 on 2026-09-28 04:43 UTC; corrected in `32ac90e`. Do not resend or reopen the same exception. |
-| `examples/no-node.md` | Paid reports #228, #279 and credited #281 are recorded. Blocks 010–011 checked post-review `8bf1f3c` wording against source and unpaid live 402/error responses. | The 2026-09-25 12:50 UTC review cutoff was later reset by paid fixes: latest recorded cutoff before this block was 2026-09-28 00:17 UTC. Block 025 screened the later GPU/budget, script/source links and closed-bounty paragraph changes in `f4d0a0b` and `05d29c1` against current `server.js`, the wanted list, and the `/examples/*` route. No new actionable mismatch established. Reopen only after another relevant change; the live URLs were not fetched in Block 025. |
+| `examples/no-node.md` | Paid reports #228, #279, #289, #307, #319, #323 and credited #281 are recorded; Blocks 010–011 and 025/030 screened specific deltas. Block 032 read the complete guide line by line against current code and official protocol docs. | Latest relevant prose/code cutoff: #323 fix in `b438d56` (2026-09-28 22:25 UTC), which changed paid-work limits/concurrency wording. Current source matches. `7bfb2e2` later changes `no-node.js`, not `no-node.md`; retry behavior was checked. Full guide audit found no qualifying post-cutoff mismatch. An older caveat remains: `/v1/receivable` caps each response at 100; one `receive` run can leave later sends if there are >100, but this predates the 2026-09-10 paid review (endpoint cap exists in `b947aa1`, 2026-09-08), so it is excluded. See Block 032 checkpoint; reopen only on a later relevant diff. |
 | `examples/buy-from-nanogpt.md` | Block 009 and Block 022 checked post-review guide changes, unpaid quotes, and linked evidence; earlier paid rows concerned other passages. | New post-review Notes-bullet report #307 was paid and fixed by `31da309` (2026-09-28 16:52:29 UTC). Block 025 screened the correction against the wanted-list payment terms and current `/examples/*` route. No new actionable error established. Targeted delta review, not a complete line-by-line audit. |
 | `examples/purchases/README.md` | Historical accepted report #266 covered the seller-first `/v1/work` flow. | Reopen only if a later change affects the instructions. |
 | `examples/research/README.md` | Historical accepted reports and the paid #285 cross-surface timing contradiction; Block 006 checked table/link structure; later ruling rows were compared with public decision data. | Ledger/index and selected changed rows were checked, not every linked research report or evidence file. |
@@ -207,3 +207,11 @@ For each, require the chain **document says X → current code/live state does Y
 - The potentially unsafe “publish any block” cancellation instruction is not a new Item 5 candidate. It is present before the paid review, while later generic lost-reply changes do not affect the facilitator endpoint's call (the handler supplies no optional `landed` dependency). Record as a provenance-excluded legacy concern, not as a finding.
 - Official Nano docs say competing blocks with the same previous hash are forks and that confirmation prevents replacement; no on-chain behavior was tested. No exact duplicate found in the register/issues search. No report sent; no Nano spent.
 - Next: use the next eligible post-review document/code delta, or newly confirmed paid-review cutoff. Avoid reopening this passage unless a later relevant change makes the consequence new.
+
+
+## Block 032 reconciliation (2026-09-29)
+
+- Completed the requested line-by-line review of all `examples/no-node.md` instructions and examples against the current `server.js`, `x402.js`, and `examples/no-node.js`, plus official x402 v2 and Nano work-generation documentation.
+- The last relevant text/code correction is the #323 work-limit fix in `b438d56`; its new wording matches current validation order, synchronous four-slot reservation, free/paid rate limits, GPU-first policy, fallback and breaker behavior. Later `7bfb2e2` changes the no-node script, not the Markdown guide, and no doc-to-current-code wrong-action chain was established.
+- A `count: '100'` limit in `/v1/receivable` means a script receive run does not pocket more than the first 100 returned blocks. The same cap exists in endpoint-introduction commit `b947aa1` (2026-09-08), so this is a pre-review caveat and fails the Item 5 timing rule. It is retained in the map to prevent circular re-investigation.
+- No matching duplicate issue was found; no report or Nano spend. See `docs/checkpoints/2026-09-29-block-032.md`.
