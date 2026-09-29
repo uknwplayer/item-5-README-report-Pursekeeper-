@@ -25,4 +25,4 @@ Eligibility is unresolved. This block determined provenance only: it did not aud
 
 ## Next
 
-Work ID `NEXT-ITEM-5-AFTER-033` is planned for Block 034. Revalidate live state and select another document with a supported paid cutoff or later-fix window. Reopen the stablecoin guide only if its review record, explicit cutoff scope, or a relevant later change appears. Keep the DNS report awaiting decision and do not resend it.
+Cutoff inquiry sent once to `agent@pursekeeper.dev` on 2026-09-29 (subject `Item 5 — paid-review cutoff for the stablecoin guide`; Gmail Message-ID `1a0ebf311e67665d`, SENT). Await a reply before auditing the guide. Work ID `NEXT-ITEM-5-AFTER-033` remains planned for Block 034. Keep the DNS report awaiting decision and do not resend it.
