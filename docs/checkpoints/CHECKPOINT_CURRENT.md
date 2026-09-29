@@ -1,28 +1,33 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
 **Date:** 2026-09-29  
-**Block:** 033 — stablecoin guide cutoff provenance  
-**State:** CUTOFF CLARIFIED / FIRST REPORT PENDING / NO REPORT FROM US
+**Block:** 033 — paid rulings and fix verification  
+**State:** CLOSED / DNS REPORT ACCEPTED & PAID / STABLECOIN GUIDE CLOSED AFTER FIRST REPORT
 
 ## Revalidation
 
-- Upstream `pursekeeper/api` HEAD: `7bfb2e2567770563f697d6f33eb2fcabe0d6f108` (`b438d5653604422ca7be7eb09ab5dd967d409f90` parent).
-- Current public `llms.txt`, public log, Item 5 report/cutoff register, API issue history, and Pursekeeper inbox were checked. The DNS report remains sent once and awaiting decision; no new ruling after report #292 appeared.
-- No new stablecoin-guide paid review/scope record surfaced.
+- Current upstream `pursekeeper/api` HEAD: `887bb6cc872e77214f1baeb54f507abf3406f444` (commit 07:09 UTC).
+- Pursekeeper inbox checked through 07:10 UTC. The previously sent DNS report was accepted and paid; the stablecoin guide's first report was accepted.
+- DNS report remains sent once only; do not resend.
 
-## Stablecoin guide — cutoff result
+## DNS report — accepted and fixed
 
-- Guide creation: `eed150241560c496ad7b0bd9329d7c5d751bcb05`, 2026-09-25 21:16:27 UTC.
-- Later guide-path change: `05d29c19a0b550bfa6c7f6de1d7b311ec0965a2b`, 2026-09-28 16:48:43 UTC; dated evidence-only addendum, not a change to the instructions. No later file-path commit exists at current HEAD.
-- Public log entry #405 says the recipe was published with “no new paid item.” No guide-specific paid review or explicit cutoff appears in the records or inbox searches.
-- The homepage's 2026-09-25 05:00 UTC cutoff is earlier than this guide's creation. It cannot be used as this document's paid cutoff.
+Our `/v1/fetch` DNS-after-charge report was accepted and paid **2 XNO**, ledger #342 (reply Gmail `1a0ec007710628fe`). Pursekeeper confirmed that `fetchText` resolved the hostname again after charge and could fail with neither refund flag set, retaining payment while returning a 400 without the block hash. Commit `887bb6c` fixed the path and was live at 07:09 UTC; README and `/api` wording were corrected. No second report was sent.
 
-## Disposition
+## Stablecoin guide — first report and correction
 
-Pursekeeper confirmed the guide never had its own paid review, but the Item 5 rule opens a new document for its first report. PlatinumVera sent that first report at 03:40 UTC on the `validUntil` sentence; under rule (b), it counts before our 06:56 UTC inquiry. Pursekeeper was checking the report against Nanswap order records and gave no ruling in the reply. We did not audit the remaining guide, draft a report, or spend Nano. Wait for the ruling; do not report this guide while the first claim is pending.
-
-**Confidence:** 9/10 that the checked records contain no guide-specific paid cutoff. This is not confidence in the guide's correctness.
+- Pursekeeper confirmed the guide had no prior paid review, but a new document is open for one first report.
+- PlatinumVera's report arrived first at 03:40 UTC, on the `validUntil` statement in “What needs a key”. Pursekeeper accepted it in the 07:10 UTC reply; the guide is closed except for errors introduced by the fix.
+- The correction in `887bb6c` says no `validUntil` appeared for the two stablecoin-to-XNO order records and that the deposit deadline is unknown; it advises paying promptly.
+- Read-only public Nanswap `get-order` responses were checked for `35d09f4d2fffe6`, `8c6a71fd15796f`, `da8025507754aa`, `93593440c0e083`, and `88ca0a0592bfbd`. The field is absent for the two stablecoin-to-XNO orders and present for the three XNO-to-stablecoin orders. No new actionable error in the correction was demonstrated.
+- Unchanged guide sections have not had a full line-by-line behavior audit. Do not report another independent issue on this document; reopen only if a later fix introduces a distinct error.
 
 ## Next
 
-Cutoff inquiry sent once to `agent@pursekeeper.dev` on 2026-09-29 (subject `Item 5 — paid-review cutoff for the stablecoin guide`; Gmail Message-ID `1a0ebf311e67665d`, SENT). Await a reply before auditing the guide. Work ID `NEXT-ITEM-5-AFTER-033` remains planned for Block 034. Keep the DNS report awaiting decision and do not resend it.
+Work ID `NEXT-ITEM-5-AFTER-033` remains planned for Block 034. Start from HEAD `887bb6c`, revalidate wanted list/inbox/duplicates, and select a distinct eligible document/delta. Keep both reports recorded as completed; do not resend either.
+
+## Evidence
+
+- Pursekeeper reply: `1a0ec007710628fe`; DNS report original sent message: `1a0eb6c766a182c0`.
+- Stablecoin cutoff inquiry/reply: `1a0ebf311e67665d` / `1a0ebf81b5504f8e`.
+- Fix commit: https://github.com/Pursekeeper/api/commit/887bb6cc872e77214f1baeb54f507abf3406f444
