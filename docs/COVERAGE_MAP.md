@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-29, against Blocks 028–032, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-29, against Blocks 028–033, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -52,7 +52,7 @@ These are candidates for **cutoff discovery first**, not automatic report target
 | Surface | Next useful step |
 |---|---|
 | `BOUNTY.md` | Blocks 016 and 021 checked the full path history and current text: latest change `0b5151bc57dfa206ada869f188f426772fcae287` (2026-09-10 06:22:54 UTC); current text says closed. Block 021 found no newer diff, no candidate-specific paid-review cutoff, and no issue/mail lead. Ineligible; reopen only if a later relevant change appears or a cutoff is substantiated. |
-| `examples/get-nano-from-stablecoins.md` | Blocks 016 and 021 read it for provenance/scope; Block 025 screened the 2026-09-28 evidence-only addendum in `05d29c1`. No guide-specific paid-review cutoff was found, and the new paragraph adds a historical transaction record rather than changing the recipe. Keep cutoff unresolved; do not borrow a neighboring document's date. |
+| `examples/get-nano-from-stablecoins.md` | Blocks 016/021/025 screened it for provenance and the evidence-only addendum; Block 033 checked its own paid-review cutoff. The file was created in `eed1502` (2026-09-25 21:16:27 UTC); `05d29c1` (2026-09-28 16:48:43 UTC) adds only a historical transaction record; no later path commit exists at HEAD. No guide-specific paid review/scope found in the public log, report register, or Gmail. The homepage's 2026-09-25 05:00 UTC cutoff predates the guide and cannot be borrowed. **Full line-by-line behavior audit remains open; eligibility unresolved.** Reopen on a guide-specific review/cutoff record or relevant later change. See Block 033.
 | Individual `examples/purchases/*/README.md` files | Block 021 read the APFS Probe, NanoBazaar, Subnano, and Vend READMEs and checked each path history: each is an operational receipt/evidence log with only its initial publication, no later instruction-changing diff, and no individual paid-review cutoff. Out of Item 5 scope by default; parent purchases README's paid review does not cover these separate files. Reconsider only if later text turns one into service instructions and its own cutoff is established. |
 | Purchase evidence JSON/TXT and scripts | Do not treat raw evidence as Item 5 instructions by default. Inspect only if a document points readers to it as an operational step or later text turns it into guidance. |
 | Individual `examples/research/*.md` reports and research evidence folders | These are generally Item 2(a) research/evidence, not Item 5 service docs. Do not bulk-audit as Item 5. Reclassify a specific file only if it contains reader-facing service instructions and has an eligible post-review change. |
@@ -215,3 +215,8 @@ For each, require the chain **document says X → current code/live state does Y
 - The last relevant text/code correction is the #323 work-limit fix in `b438d56`; its new wording matches current validation order, synchronous four-slot reservation, free/paid rate limits, GPU-first policy, fallback and breaker behavior. Later `7bfb2e2` changes the no-node script, not the Markdown guide, and no doc-to-current-code wrong-action chain was established.
 - A `count: '100'` limit in `/v1/receivable` means a script receive run does not pocket more than the first 100 returned blocks. The same cap exists in endpoint-introduction commit `b947aa1` (2026-09-08), so this is a pre-review caveat and fails the Item 5 timing rule. It is retained in the map to prevent circular re-investigation.
 - No matching duplicate issue was found; no report or Nano spend. See `docs/checkpoints/2026-09-29-block-032.md`.
+
+
+### Block 033 — cutoff provenance (2026-09-29)
+
+The stablecoin guide's own history begins after the homepage paid review. Its later edit is an evidence-only transaction addendum, and no paid review specific to this guide appears in the public log, report register, or Gmail searches. No cutoff can be asserted from the neighboring homepage review. The guide remains **open and not systematically audited**; do not report behavior findings until a document-specific paid-review cutoff/scope is established or an eligible later change appears.
