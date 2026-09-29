@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-29, against Blocks 028–033, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-29, against Blocks 028–033 and fix commit `887bb6cc872e77214f1baeb54f507abf3406f444`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -52,7 +52,7 @@ These are candidates for **cutoff discovery first**, not automatic report target
 | Surface | Next useful step |
 |---|---|
 | `BOUNTY.md` | Blocks 016 and 021 checked the full path history and current text: latest change `0b5151bc57dfa206ada869f188f426772fcae287` (2026-09-10 06:22:54 UTC); current text says closed. Block 021 found no newer diff, no candidate-specific paid-review cutoff, and no issue/mail lead. Ineligible; reopen only if a later relevant change appears or a cutoff is substantiated. |
-| `examples/get-nano-from-stablecoins.md` | Blocks 016/021/025 screened it for provenance and the evidence-only addendum; Block 033 checked cutoff and obtained an explicit rule from Pursekeeper. No own paid review/cutoff exists; file created in `eed1502` (2026-09-25 21:16:27 UTC), and `05d29c1` is evidence-only. Pursekeeper says a new document is open for one first report. PlatinumVera's earlier report on the `validUntil` sentence arrived 2026-09-29 03:40 UTC and is under review under rule (b), before our 06:56 UTC inquiry. **Pause all guide auditing/reporting until that report is ruled on.** If accepted, reopen only for errors introduced by its fix; if not upheld, the guide stays open. No independent line-by-line audit yet. See Block 033.
+| `examples/get-nano-from-stablecoins.md` | Blocks 016/021/025 screened provenance/addendum; Block 033 established there was no own paid review, then checked the accepted first-report correction. PlatinumVera's `validUntil` report (03:40 UTC) was accepted under the new-document/first-report rule; guide now closed except errors introduced by fix `887bb6c` (2026-09-29 07:09 UTC). Compared its exact two-line diff with live public `get-order` JSON for five order IDs; observed `validUntil` absent for stablecoin→XNO and present for XNO→stablecoin examples. Revised text says the stablecoin deposit deadline is unknown and advises prompt payment. No distinct new actionable error found. Reopen only for a later fix-introduced error. No full line-by-line audit of unchanged guide sections. See Block 033.
 | Individual `examples/purchases/*/README.md` files | Block 021 read the APFS Probe, NanoBazaar, Subnano, and Vend READMEs and checked each path history: each is an operational receipt/evidence log with only its initial publication, no later instruction-changing diff, and no individual paid-review cutoff. Out of Item 5 scope by default; parent purchases README's paid review does not cover these separate files. Reconsider only if later text turns one into service instructions and its own cutoff is established. |
 | Purchase evidence JSON/TXT and scripts | Do not treat raw evidence as Item 5 instructions by default. Inspect only if a document points readers to it as an operational step or later text turns it into guidance. |
 | Individual `examples/research/*.md` reports and research evidence folders | These are generally Item 2(a) research/evidence, not Item 5 service docs. Do not bulk-audit as Item 5. Reclassify a specific file only if it contains reader-facing service instructions and has an eligible post-review change. |
@@ -225,3 +225,8 @@ The stablecoin guide's own history begins after the homepage paid review. Its la
 ### Block 033 follow-up — first-report priority
 
 Pursekeeper's 2026-09-29 07:01 UTC email confirms there was no prior paid review for the stablecoin guide but establishes that it is eligible for a first report as a new document. PlatinumVera's report on its `validUntil` sentence, sent at 03:40 UTC, takes priority under rule (b) and remains under review. No second report should be prepared or sent for this document while the first is pending. The line-by-line audit remains uncompleted. Upstream HEAD stayed `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`; the current research README had not yet recorded the report/ruling at our check.
+
+
+### Block 033 final status
+
+Pursekeeper accepted PlatinumVera's first report on the guide's `validUntil` statement and closed the guide except for mistakes introduced by its correction. The 2026-09-29 `887bb6c` correction was compared with five live Nanswap `get-order` JSON responses and does not introduce a demonstrated actionable error. The guide remains ineligible for a second independent report unless a later correction introduces a distinct error. The same Pursekeeper email accepted our DNS report #342 and confirmed the fix live. Next hunt starts at `887bb6c`.
