@@ -1,6 +1,6 @@
 # Candidate report — checkout-wallet false positive rejects API payment
 
-**Review state:** Candidate ready — awaiting operator review. Not sent.
+**Review state:** Sent once at 2026-09-29 05:11 America/Sao_Paulo (08:11 UTC). Awaiting Pursekeeper decision. Gmail message: `1a0ec37b5628f92a`.
 **Confidence:** 8/10.
 
 ## Email

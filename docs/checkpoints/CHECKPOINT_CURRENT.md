@@ -2,7 +2,7 @@
 
 **Date:** 2026-09-29 07:24 UTC baseline; candidate researched 08:05 UTC
 **Block:** 034 — financial-loss path found
-**State:** CANDIDATE READY — AWAITING OPERATOR REVIEW / NOT SENT
+**State:** AWAITING PURSEKEEPER DECISION — SENT ONCE
 
 ## Current Item 5 rule
 
@@ -12,7 +12,7 @@ Pursekeeper's current rule is in API commit [`d7b69a3`](https://github.com/Purse
 
 **Subject:** `Item 5 report — valid API payment rejected by checkout heuristic — uknwplayer`
 **Confidence:** 8/10
-**Status:** Presented for operator review only; no email sent.
+**Status:** Sent once at 2026-09-29 05:11 America/Sao_Paulo (08:11 UTC); Gmail message `1a0ec37b5628f92a`. Awaiting Pursekeeper decision.
 
 The API README tells callers to send `price_raw` “from any wallet” and retry with `X-Nano-Payment`. Current `server.js` treats a wallet as a Subnano checkout when its recent account history contains any send to Pursekeeper's API address and any send to the Subnano fee collector, without verifying that the two sends belong to the same checkout. For an otherwise eligible, unlisted, not-yet-classified payer with five history entries containing one exact direct API payment and one separate fee transfer, the exact helper returns `true`. Then `creditForUnlocked()` marks the payment `NO_CREDIT_REASON` and exits before API credit or refund. The payment remains with Pursekeeper and the caller receives an error/402.
 
