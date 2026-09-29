@@ -438,3 +438,11 @@ Work ID NEXT-ITEM-5-AFTER-032 is planned. Start from freshly revalidated upstrea
 - Confidence: 9/10 that the records checked do not establish a guide-specific paid cutoff; this is not confidence in the guide's correctness.
 
 Next useful step: select another document with a supported paid cutoff/later-fix window for Block 034. Reopen the stablecoin guide only if a guide-specific paid-review record, explicit cutoff ruling, or relevant post-cutoff change appears.
+
+
+### Block 033 follow-up — Pursekeeper scope reply (2026-09-29 07:01 UTC)
+
+- Pursekeeper replied to the cutoff inquiry by email (Gmail message `1a0ebf81b5504f8e`; thread with inquiry `1a0ebf311e67665d`). They confirmed the stablecoin guide has never had its own paid review, and no cutoff commit exists. The later `05d29c1` evidence-only change did not alter that.
+- Pursekeeper clarified the new-document rule: the whole document is open for its first report, one report per document. Under their rule (b), a report already in their inbox counts before a later query. PlatinumVera sent the guide's first report at 03:40 UTC, on the `validUntil` sentence in “What needs a key”; Pursekeeper was checking it against Nanswap order records and gave no decision in this reply.
+- Therefore, our guide audit is paused pending the first report's ruling. If upheld, the document closes after its fix except for errors introduced by that fix; if not upheld, the document remains open. Do not submit a second report on this document while that determination is pending. We did not independently audit the rest of the guide, draft a finding, or spend Nano.
+- At the latest check, upstream HEAD remained `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, and `examples/research/README.md` had not yet recorded this report or a ruling. No newer Pursekeeper mail appeared.
