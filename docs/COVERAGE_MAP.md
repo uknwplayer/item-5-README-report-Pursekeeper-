@@ -1,6 +1,6 @@
 # Coverage Map — Pursekeeper Item 5
 
-**Last reconciled:** 2026-09-29, against Blocks 028–030, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
+**Last reconciled:** 2026-09-29, against Blocks 028–031, upstream HEAD `7bfb2e2567770563f697d6f33eb2fcabe0d6f108`, the current wanted list, and Pursekeeper inbox.
 **Purpose:** Preserve where Item 5 hunts have looked, what they actually covered, and what remains without a systematic audit. This is a navigation aid, not proof that a document is currently accurate. Revalidate HEAD, diffs, live behavior, review cutoff, and duplicate status before each hunt.
 
 ## Coverage states
@@ -20,7 +20,7 @@
 | `examples/purchases/README.md` | Historical accepted report #266 covered the seller-first `/v1/work` flow. | Reopen only if a later change affects the instructions. |
 | `examples/research/README.md` | Historical accepted reports and the paid #285 cross-surface timing contradiction; Block 006 checked table/link structure; later ruling rows were compared with public decision data. | Ledger/index and selected changed rows were checked, not every linked research report or evidence file. |
 | Generated `/` and `/api` text | Historical paid #282 checked the x402 hand-back claim; Block 012 traced later `dd419256` redirect wording against `fetchText()` and the 400 path. | Previously reported/fixed area; any new report needs a distinct post-fix error and consequence. |
-| `/facilitator` | Historical accepted report #269; `ab1799a` fixed seller labels. Block 006 also made two unauthenticated body-size probes. | No later relevant reopening recorded through Block 014. |
+| `/facilitator` | Historical accepted report #269; `ab1799a` fixed seller labels. Block 006 made two unauthenticated body-size probes. Block 031 audited the full `/settle` docs against `facilitator.js`/`x402.js` and Nano fork behavior. | Cancellation wording about publishing any block to withdraw an unsettled send is a legacy concern: it predates the paid facilitator-doc review. `b438d56`/`7bfb2e2` do not alter the facilitator path because `settleRequest()` does not pass `hash`/`landed` to `x402.settle()`. No eligible reopening or report; do not re-audit absent a later relevant change. |
 | `/sellers`, `/offers`, `/sellers.json` | Historical accepted reports #266/#275 and one `checked_at` lead marked not reproduced; later seller-flow diffs were revisited in Block 014. | Search prior rulings first; do not revive stale or duplicate leads without new evidence. |
 | Endpoint/docs behavior: `/v1/requests`, `/v1/process`, `/v1/fetch`, `/v1/hash`, `/v1/credit`, `/.well-known/x402` | Covered in specific historical reports/probes, including paid reports #266/#275/#276/#282 and current no-node/API checks. | Coverage is finding-specific, not an exhaustive endpoint audit. Revalidate source and current public behavior. |
 | Homepage campaign date and paid-work GPU wording | Block 014 checked provenance/cutoff; campaign text predated its paid-review cutoff, GPU wording also predates review. | Excluded for timing. Do not re-open without a later relevant text/code change. |
@@ -199,3 +199,11 @@ For each, require the chain **document says X → current code/live state does Y
 - Facilitator docs: current /settle page tells clients to check block status before retrying; recent code distinguishes definite rejection from uncertain transport failure and warns that a missing block may still arrive. No actionable documentation/code mismatch found.
 - Duplicate check: current work log/report history, Item 5 wanted-list entries, and API issues were reviewed; no distinct new candidate duplicated by a prior report was found. No candidate ready. No email sent and no Nano spent.
 - Scope limits: no paid requests, no Nano spend, and no destructive actions. This was a post-cutoff delta audit, not a line-by-line review of every eligible document. Next: Block 031 after fresh revalidation.
+
+
+## Block 031 reconciliation (2026-09-29)
+
+- Full facilitator `/settle` prose in current `facilitator.js` compared with current handlers and `x402.settle()`; the described timeout/polling, confirmation-timeout, hash checking, and same-block retry behavior agree with the source.
+- The potentially unsafe “publish any block” cancellation instruction is not a new Item 5 candidate. It is present before the paid review, while later generic lost-reply changes do not affect the facilitator endpoint's call (the handler supplies no optional `landed` dependency). Record as a provenance-excluded legacy concern, not as a finding.
+- Official Nano docs say competing blocks with the same previous hash are forks and that confirmation prevents replacement; no on-chain behavior was tested. No exact duplicate found in the register/issues search. No report sent; no Nano spent.
+- Next: use the next eligible post-review document/code delta, or newly confirmed paid-review cutoff. Avoid reopening this passage unless a later relevant change makes the consequence new.
