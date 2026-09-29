@@ -1,32 +1,28 @@
 # Current Checkpoint — Pursekeeper Item 5 README Reports
 
-**Date:** 2026-09-28 21:51 UTC  
-**Block:** 027 — unchanged upstream and research-index timing corrections  
-**State:** CLOSED / NO QUALIFYING FINDING / NO REPORT SENT
+**Date:** 2026-09-29  
+**Block:** 033 — stablecoin guide cutoff provenance  
+**State:** CLOSED / ELIGIBILITY UNRESOLVED / NO REPORT SENT
 
-## Fresh revalidation
+## Revalidation
 
-- Upstream `pursekeeper/api` HEAD remains `449391364ae6e6c37fa19699fe389426359a16cf` (2026-09-28 21:23:26 UTC), unchanged since Block 026.
-- The research register contains paid Item 5 reports through #319. Gmail searches for recent messages from Pursekeeper and Item 5 show no decision after #292 (04:43:18 UTC).
-- The Item 5 cutoff remains document-specific: an actionable error must postdate that document's paid review or be a distinct error introduced by a later fix.
+- Upstream `pursekeeper/api` HEAD: `7bfb2e2567770563f697d6f33eb2fcabe0d6f108` (`b438d5653604422ca7be7eb09ab5dd967d409f90` parent).
+- Current public `llms.txt`, public log, Item 5 report/cutoff register, API issue history, and Pursekeeper inbox were checked. The DNS report remains sent once and awaiting decision; no new ruling after report #292 appeared.
+- No new stablecoin-guide paid review/scope record surfaced.
 
-## Block 027 result
+## Stablecoin guide — cutoff result
 
-No new candidate met the timing and reader-impact requirements.
+- Guide creation: `eed150241560c496ad7b0bd9329d7c5d751bcb05`, 2026-09-25 21:16:27 UTC.
+- Later guide-path change: `05d29c19a0b550bfa6c7f6de1d7b311ec0965a2b`, 2026-09-28 16:48:43 UTC; dated evidence-only addendum, not a change to the instructions. No later file-path commit exists at current HEAD.
+- Public log entry #405 says the recipe was published with “no new paid item.” No guide-specific paid review or explicit cutoff appears in the records or inbox searches.
+- The homepage's 2026-09-25 05:00 UTC cutoff is earlier than this guide's creation. It cannot be used as this document's paid cutoff.
 
-- Screened the latest changes to `examples/research/README.md`: `c1f0d1c` added the #319 payment row and `4493913` corrected two timestamps. They record payment/hold history rather than telling readers how to use a service. No wrong operation, lost payment, or wrong participation outcome was demonstrated.
-- Checked the earlier #285 timing report and its ruling for duplicate scope. No separate issue or report on the current changed rows surfaced.
-- No newer reader-facing service-doc change exists after Block 026. Confidence in the no-candidate conclusion for these latest index edits: 8/10. No report drafted/sent; no Nano spent.
+## Disposition
 
-This was a targeted delta review, not a line-by-line audit.
+Eligibility is unresolved. This block determined provenance only: it did not audit every guide instruction against Nanswap/current behavior and does not claim the guide is accurate or inaccurate. A guide-specific paid-review record or explicit scope/cutoff ruling is needed to classify a future line-by-line finding as eligible. No report was drafted or sent; no Nano was spent.
 
-## Next hunt
+**Confidence:** 9/10 that the checked records contain no guide-specific paid cutoff. This is not confidence in the guide's correctness.
 
-Work ID `NEXT-ITEM-5-AFTER-027` is planned. Begin Block 028 from fresh upstream HEAD, wanted list, inbox, coverage map, and duplicate checks. Prioritize newly eligible service-document changes or a newly confirmed paid-review cutoff. Keep the stablecoin guide's document-specific cutoff unresolved.
+## Next
 
-## Durable records
-
-- Work log: `NEXT-ITEM-5-AFTER-026` closed; `NEXT-ITEM-5-AFTER-027` planned.
-- Coverage map: Block 027 records the unchanged HEAD, recent research-index edits, duplicate screen, and disposition.
-
-**Payout address:** `nano_1zwik4hd1pjy73owfah8xuxzokk6zexc5a6rs6byhrxryggkbh38kemm51yt`
+Work ID `NEXT-ITEM-5-AFTER-033` is planned for Block 034. Revalidate live state and select another document with a supported paid cutoff or later-fix window. Reopen the stablecoin guide only if its review record, explicit cutoff scope, or a relevant later change appears. Keep the DNS report awaiting decision and do not resend it.
