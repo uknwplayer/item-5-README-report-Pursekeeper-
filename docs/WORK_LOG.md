@@ -402,4 +402,4 @@ Work ID `NEXT-ITEM-5-AFTER-026` is planned. Start Block 027 from fresh upstream 
 
 ## Next hunt
 
-Work ID `NEXT-ITEM-5-AFTER-027` is planned. Start Block 028 from fresh upstream HEAD, wanted list, inbox, coverage map and duplicate checks. Prioritize a relevant new commit or newly substantiated paid-review/fix cutoff; do not infer a cutoff for `examples/get-nano-from-stablecoins.md` from a neighboring document.
+Work ID NEXT-ITEM-5-AFTER-030 is planned. Start Block 031 from fresh upstream HEAD, wanted list, inbox, coverage map, and duplicate checks. Keep ITEM5-FETCH-DNS-2026-09-29 in Awaiting decision and do not resend it.
